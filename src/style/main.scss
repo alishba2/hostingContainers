@@ -1,0 +1,15 @@
+@import url("./base/_color.scss");
+@import url("./base/_reset.scss");
+@import url("./base/_typography.scss");
+@import url("./_global.scss");
+
+//----------------Components--------------------
+@import url("./components/_buttons.scss");
+@import url("./components/_input.scss");
+
+//----------------Shared--------------------
+@import url("./shared/_navbar.scss");
+@import url("./shared/_footer.scss");
+
+//---------------------PAGES-----------------------
+//home

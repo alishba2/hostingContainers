@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+.roboto-family {
+  font-family: Roboto;
+}
+h1 {
+  font-size: 68px;
+  line-height: var(--Number, 82px);
+  letter-spacing: 2.04px;
+}
+h1.small {
+  font-size: 64px;
+}
+h2 {
+  font-feature-settings: "cv11" on, "cv01" on, "ss01" on;
+  font-size: 48px;
+  line-height: 72px;
+  letter-spacing: 1.44px;
+}
+h3 {
+  font-feature-settings: "cv11" on, "cv01" on, "ss01" on;
+  font-size: 36px;
+  line-height: 72px;
+  letter-spacing: 1.08px;
+}
+h3.small {
+  font-size: 32px;
+  line-height: 49px;
+  letter-spacing: 0.96px;
+}
+h4 {
+  font-size: 26px;
+  line-height: 30px;
+  letter-spacing: 0.78px;
+}
+h5 {
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 0.72px;
+}
+h6 {
+  font-size: 22px;
+  line-height: 150.367%;
+  letter-spacing: 0.66px;
+}
+p {
+  font-size: 20px;
+  letter-spacing: 0.6px;
+}
+.paraLarge {
+  font-size: 18px;
+  line-height: 28px;
+}
+.elarge {
+  font-size: 16px;
+}
+.paraMedium {
+  font-size: 15px;
+  line-height: 20px;
+}
+.paraSmall {
+  font-size: 14px;
+  line-height: 20px;
+}
+.esmall {
+  font-size: 12px;
+  line-height: 23.909px;
+}

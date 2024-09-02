@@ -1,0 +1,228 @@
+.navbar-main {
+  position: relative;
+  padding: 45px 82px;
+  .logo {
+    width: 60px;
+    height: 60px;
+  }
+  .left {
+    gap: 82px;
+    .li-items {
+      gap: 70px;
+      li {
+        a {
+          color: var(--white);
+          font-feature-settings: "cv11" on, "cv01" on, "ss01" on;
+          font-size: 18px;
+          &:hover {
+            text-decoration: none !important;
+          }
+          &.active {
+            color: #b84ce7;
+            font-size: 600;
+          }
+        }
+      }
+    }
+  }
+  .resourceList {
+    position: relative;
+  }
+  .drop-downss {
+    width: 135px;
+    height: auto;
+    padding: 20px 0px 20px 15px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    flex-direction: column;
+    color: white;
+    font-size: 13px;
+    background-color: #72518a;
+    // border-radius: 20px;
+    border: 1px solid gray;
+    position: absolute;
+    bottom: -240px;
+    left: 0;
+    // margin-top: 100px;
+    // top: 300px;
+    // transform: translate(-50%, -50%);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.7s ease-in-out;
+  }
+  button {
+    color: #e9deff;
+    display: flex;
+    position: relative;
+    width: 99px;
+    height: 37px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-weight: 500 !important;
+    gap: 5px;
+    border-radius: 19.169px;
+    border: none;
+    background: #0e0026;
+    box-shadow: 0px 0px 16px 9px rgba(162, 45, 247, 0.1),
+      0px 0px 40.852px 0px rgba(162, 45, 247, 0.1),
+      0px 0px 20.481px 0px rgba(162, 45, 247, 0.1),
+      0px 0px 10px 0px rgba(162, 45, 247, 0.1),
+      0px 0px 3.519px 0px rgba(162, 45, 247, 0.1),
+      0px 0px 3.148px 0px rgba(162, 45, 247, 0.1);
+
+    &::after {
+      background: linear-gradient(90deg, #9208f3 80%, #9b28a8 20%);
+      border-radius: 25px;
+      bottom: -1px;
+      content: "";
+      left: -1px;
+      position: absolute;
+      right: -1px;
+      top: -1px;
+      z-index: -1;
+    }
+
+    .btnIcon {
+      color: #e9deff;
+      object-fit: contain;
+
+      // transform: rotate(-40deg);
+    }
+  }
+}
+@media screen and (max-width: 3000px) {
+  .mobile-navbar {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1600px) {
+  .navbar-main {
+    padding: 45px 62px;
+    .left {
+      gap: 62px;
+      .li-items {
+        gap: 50px;
+        li {
+          a {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+    .btn-primary {
+      min-width: 170px !important;
+      font-size: 20px !important;
+    }
+  }
+}
+@media screen and (max-width: 1440px) {
+  .navbar-main {
+    padding: 25px 45px;
+    .left {
+      div {
+        a {
+          img {
+            width: 100px;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .navbar-main {
+    display: none;
+  }
+
+  .mobile-navbar {
+    width: 100%;
+    height: 68px;
+    //background: #6d43ff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+
+    .mobileLogo {
+      width: 100px;
+      height: 25px;
+    }
+
+    .menu-btn {
+      background: transparent;
+      border: none;
+      width: 56px;
+      height: 39px;
+      // margin-top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+  .offcanvas {
+    width: 100% !important;
+  }
+  .offcanvas-header {
+    background: white;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .offcanvas-body {
+    // background: #3F60DD;
+    color: var(--white);
+    background: white;
+    width: 100% !important;
+  }
+  .Offcanvas.Title {
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  .blue-button {
+    border: 2.3px solid #fff !important;
+
+    &:hover {
+      background-image: linear-gradient(90deg, #00c6ff 0%, #0072ff 100%);
+      border: none !important;
+    }
+  }
+  .logostyle {
+    width: 100px;
+    height: 25px;
+  }
+  li {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: black;
+    list-style: none;
+    a {
+      color: black;
+      text-decoration: none;
+    }
+  }
+
+  .signupBtn {
+    width: auto;
+    //margin-left: 30px;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    line-height: normal;
+    border: 1px solid black;
+    color: black;
+    border-radius: 10px;
+    background-color: white;
+  }
+}
+.offcanvas-header .btn-close {
+  display: none;
+}
