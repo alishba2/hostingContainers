@@ -1,0 +1,261 @@
+/* Container for the About Us page */
+.about-us-container {
+    margin-top: 10rem;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 0 20px;
+    /* Padding for responsiveness */
+}
+
+/* Styling for the background image */
+.background-image {
+    position: relative;
+    background-image: url('./assets/aboutus.jpg');
+    /* Path to your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Black overlay with reduced opacity */
+.background-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Black background with 50% opacity */
+    z-index: 1;
+    /* Place overlay behind text */
+}
+
+/* Overlay text styling */
+.text-overlay {
+    position: relative;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 2;
+    /* Place text above the overlay */
+    text-transform: uppercase;
+    word-spacing: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Styling for the heading */
+.text-overlay h4 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Styling for the mission statement card */
+.missionStatement {
+    margin-top: 8rem;
+    padding: 20px;
+    background-color: black;
+    border: 1px solid white;
+    /* Light background color for the card */
+    border-radius: 12px;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+    max-width: 800px;
+    /* Max width for responsiveness */
+    margin-left: auto;
+    margin-right: auto;
+    /* Center the card horizontally */
+}
+
+.missionStatement h3 {
+    margin-top: 0;
+    /* Dark color for the heading */
+    font-size: 1.8rem;
+    /* Adjust font size as needed */
+}
+
+.missionStatement p {
+
+    /* Gray color for the text */
+    line-height: 1.6;
+    /* Increase line-height for readability */
+    font-size: 1rem;
+    /* Adjust font size as needed */
+}
+
+/* Styling for the team section */
+.team-section {
+    margin-top: 6rem;
+    text-align: center;
+}
+
+.team-section h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.team-members {
+    padding: 0px 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 80px;
+}
+
+.team-card {
+    background-color: #fff;
+    border-radius: 12px;
+    /* Rounded corners */
+    overflow: hidden;
+    width: 300px;
+    /* Size of the card */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+    text-align: center;
+}
+
+.team-image {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    /* Ensure the image covers the area */
+}
+
+.team-info {
+    padding: 10px;
+}
+
+.team-name {
+    margin: 10px 0 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #666;
+
+}
+
+.team-role {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .background-image {
+        height: 250px;
+        /* Adjust height for smaller screens */
+    }
+
+    .text-overlay h4 {
+        font-size: 1.5rem;
+    }
+
+    .missionStatement {
+        padding: 15px;
+    }
+
+    .missionStatement h3 {
+        font-size: 1.5rem;
+    }
+
+    .missionStatement p {
+        font-size: 0.9rem;
+    }
+
+    .team-card {
+        width: 180px;
+    }
+
+    .team-image {
+        height: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .background-image {
+        height: 200px;
+        /* Further adjust height for very small screens */
+    }
+
+    .text-overlay h4 {
+        font-size: 1.2rem;
+    }
+
+    .missionStatement {
+        padding: 10px;
+    }
+
+    .missionStatement h3 {
+        font-size: 1.2rem;
+    }
+
+    .missionStatement p {
+        font-size: 0.8rem;
+    }
+
+    .team-card {
+        width: 150px;
+    }
+
+    .team-image {
+        height: 100px;
+    }
+}
+
+.services-section {
+    margin: 9rem 1rem;
+    text-align: center;
+}
+
+.services-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.service-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+    padding: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.service-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.service-card h5 {
+    margin: 1rem 0 0.5rem;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.service-card p {
+    color: #666;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+}

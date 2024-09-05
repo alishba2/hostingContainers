@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import Home from "../src/pages/home";
 import Aboutus from "./pages/aboutus";
 import Navbar from "./shared/navbar";
-
+import './i18n';
 function App() {
   return (
     <>
