@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import "../_about.scss";
+import "../../src/style/pages/_about.scss";
 import img1 from "../assets/team4.png";
 import img2 from "../assets/team2.png";
 import img3 from "../assets/team3.png"
@@ -22,15 +22,20 @@ export default function AboutUs() {
 
   return (
     <div className="about-us-container">
-      <div className="background-image">
+      {/* <div className="background-image">
         <div className="text-overlay">
           <h4>{t('aboutUsHeading')}</h4>
         </div>
-      </div>
+      </div> */}
       <div className='missionStatement'>
         <h3>{t('missionStatement')}</h3>
         <p>{t('aboutUsText')}</p>
       </div>
+
+
+
+
+
       <div className='team-section'>
         <h2>{t('ourTeam')}</h2>
         <div className='team-members'>
@@ -45,32 +50,7 @@ export default function AboutUs() {
           ))}
         </div>
       </div>
-      <div className="services-section">
-        <h2>{t('whyChooseUs')}</h2>
-        <div className="services-cards">
-          <div className="service-card">
-            <img src={service} alt="Service 1" />
-            <h5>{t('service1Title')}</h5>
-            <p>{t('service1Description')}</p>
-          </div>
-          <div className="service-card">
-            <img src={service} alt="Service 2" />
-            <h5>{t('service2Title')}</h5>
-            <p>{t('service2Description')}</p>
-          </div>
-          <div className="service-card">
-            <img src={service} alt="Service 3" />
-            <h5>{t('service3Title')}</h5>
-            <p>{t('service3Description')}</p>
-          </div>
-          <div className="service-card">
-            <img src={service} alt="Service 4" />
-            <h5>{t('service4Title')}</h5>
-            <p>{t('service4Description')}</p>
-          </div>
-          {/* Add more service cards as needed */}
-        </div>
-      </div>
+
 
     </div>
   );

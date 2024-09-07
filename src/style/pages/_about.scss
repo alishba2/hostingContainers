@@ -1,6 +1,6 @@
 /* Container for the About Us page */
 .about-us-container {
-    margin-top: 10rem;
+    margin-top: 2rem;
     position: relative;
     width: 100%;
     overflow: hidden;
@@ -9,18 +9,18 @@
 }
 
 /* Styling for the background image */
-.background-image {
-    position: relative;
-    background-image: url('./assets/aboutus.jpg');
-    /* Path to your background image */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+// .background-image {
+//     position: relative;
+//     background-image: url('./assets/aboutus.jpg');
+//     /* Path to your background image */
+//     background-size: cover;
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     height: 200px;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
 
 /* Black overlay with reduced opacity */
 .background-image::before {
@@ -63,7 +63,7 @@
 
 /* Styling for the mission statement card */
 .missionStatement {
-    margin-top: 8rem;
+    margin-top: 3rem;
     padding: 20px;
     background-color: black;
     border: 1px solid white;
@@ -95,6 +95,10 @@
     /* Adjust font size as needed */
 }
 
+$primary-color: #a890d3;
+$shadow-light: rgba(0, 0, 0, 0.1);
+$shadow-dark: rgba(0, 0, 0, 0.2);
+
 /* Styling for the team section */
 .team-section {
     margin-top: 6rem;
@@ -104,6 +108,7 @@
 .team-section h2 {
     margin-bottom: 2rem;
     font-size: 2rem;
+    color: $primary-color;
 }
 
 .team-members {
@@ -114,19 +119,24 @@
     gap: 80px;
 }
 
+
+
 .team-card {
     background-color: #fff;
     border-radius: 12px;
-    /* Rounded corners */
     overflow: hidden;
     width: 300px;
-    /* Size of the card */
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow for depth */
+    box-shadow: 0 4px 8px $shadow-light;
     text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+    &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px $shadow-dark;
+    }
 }
 
 .team-image {
@@ -188,7 +198,7 @@
 
 @media (max-width: 480px) {
     .background-image {
-        height: 200px;
+        height: 100px;
         /* Further adjust height for very small screens */
     }
 
@@ -208,54 +218,15 @@
         font-size: 0.8rem;
     }
 
+    .team-members {
+        padding: 0px 0rem;
+    }
+
     .team-card {
-        width: 150px;
+        width: 215px;
     }
 
     .team-image {
-        height: 100px;
+        height: 240px;
     }
-}
-
-.services-section {
-    margin: 9rem 1rem;
-    text-align: center;
-}
-
-.services-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-}
-
-.service-card {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 250px;
-    text-align: center;
-    padding: 1rem;
-    transition: transform 0.3s ease;
-}
-
-.service-card img {
-    width: 100%;
-    height: auto;
-    border-bottom: 1px solid #ddd;
-}
-
-.service-card h5 {
-    margin: 1rem 0 0.5rem;
-    font-size: 1.2rem;
-    color: #333;
-}
-
-.service-card p {
-    color: #666;
-}
-
-.service-card:hover {
-    transform: scale(1.05);
 }

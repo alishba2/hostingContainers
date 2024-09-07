@@ -1,6 +1,7 @@
 .banner-main {
   min-height: 100vh;
   height: 100%;
+
   .marquee-main {
     marquee {
       color: white;
@@ -8,21 +9,44 @@
       height: 25px;
     }
   }
+
   .banner-inner {
-    background-image: url(../../../assets/images/Home/banner.jfif);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
+    position: relative;
+    /* Necessary for positioning the overlay */
     width: 100%;
     height: 100%;
-    background-position: center;
     min-height: 80vh;
+
+    background-image: url(../../../assets/containerImgday12.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+
+      z-index: 0;
+
+    }
+
     .banner-content {
+      position: relative;
       max-width: 50%;
       padding-left: 100px;
       min-height: 80vh;
+      color: #fff;
+      z-index: 1;
+
       h2 {
         color: #4b2e83;
       }
     }
   }
+
+
 }

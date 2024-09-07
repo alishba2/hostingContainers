@@ -13,6 +13,8 @@ const banner = () => {
           </marquee>
         </div>
         <div className="banner-inner">
+          <div class='overlay'></div>
+
           <div className="banner-content h-center flex-column">
             <p className="paraSmall">
               The Best Crypto Mining Service Providers in GCC
