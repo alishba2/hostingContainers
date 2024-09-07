@@ -1,0 +1,28 @@
+.banner-main {
+  min-height: 100vh;
+  height: 100%;
+  .marquee-main {
+    marquee {
+      color: white;
+      background: #4b2e83;
+      height: 25px;
+    }
+  }
+  .banner-inner {
+    background-image: url(../../../assets/images/Home/banner.jfif);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    min-height: 80vh;
+    .banner-content {
+      max-width: 50%;
+      padding-left: 100px;
+      min-height: 80vh;
+      h2 {
+        color: #4b2e83;
+      }
+    }
+  }
+}

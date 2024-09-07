@@ -179,7 +179,12 @@ const Navbar = () => {
           <div className="v-center gap-2">
             <NavLink to="/demo">
               <div className="navbarbtn-container">
-                <button onClick={() => navigate("/demo")}>Sign in</button>
+                <button
+                  onClick={() => navigate("/demo")}
+                  lassName="btn-primary"
+                >
+                  Sign in
+                </button>
               </div>
             </NavLink>
             <div
@@ -187,7 +192,7 @@ const Navbar = () => {
               onMouseEnter={() => handlelanguageShow()}
               onMouseLeave={() => handlelanguagesClose()}
             >
-              <button className="dropdown-button v-center gap-2">
+              <button className="dropdown-button v-center gap-2 btn-primary">
                 English{" "}
                 <Icon
                   color="#FFF"
@@ -198,27 +203,21 @@ const Navbar = () => {
               {languagesshow && (
                 <div className="languages-main-outer">
                   <div className="platform-hover-container d-flex flex-column">
-                    <NavLink to="/platform">
-                      <div className="platform-items d-flex space-between ">
-                        <div className="left d-flex v-center">
-                          <h6>English</h6>
-                        </div>
+                    <div className="platform-items d-flex space-between ">
+                      <div className="left d-flex v-center">
+                        <h6>English</h6>
                       </div>
-                    </NavLink>
-                    <NavLink to="/work">
-                      <div className="platform-items d-flex space-between ">
-                        <div className="left d-flex v-center">
-                          <h6>Arabic</h6>
-                        </div>
+                    </div>
+                    <div className="platform-items d-flex space-between ">
+                      <div className="left d-flex v-center">
+                        <h6>Arabic</h6>
                       </div>
-                    </NavLink>
-                    <NavLink to="/choose-us">
-                      <div className="platform-items d-flex space-between ">
-                        <div className="left d-flex v-center">
-                          <h6>Spanich</h6>
-                        </div>
+                    </div>
+                    <div className="platform-items d-flex space-between ">
+                      <div className="left d-flex v-center">
+                        <h6>Spanich</h6>
                       </div>
-                    </NavLink>
+                    </div>
                   </div>
                 </div>
               )}
