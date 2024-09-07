@@ -46,7 +46,6 @@ export default function AboutUs() {
         </div>
       </div>
       <div className="services-section">
-
         <h2>{t('whyChooseUs')}</h2>
         <div className="services-cards">
           <div className="service-card">
