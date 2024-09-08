@@ -1,6 +1,7 @@
 import React from "react";
 import Banner from "./../components/Home/banner";
 import Benefits from "../components/Home/Benefits";
+import Footer from "./footer";
 
 const Home = () => {
   return (
@@ -8,6 +9,8 @@ const Home = () => {
       <Banner />
 
       {/* <Benefits /> */}
+
+      <Footer />
     </>
   );
 };
