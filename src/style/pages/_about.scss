@@ -137,7 +137,7 @@ $shadow-dark: rgba(0, 0, 0, 0.2);
 .team-section h2 {
     margin-bottom: 2rem;
     font-size: 2rem;
-    color: $primary-color;
+    color: white;
 }
 
 .team-members {
@@ -151,7 +151,7 @@ $shadow-dark: rgba(0, 0, 0, 0.2);
 .team-card {
     position: relative;
     /* Position relative to allow absolute positioning for overlay */
-    background-color: #fff;
+    background-color: #1c1c1c;
     border-radius: 12px;
     overflow: hidden;
     width: 300px;
@@ -199,13 +199,13 @@ $shadow-dark: rgba(0, 0, 0, 0.2);
         margin: 10px 0 5px;
         font-size: 1.2rem;
         font-weight: bold;
-        color: #666;
+        color: white;
     }
 
     .team-role {
         margin: 0;
         font-size: 0.9rem;
-        color: #666;
+        color: white;
     }
 
     .team-image {
