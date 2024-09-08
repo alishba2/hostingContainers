@@ -153,7 +153,7 @@ const Navbar = () => {
               </div>
 
               <li>
-                <NavLink to="/pricing" activeClassName="active">
+                <NavLink to="/hosting" activeClassName="active">
                   {t('hosting')}
                 </NavLink>
               </li>
