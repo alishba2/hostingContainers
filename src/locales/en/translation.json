@@ -33,5 +33,15 @@
     "service3Title": "Service 3",
     "service3Description": "Description for Service 3",
     "service4Title": "Service 4",
-    "service4Description": "Description for Service 4"
+    "service4Description": "Description for Service 4",
+    "contactUs": "Contact Us",
+    "email": "support@email.com",
+    "phone": "+971 4 257 8883",
+    "address": "Store 2, Al Nisf Building, Airport Rd, Al Garhoud",
+    "quickLinks": "Quick Links",
+    "blog": "Blog",
+    "faq": "FAQ",
+    "privacyPolicy": "Privacy Policy",
+    "socialMedia": "Social Media",
+    "copyright": "© 2024 Hosting Containers - Bitcoin Mining Dubai | All rights reserved."
 }
