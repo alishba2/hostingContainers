@@ -43,5 +43,58 @@
     "faq": "常见问题",
     "privacyPolicy": "隐私政策",
     "socialMedia": "社交媒体",
-    "copyright": "© 2024 Hosting Containers - 迪拜比特币挖矿 | 版权所有."
+    "copyright": "© 2024 Hosting Containers - 迪拜比特币挖矿 | 版权所有.",
+    "hosting1": {
+        "title": "选择您的托管计划",
+        "description": "解锁最佳的加密货币挖矿托管解决方案。",
+        "getStarted": "开始",
+        "standard": {
+            "title": "标准",
+            "powerRate": "功率费率",
+            "cooling": "冷却",
+            "coolingValue": "空气系统",
+            "location": "地点",
+            "locationValue": "迪拜",
+            "energy": "能源",
+            "energyValue": "混合",
+            "hashShare": "哈希共享",
+            "hashShareValue": "Lorem Ipsum",
+            "lifespan": "预计寿命",
+            "lifespanValue": "5年",
+            "contractDuration": "合同期限",
+            "contractDurationValue": "3年"
+        },
+        "premium": {
+            "title": "高级",
+            "powerRate": "功率费率",
+            "cooling": "冷却",
+            "coolingValue": "空气系统",
+            "location": "地点",
+            "locationValue": "迪拜",
+            "energy": "能源",
+            "energyValue": "混合",
+            "hashShare": "哈希共享",
+            "hashShareValue": "Lorem Ipsum",
+            "lifespan": "预计寿命",
+            "lifespanValue": "5年",
+            "contractDuration": "合同期限",
+            "contractDurationValue": "3年"
+        },
+        "hydro": {
+            "title": "水力",
+            "powerRate": "功率费率",
+            "cooling": "冷却",
+            "coolingValue": "空气系统",
+            "location": "地点",
+            "locationValue": "迪拜",
+            "energy": "能源",
+            "energyValue": "混合",
+            "hashShare": "哈希共享",
+            "hashShareValue": "Lorem Ipsum",
+            "lifespan": "预计寿命",
+            "lifespanValue": "5年",
+            "contractDuration": "合同期限",
+            "contractDurationValue": "3年"
+        }
+    }
 }

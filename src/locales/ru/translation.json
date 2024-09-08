@@ -43,5 +43,58 @@
     "faq": "Часто задаваемые вопросы",
     "privacyPolicy": "Политика конфиденциальности",
     "socialMedia": "Социальные сети",
-    "copyright": "© 2024 Hosting Containers - Биткойн-майнинг в Дубае | Все права защищены."
+    "copyright": "© 2024 Hosting Containers - Биткойн-майнинг в Дубае | Все права защищены.",
+    "hosting1": {
+        "title": "Выберите ваш хостинг-план",
+        "description": "Откройте для себя оптимальные решения для хостинга криптовалютного майнинга.",
+        "getStarted": "Начать",
+        "standard": {
+            "title": "Стандарт",
+            "powerRate": "Ставка за мощность",
+            "cooling": "Охлаждение",
+            "coolingValue": "Воздушная система",
+            "location": "Местоположение",
+            "locationValue": "Дубай",
+            "energy": "Энергия",
+            "energyValue": "Смесь",
+            "hashShare": "Доля хэша",
+            "hashShareValue": "Lorem Ipsum",
+            "lifespan": "Ожидаемый срок службы",
+            "lifespanValue": "5 лет",
+            "contractDuration": "Срок контракта",
+            "contractDurationValue": "3 года"
+        },
+        "premium": {
+            "title": "Премиум",
+            "powerRate": "Ставка за мощность",
+            "cooling": "Охлаждение",
+            "coolingValue": "Воздушная система",
+            "location": "Местоположение",
+            "locationValue": "Дубай",
+            "energy": "Энергия",
+            "energyValue": "Смесь",
+            "hashShare": "Доля хэша",
+            "hashShareValue": "Lorem Ipsum",
+            "lifespan": "Ожидаемый срок службы",
+            "lifespanValue": "5 лет",
+            "contractDuration": "Срок контракта",
+            "contractDurationValue": "3 года"
+        },
+        "hydro": {
+            "title": "Гидро",
+            "powerRate": "Ставка за мощность",
+            "cooling": "Охлаждение",
+            "coolingValue": "Воздушная система",
+            "location": "Местоположение",
+            "locationValue": "Дубай",
+            "energy": "Энергия",
+            "energyValue": "Смесь",
+            "hashShare": "Доля хэша",
+            "hashShareValue": "Lorem Ipsum",
+            "lifespan": "Ожидаемый срок службы",
+            "lifespanValue": "5 лет",
+            "contractDuration": "Срок контракта",
+            "contractDurationValue": "3 года"
+        }
+    }
 }
