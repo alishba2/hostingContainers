@@ -22,10 +22,13 @@ export default function AboutUs() {
 
   return (
     <div className="about-us-container">
-      <div className='missionStatement'>
-        <h3>{t('missionStatement')}</h3>
-        <p>{t('aboutUsText')}</p>
+      <div className='mission-bg'>
+        <div className='missionStatement'>
+          <h3>{t('missionStatement')}</h3>
+          <p>{t('aboutUsText')}</p>
+        </div>
       </div>
+
 
       <div className='team-section'>
         <h2>{t('ourTeam')}</h2>
