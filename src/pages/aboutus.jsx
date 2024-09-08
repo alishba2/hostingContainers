@@ -7,6 +7,7 @@ import img3 from "../assets/team3.png"
 import img4 from "../assets/team4.png"
 import service from "../assets/service.jpg";
 
+import Footer from './footer';
 export default function AboutUs() {
   const { t } = useTranslation();
 
@@ -51,6 +52,8 @@ export default function AboutUs() {
         </div>
       </div>
 
+
+      <Footer />
 
     </div>
   );

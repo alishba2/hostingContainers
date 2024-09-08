@@ -33,5 +33,15 @@
     "service3Title": "Servicio 3",
     "service3Description": "Descripción del Servicio 3",
     "service4Title": "Servicio 4",
-    "service4Description": "Descripción del Servicio 4"
+    "service4Description": "Descripción del Servicio 4",
+    "contactUs": "Contáctenos",
+    "email": "support@email.com",
+    "phone": "+971 4 257 8883",
+    "address": "Tienda 2, Edificio Al Nisf, Carretera del Aeropuerto, Al Garhoud",
+    "quickLinks": "Enlaces Rápidos",
+    "blog": "Blog",
+    "faq": "Preguntas Frecuentes",
+    "privacyPolicy": "Política de Privacidad",
+    "socialMedia": "Redes Sociales",
+    "copyright": "© 2024 Hosting Containers - Minería de Bitcoin en Dubái | Todos los derechos reservados."
 }
