@@ -43,5 +43,58 @@
     "faq": "FAQ",
     "privacyPolicy": "Privacy Policy",
     "socialMedia": "Social Media",
-    "copyright": "© 2024 Hosting Containers - Bitcoin Mining Dubai | All rights reserved."
+    "copyright": "© 2024 Hosting Containers - Bitcoin Mining Dubai | All rights reserved.",
+    "hosting1": {
+        "title": "Choose Your Hosting Plan",
+        "description": "Unlock optimal crypto mining hosting solutions.",
+        "getStarted": "Get Started",
+        "standard": {
+            "title": "Standard",
+            "powerRate": "Power rate",
+            "cooling": "Cooling",
+            "coolingValue": "Air System",
+            "location": "Location",
+            "locationValue": "Dubai",
+            "energy": "Energy",
+            "energyValue": "Mix",
+            "hashShare": "Hash-Share",
+            "hashShareValue": "Lorem Ipsum",
+            "lifespan": "Estimated Lifespan",
+            "lifespanValue": "5 Years",
+            "contractDuration": "Contract Duration",
+            "contractDurationValue": "3 Years"
+        },
+        "premium": {
+            "title": "Premium",
+            "powerRate": "Power rate",
+            "cooling": "Cooling",
+            "coolingValue": "Air System",
+            "location": "Location",
+            "locationValue": "Dubai",
+            "energy": "Energy",
+            "energyValue": "Mix",
+            "hashShare": "Hash-Share",
+            "hashShareValue": "Lorem Ipsum",
+            "lifespan": "Estimated Lifespan",
+            "lifespanValue": "5 Years",
+            "contractDuration": "Contract Duration",
+            "contractDurationValue": "3 Years"
+        },
+        "hydro": {
+            "title": "Hydro",
+            "powerRate": "Power rate",
+            "cooling": "Cooling",
+            "coolingValue": "Air System",
+            "location": "Location",
+            "locationValue": "Dubai",
+            "energy": "Energy",
+            "energyValue": "Mix",
+            "hashShare": "Hash-Share",
+            "hashShareValue": "Lorem Ipsum",
+            "lifespan": "Estimated Lifespan",
+            "lifespanValue": "5 Years",
+            "contractDuration": "Contract Duration",
+            "contractDurationValue": "3 Years"
+        }
+    }
 }

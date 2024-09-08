@@ -43,5 +43,58 @@
     "faq": "Preguntas Frecuentes",
     "privacyPolicy": "Política de Privacidad",
     "socialMedia": "Redes Sociales",
-    "copyright": "© 2024 Hosting Containers - Minería de Bitcoin en Dubái | Todos los derechos reservados."
+    "copyright": "© 2024 Hosting Containers - Minería de Bitcoin en Dubái | Todos los derechos reservados.",
+    "hosting1": {
+        "title": "Elige tu plan de alojamiento",
+        "description": "Desbloquea soluciones óptimas para el alojamiento de minería de criptomonedas.",
+        "getStarted": "Comenzar",
+        "standard": {
+            "title": "Estándar",
+            "powerRate": "Tarifa de potencia",
+            "cooling": "Enfriamiento",
+            "coolingValue": "Sistema de aire",
+            "location": "Ubicación",
+            "locationValue": "Dubái",
+            "energy": "Energía",
+            "energyValue": "Mezcla",
+            "hashShare": "Participación en hash",
+            "hashShareValue": "Lorem Ipsum",
+            "lifespan": "Vida útil estimada",
+            "lifespanValue": "5 años",
+            "contractDuration": "Duración del contrato",
+            "contractDurationValue": "3 años"
+        },
+        "premium": {
+            "title": "Premium",
+            "powerRate": "Tarifa de potencia",
+            "cooling": "Enfriamiento",
+            "coolingValue": "Sistema de aire",
+            "location": "Ubicación",
+            "locationValue": "Dubái",
+            "energy": "Energía",
+            "energyValue": "Mezcla",
+            "hashShare": "Participación en hash",
+            "hashShareValue": "Lorem Ipsum",
+            "lifespan": "Vida útil estimada",
+            "lifespanValue": "5 años",
+            "contractDuration": "Duración del contrato",
+            "contractDurationValue": "3 años"
+        },
+        "hydro": {
+            "title": "Hidráulico",
+            "powerRate": "Tarifa de potencia",
+            "cooling": "Enfriamiento",
+            "coolingValue": "Sistema de aire",
+            "location": "Ubicación",
+            "locationValue": "Dubái",
+            "energy": "Energía",
+            "energyValue": "Mezcla",
+            "hashShare": "Participación en hash",
+            "hashShareValue": "Lorem Ipsum",
+            "lifespan": "Vida útil estimada",
+            "lifespanValue": "5 años",
+            "contractDuration": "Duración del contrato",
+            "contractDurationValue": "3 años"
+        }
+    }
 }
