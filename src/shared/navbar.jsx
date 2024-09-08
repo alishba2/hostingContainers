@@ -119,10 +119,10 @@ const Navbar = () => {
                 {platformshow && (
                   <div className="platform-main-outer">
                     <div className="platform-hover-container d-flex flex-column">
-                      <NavLink to="/platform">
+                      <NavLink to="/products">
                         <div className="platform-items d-flex space-between">
                           <div className="left d-flex v-center">
-                            <h6>{t('platform_overview')}</h6>
+                            <h6>{t('Miners')}</h6>
                           </div>
                         </div>
                       </NavLink>

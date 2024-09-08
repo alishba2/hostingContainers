@@ -4,6 +4,7 @@ import Aboutus from "./pages/aboutus";
 import Navbar from "./shared/navbar";
 import './i18n';
 import Hosting from "./pages/hosting";
+import ProductListing from "./pages/productListing";
 function App() {
   return (
     <>
@@ -12,6 +13,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<Aboutus />} />
         <Route path="/hosting" element={<Hosting />} />
+        <Route path="/products" element={<ProductListing />} />
       </Routes>
     </>
   );
