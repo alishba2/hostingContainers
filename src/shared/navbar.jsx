@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Icon } from "@iconify/react";
 import { Button, Drawer } from "antd";
 import { NavLink, useNavigate, useLocation } from "react-router-dom";
-import logo from "../assets/logo.png";
-import { useTranslation } from 'react-i18next';
+import logo from "../assets/logo.jpeg";
+import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
   const { t, i18n } = useTranslation();
@@ -81,14 +81,14 @@ const Navbar = () => {
         <div className="navbar-inner-section">
           <div className="logo-container">
             <NavLink className="navbar-brand" to="/">
-              <img src={logo} alt={t('logo_alt')} />
+              <img src={logo} alt={t("logo_alt")} />
             </NavLink>
           </div>
           <div className="menu-container">
             <ul>
               <li>
                 <NavLink exact to="/" activeClassName="active">
-                  {t('home')}
+                  {t("home")}
                 </NavLink>
               </li>
 
@@ -98,17 +98,18 @@ const Navbar = () => {
                 onMouseLeave={handleplatformClose}
               >
                 <li
-                  className={`li-platform cursor-pointer ${platformshow ||
+                  className={`li-platform cursor-pointer ${
+                    platformshow ||
                     location.pathname === "/platform" ||
                     location.pathname === "/work" ||
                     location.pathname === "/choose-us" ||
                     location.pathname === "/integrations"
-                    ? "activeClass"
-                    : ""
-                    }`}
+                      ? "activeClass"
+                      : ""
+                  }`}
                 >
                   <a className="v-center gap-1">
-                    {t('products')}
+                    {t("products")}
                     <Icon
                       color="#FFF"
                       icon="mingcute:down-fill"
@@ -122,28 +123,28 @@ const Navbar = () => {
                       <NavLink to="/products">
                         <div className="platform-items d-flex space-between">
                           <div className="left d-flex v-center">
-                            <h6>{t('Miners')}</h6>
+                            <h6>{t("Miners")}</h6>
                           </div>
                         </div>
                       </NavLink>
                       <NavLink to="/work">
                         <div className="platform-items d-flex space-between">
                           <div className="left d-flex v-center">
-                            <h6>{t('how_it_works')}</h6>
+                            <h6>{t("how_it_works")}</h6>
                           </div>
                         </div>
                       </NavLink>
                       <NavLink to="/choose-us">
                         <div className="platform-items d-flex space-between">
                           <div className="left d-flex v-center">
-                            <h6>{t('why_choose_us')}</h6>
+                            <h6>{t("why_choose_us")}</h6>
                           </div>
                         </div>
                       </NavLink>
                       <NavLink to="/integrations">
                         <div className="platform-items d-flex space-between">
                           <div className="left d-flex v-center">
-                            <h6>{t('integration')}</h6>
+                            <h6>{t("integration")}</h6>
                           </div>
                         </div>
                       </NavLink>
@@ -154,22 +155,22 @@ const Navbar = () => {
 
               <li>
                 <NavLink to="/hosting" activeClassName="active">
-                  {t('hosting')}
+                  {t("hosting")}
                 </NavLink>
               </li>
               <li>
                 <NavLink to="/about-us" activeClassName="active">
-                  {t('about_us')}
+                  {t("about_us")}
                 </NavLink>
               </li>
               <li>
                 <NavLink to="/blogs" activeClassName="active">
-                  {t('blogs')}
+                  {t("blogs")}
                 </NavLink>
               </li>
               <li>
                 <NavLink to="/gallery" activeClassName="active">
-                  {t('gallery')}
+                  {t("gallery")}
                 </NavLink>
               </li>
             </ul>
@@ -177,7 +178,9 @@ const Navbar = () => {
           <div className="v-center gap-2">
             <NavLink to="/demo">
               <div className="navbarbtn-container">
-                <button onClick={() => navigate("/demo")}>{t('sign_in')}</button>
+                <button onClick={() => navigate("/demo")}>
+                  {t("sign_in")}
+                </button>
               </div>
             </NavLink>
             <div
@@ -186,9 +189,13 @@ const Navbar = () => {
               onMouseLeave={handlelanguagesClose}
             >
               <button className="dropdown-button v-center gap-2">
-                {i18n.language === 'en' ? 'English' :
-                  i18n.language === 'ru' ? 'Русский' :
-                    i18n.language === 'es' ? 'Español' : '中文'}
+                {i18n.language === "en"
+                  ? "English"
+                  : i18n.language === "ru"
+                  ? "Русский"
+                  : i18n.language === "es"
+                  ? "Español"
+                  : "中文"}
                 <Icon
                   color="#FFF"
                   icon="mingcute:down-fill"
@@ -198,22 +205,34 @@ const Navbar = () => {
               {languagesshow && (
                 <div className="languages-main-outer">
                   <div className="platform-hover-container d-flex flex-column">
-                    <div onClick={() => i18n.changeLanguage('en')} className="platform-items d-flex space-between">
+                    <div
+                      onClick={() => i18n.changeLanguage("en")}
+                      className="platform-items d-flex space-between"
+                    >
                       <div className="left d-flex v-center">
                         <h6>English</h6>
                       </div>
                     </div>
-                    <div onClick={() => i18n.changeLanguage('ru')} className="platform-items d-flex space-between">
+                    <div
+                      onClick={() => i18n.changeLanguage("ru")}
+                      className="platform-items d-flex space-between"
+                    >
                       <div className="left d-flex v-center">
                         <h6>Русский</h6>
                       </div>
                     </div>
-                    <div onClick={() => i18n.changeLanguage('es')} className="platform-items d-flex space-between">
+                    <div
+                      onClick={() => i18n.changeLanguage("es")}
+                      className="platform-items d-flex space-between"
+                    >
                       <div className="left d-flex v-center">
                         <h6>Español</h6>
                       </div>
                     </div>
-                    <div onClick={() => i18n.changeLanguage('zh')} className="platform-items d-flex space-between">
+                    <div
+                      onClick={() => i18n.changeLanguage("zh")}
+                      className="platform-items d-flex space-between"
+                    >
                       <div className="left d-flex v-center">
                         <h6>中文</h6>
                       </div>
@@ -228,7 +247,7 @@ const Navbar = () => {
 
       <div className="mobile-navbar">
         <NavLink to="/">
-          <img src={logo} alt={t('logo_alt')} className="mobileLogo" />
+          <img src={logo} alt={t("logo_alt")} className="mobileLogo" />
         </NavLink>
         <Button
           onClick={showDrawer}
@@ -253,7 +272,7 @@ const Navbar = () => {
           width="80%"
           className="mobile-menu-drawer"
         >
-          <img src={logo} alt={t('logo_alt')} className="logostyle" />
+          <img src={logo} alt={t("logo_alt")} className="logostyle" />
 
           <ul className="mt-5">
             <li>
@@ -263,13 +282,19 @@ const Navbar = () => {
                 activeClassName="active"
                 onClick={() => setOpen(false)}
               >
-                {t('home')}
+                {t("home")}
               </NavLink>
             </li>
 
-            <li className={` ${location.pathname === "/fabicare" || location.pathname === "/u" ? "activeClass" : ""}`}>
+            <li
+              className={` ${
+                location.pathname === "/fabicare" || location.pathname === "/u"
+                  ? "activeClass"
+                  : ""
+              }`}
+            >
               <a onClick={handlesolutionSubmenu} className="v-center mt-3">
-                {t('solutions')}
+                {t("solutions")}
                 <Icon
                   icon="mingcute:down-line"
                   color="#4B2E83"
@@ -290,8 +315,11 @@ const Navbar = () => {
                       activeClassName="active"
                       onClick={() => setOpen(false)}
                     >
-                      <img src="../../../assets/images/drycleanIcon.svg" alt={t('dry_cleaning')} />
-                      {t('dry_cleaning')}
+                      <img
+                        src="../../../assets/images/drycleanIcon.svg"
+                        alt={t("dry_cleaning")}
+                      />
+                      {t("dry_cleaning")}
                     </NavLink>
                   </li>
                   <li>
@@ -302,8 +330,11 @@ const Navbar = () => {
                       activeClassName="active"
                       onClick={() => setOpen(false)}
                     >
-                      <img src="../../../assets/images/lifeInsIcon.svg" alt={t('life_insurance')} />
-                      {t('life_insurance')}
+                      <img
+                        src="../../../assets/images/lifeInsIcon.svg"
+                        alt={t("life_insurance")}
+                      />
+                      {t("life_insurance")}
                     </NavLink>
                   </li>
                   <li>
@@ -314,8 +345,11 @@ const Navbar = () => {
                       activeClassName="active"
                       onClick={() => setOpen(false)}
                     >
-                      <img src="../../../assets/images/automobileIcon.svg" alt={t('auto_mobile')} />
-                      {t('auto_mobile')}
+                      <img
+                        src="../../../assets/images/automobileIcon.svg"
+                        alt={t("auto_mobile")}
+                      />
+                      {t("auto_mobile")}
                     </NavLink>
                   </li>
                   <li>
@@ -326,8 +360,11 @@ const Navbar = () => {
                       activeClassName="active"
                       onClick={() => setOpen(false)}
                     >
-                      <img src="../../../assets/images/educationIcon.svg" alt={t('education')} />
-                      {t('education')}
+                      <img
+                        src="../../../assets/images/educationIcon.svg"
+                        alt={t("education")}
+                      />
+                      {t("education")}
                     </NavLink>
                   </li>
                   <li>
@@ -338,8 +375,11 @@ const Navbar = () => {
                       activeClassName="active"
                       onClick={() => setOpen(false)}
                     >
-                      <img src="../../../assets/images/transportIcon.svg" alt={t('transportation')} />
-                      {t('transportation')}
+                      <img
+                        src="../../../assets/images/transportIcon.svg"
+                        alt={t("transportation")}
+                      />
+                      {t("transportation")}
                     </NavLink>
                   </li>
                 </ul>
@@ -352,19 +392,18 @@ const Navbar = () => {
                 activeClassName="active"
                 onClick={() => setOpen(false)}
               >
-                {t('pricing')}
+                {t("pricing")}
               </NavLink>
             </li>
           </ul>
 
           <NavLink to="/demo">
-            <button className="signupBtn">{t('demo')}</button>
+            <button className="signupBtn">{t("demo")}</button>
           </NavLink>
         </Drawer>
       </div>
     </>
   );
 };
-
 
 export default Navbar;

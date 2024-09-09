@@ -1,0 +1,92 @@
+.slider-container {
+  max-width: 100%;
+  padding: 40px;
+
+  .slick-slide {
+    padding: 0 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .product-card {
+    background-color: #4b2e83;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+
+    h3 {
+      font-size: 1rem;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .product-info {
+      display: flex;
+      justify-content: space-between;
+
+      p {
+        font-size: 1rem;
+        color: #ddd;
+        margin: 0;
+
+        &.out-of-stock {
+          color: #dc3545 !important; // Out-of-stock color
+        }
+
+        &.power {
+          color: #28a745; // In-stock color
+        }
+      }
+    }
+  }
+
+  // Slick Carousel Customization
+  .slick-prev,
+  .slick-next {
+    color: #fff;
+    background-color: #4b2e83;
+    border-radius: 50%;
+    padding: 5px;
+  }
+
+  .slick-dots {
+    bottom: -30px;
+
+    li button:before {
+      color: #4b2e83;
+    }
+
+    li.slick-active button:before {
+      color: #28a745;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .product-card {
+      max-width: 150px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .product-card {
+      max-width: 100%;
+    }
+  }
+}
