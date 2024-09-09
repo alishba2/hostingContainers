@@ -3,13 +3,11 @@ import { useNavigate } from "react-router-dom";
 import logo from "../assets/logo.jpeg";
 import { Modal } from "antd";
 import Signup from "./signup";
+import ForgetPswd from "./forgetpswd";
 
-const Login = ({
-  isModalOpen,
-  setIsModalOpen,
-  
-}) => {
+const Login = ({ isModalOpen, setIsModalOpen }) => {
   const [isSignupModal, setisSignupModal] = useState(false);
+  const [isforgetModal, setisforgetModal] = useState(false);
 
   const navigate = useNavigate();
   const handleOk = () => {
@@ -20,6 +18,9 @@ const Login = ({
   };
   const onsignupbtnClick = () => {
     setisSignupModal(true);
+  };
+  const onforgetbtnClick = () => {
+    setisforgetModal(true);
   };
   return (
     <>
@@ -36,7 +37,18 @@ const Login = ({
           <h4 className="text-white text-center">Create Your Account</h4>
 
           <input type="email" name="email" placeholder="Email" />
-          <input type="password" name="password" placeholder="Password" />
+          <div className="w-100 v-center flex-column">
+            <input type="password" name="password" placeholder="Password" />
+            <p
+              className="text-white paraSmall cursor-pointer"
+              onClick={() => {
+                onforgetbtnClick();
+                handleOk();
+              }}
+            >
+              Forget password?
+            </p>
+          </div>
 
           <button className="send-request-btn"> Login</button>
           <p className="text-center text-white paraMedium mt-2">
@@ -56,6 +68,10 @@ const Login = ({
       <Signup
         isSignupModal={isSignupModal}
         setisSignupModal={setisSignupModal}
+      />
+      <ForgetPswd
+        isforgetModal={isforgetModal}
+        setisforgetModal={setisforgetModal}
       />
     </>
   );
