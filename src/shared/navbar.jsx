@@ -4,8 +4,11 @@ import { Button, Drawer } from "antd";
 import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import logo from "../assets/logo.jpeg";
 import { useTranslation } from "react-i18next";
+import Signup from "../Modals/signup";
+import Login from "../Modals/login";
 
 const Navbar = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const { t, i18n } = useTranslation();
   const [platformshow, setplatformshow] = useState(false);
   const [languagesshow, setlanguagesshow] = useState(false);
@@ -22,7 +25,9 @@ const Navbar = () => {
   const handleplatformShow = () => {
     setplatformshow(true);
   };
-
+  const onsigninbtnClick = () => {
+    setIsModalOpen(true);
+  };
   const handleplatformClose = () => {
     setplatformshow(false);
   };
@@ -176,13 +181,10 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="v-center gap-2">
-            <NavLink to="/demo">
-              <div className="navbarbtn-container">
-                <button onClick={() => navigate("/demo")}>
-                  {t("sign_in")}
-                </button>
-              </div>
-            </NavLink>
+            <div className="navbarbtn-container">
+              <button onClick={onsigninbtnClick}>{t("sign_in")}</button>
+            </div>
+
             <div
               className="navbarbtn-container"
               onMouseEnter={handlelanguageShow}
@@ -397,11 +399,11 @@ const Navbar = () => {
             </li>
           </ul>
 
-          <NavLink to="/demo">
-            <button className="signupBtn">{t("demo")}</button>
-          </NavLink>
+          <button onClick={onsigninbtnClick}>{t("sign_in")}</button>
         </Drawer>
       </div>
+
+      <Login isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
     </>
   );
 };

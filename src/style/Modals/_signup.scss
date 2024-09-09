@@ -1,0 +1,68 @@
+.ant-modal-footer {
+  display: none;
+}
+.ant-modal-close {
+  color: #fff !important;
+  &:hover {
+    background: transparent !important;
+  }
+}
+.ant-modal-content {
+  border-radius: 12px !important;
+  border: 2px solid #4b2e83 !important;
+  background: #000000 !important;
+}
+.account-modal {
+  .modal-content {
+    padding: 0px 20px 20px 20px;
+    .logo {
+      width: 210px;
+      height: 70px;
+      margin-bottom: 30px;
+    }
+    h4 {
+      text-shadow: 2px 2px 2px #4b2e83, 2px 2px 2px #4b2e83, 2px 2px 2px #4b2e83,
+        2px 2px 2px #4b2e83;
+      margin-bottom: 10px;
+    }
+
+    input {
+      width: 90%;
+      border-radius: 10px;
+      border: 1px solid var(--Gray-3, #828282);
+      background: #f9f9f9;
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: 2px solid #4b2e83;
+    }
+
+    .send-request-btn {
+      width: 90%;
+      border-radius: 24px;
+      background: var(--primary-light, #4b2e83);
+      padding: 12px 20px;
+      margin-top: 20px;
+      color: var(--white, #fff);
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+    p {
+      span {
+        font-weight: 600;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 900px) {
+  .account-modal {
+    width: 70% !important;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .account-modal {
+    width: 90% !important;
+  }
+}
