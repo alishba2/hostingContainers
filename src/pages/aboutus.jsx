@@ -7,6 +7,7 @@ import {
   FaInstagram,
 } from "react-icons/fa"; // Social icons
 import "../../src/style/pages/_about.scss";
+import videoSrc from "../assets/blockchainn2.mp4"; // Add your background video here
 import img1 from "../assets/team4.png";
 import img2 from "../assets/team2.png";
 import img3 from "../assets/team3.png";
@@ -47,7 +48,6 @@ export default function AboutUs() {
                 <h5 className="team-name">{member.name}</h5>
                 <p className="team-role">{member.role}</p>
               </div>
-              {/* Hover overlay for social links */}
               <div className="team-overlay">
                 <a href="#">
                   <FaFacebookF />

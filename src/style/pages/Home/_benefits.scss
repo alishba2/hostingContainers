@@ -9,10 +9,12 @@
   .container {
     max-width: 1050px;
     margin: 0 auto;
+
     h2 {
       text-shadow: 4px 4px 4px #4b2e83, 4px 4px 4px #4b2e83, 4px 4px 4px #4b2e83,
         4px 4px 4px #4b2e83;
     }
+
     .row {
       display: flex;
       flex-wrap: wrap;
@@ -35,6 +37,7 @@
         background-color: #4b2e83;
         transform: translateY(-5px);
         box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+
         .icon {
           color: white;
         }
@@ -43,6 +46,9 @@
       h3 {
         color: white;
         margin-bottom: 15px;
+        font-size: 30px;
+        padding: 0;
+        line-height: 1.7;
       }
 
       p {
@@ -58,6 +64,7 @@
     }
   }
 }
+
 @media only screen and (max-width: 900px) {
   .service-container {
     .container {
@@ -73,8 +80,8 @@
         width: 100%;
         max-width: 400px;
         margin: 0px;
-        h3 {
-        }
+
+        h3 {}
 
         p {
           font-size: 14px;
@@ -87,6 +94,7 @@
     }
   }
 }
+
 @media only screen and (max-width: 700px) {
   .service-container {
     h2 {
@@ -94,10 +102,12 @@
       line-height: 40px;
       margin-bottom: 10px;
     }
+
     .container {
       .row {
         grid-template-columns: repeat(1, 1fr);
       }
+
       .service-card {
         max-width: 100%;
       }

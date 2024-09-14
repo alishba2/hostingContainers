@@ -7,7 +7,7 @@ const Contactus = () => {
   return (
     <>
       <div className="requestDemo-main-container">
-        <div className="requestDemo-flex-box-right">
+        <div className="requestDemo-flex-box-right content">
           <h2 className="text-white text-center mb-3">Contact Us</h2>
           <div className="requestDemo-twoInputbox">
             <input type="text" name="fname" placeholder="First Name*" />
