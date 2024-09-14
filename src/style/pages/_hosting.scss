@@ -1,118 +1,119 @@
 .hosting-container {
-  padding-top: 50px;
-  padding-bottom: 30px;
-  text-align: center;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    text-align: center;
 
-  color: white;
+    color: white;
 
-  h1 {
-    font-size: 2rem; // Reduced font size
-    margin-bottom: 10px;
-    color: #ffffff;
-  }
-
-  p {
-    margin-bottom: 30px;
-    color: #d3d3d3;
-    font-size: 1rem; // Reduced font size
-  }
-
-  .hosting-plans {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-
-    .plan {
-      background: var(--primary-dark, #4b2e83);
-      color: white;
-      padding: 20px;
-      border-radius: 10px;
-      width: 300px; // Equal size for all cards
-      text-align: left;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      transition: transform 0.3s ease;
-      border: 2px solid transparent;
-
-      &:hover {
-        transform: scale(1.05);
-      }
-
-      .plan-icon {
-        font-size: 2rem; // Reduced icon size
+    h1 {
+        font-size: 2rem; // Reduced font size
         margin-bottom: 10px;
-        color: #3a86ff;
-      }
+        color: #ffffff;
+    }
 
-      h2 {
-        font-size: 1.5rem; // Reduced font size
-        margin-bottom: 7px;
-        color: #fff;
-        text-align: start;
-      }
+    p {
+        margin-bottom: 30px;
+        color: #d3d3d3;
+        font-size: 1rem; // Reduced font size
+    }
 
-      ul {
-        list-style: none;
-        padding: 0;
-        margin: 0 0 20px;
-        width: 100%;
+    .hosting-plans {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+        margin-bottom: 5em;
 
-        li {
-          display: flex;
-          justify-content: space-between;
-          margin: 10px 0;
-          font-size: 0.9rem; // Reduced font size
+        .plan {
+            background: var(--primary-dark, #4b2e83);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px; // Equal size for all cards
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.3s ease;
+            border: 2px solid transparent;
 
-          strong {
-            color: #b8b8b8;
-          }
+            &:hover {
+                transform: scale(1.05);
+            }
 
-          span {
-            text-align: right;
-          }
+            .plan-icon {
+                font-size: 2rem; // Reduced icon size
+                margin-bottom: 10px;
+                color: #3a86ff;
+            }
+
+            h2 {
+                font-size: 1.5rem; // Reduced font size
+                margin-bottom: 7px;
+                color: #fff;
+                text-align: start;
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0 0 20px;
+                width: 100%;
+
+                li {
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 10px 0;
+                    font-size: 0.9rem; // Reduced font size
+
+                    strong {
+                        color: #b8b8b8;
+                    }
+
+                    span {
+                        text-align: right;
+                    }
+                }
+            }
         }
-      }
+
+        // Highlight for the Premium card
+        .plan-highlight {
+            background: var(--primary-dark, #4b2e83);
+            border-color: #a890d3;
+            box-shadow: 0 0 15px var(--primary-dark, #a890d3); // Shadow color set to the background color
+            transform: scale(1.05);
+        }
+
+        .plan-highlight .get-started-btn {
+            background-color: #a890d3 !important;
+            border: 1px solid #a890d3;
+        }
+
+        .get-started-btn {
+            background-color: transparent;
+            border: 1px solid white;
+            color: white;
+            padding: 9px 22px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            border-radius: 50px;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+            // Add this line to prevent flex from shrinking or growing the button
+            flex: 0 0 auto;
+
+            // Add this line to center the button and control its width
+            max-width: 200px; // Adjust the width as needed
+            margin: 0 auto; // This centers the button horizontally
+        }
+
+        .get-started-btn:hover {
+            background-color: white;
+            border: 1px solid white;
+            box-shadow: 0 5px 15px #9f78e9;
+            color: #4b2e83;
+        }
     }
-
-    // Highlight for the Premium card
-    .plan-highlight {
-      background: var(--primary-dark, #4b2e83);
-      border-color: #a890d3;
-      box-shadow: 0 0 15px var(--primary-dark, #a890d3); // Shadow color set to the background color
-      transform: scale(1.05);
-    }
-
-    .plan-highlight .get-started-btn {
-      background-color: #a890d3 !important;
-      border: 1px solid #a890d3;
-    }
-
-    .get-started-btn {
-      background-color: transparent;
-      border: 1px solid white;
-      color: white;
-      padding: 9px 22px;
-      font-size: 0.8rem;
-      cursor: pointer;
-      border-radius: 50px;
-      text-transform: uppercase;
-      transition: background-color 0.3s ease, box-shadow 0.3s ease;
-
-      // Add this line to prevent flex from shrinking or growing the button
-      flex: 0 0 auto;
-
-      // Add this line to center the button and control its width
-      max-width: 200px; // Adjust the width as needed
-      margin: 0 auto; // This centers the button horizontally
-    }
-
-    .get-started-btn:hover {
-      background-color: white;
-      border: 1px solid white;
-      box-shadow: 0 5px 15px #9f78e9;
-      color: #4b2e83;
-    }
-  }
 }

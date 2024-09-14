@@ -12,69 +12,42 @@ export default function Benefits() {
   return (
     <div className="service-container">
       <div className="container">
-        <h2>We Shape The Perfect Solutions</h2>
+        <h2>Optimizing Your Crypto Mining Potential</h2>
         <p>
-          A small river named Duden flows by their place and supplies it with
-          the necessary regelialia.
+          Unlock the full power of cryptocurrency mining with our tailored solutions, designed to meet the demands of both novice and expert miners.
         </p>
 
         <div className="row">
           <div className="service-card active">
             <div className="icon">
-              <FaPaintBrush />
+              {/* <FaPaintBrush /> */}
             </div>
-            <h3>MINING SOLUTIONS</h3>
+            <h3>Cryptocurrency Miners</h3>
             <p>
-              Want to mine crypto but dont have the space? Explore our mining
-              solutions.
+              Want to mine crypto but lack the infrastructure? Explore our top-of-the-line miners, offering unparalleled performance for your mining operations.
             </p>
           </div>
 
           <div className="service-card">
             <div className="icon">
-              <FaCode />
+              {/* <FaCode />/ */}
             </div>
-            <h3>Miners</h3>
-            <p>Browse more miners</p>
-          </div>
-
-          <div className="service-card">
-            <div className="icon">
-              <FaLaptopCode />
-            </div>
-            <h3>HYDRO MINERS</h3>
-            <p>Browse Hydro Miners</p>
-          </div>
-
-          <div className="service-card">
-            <div className="icon">
-              <FaChartLine />
-            </div>
-            <h3>ACCESSORIES</h3>
-            <p>Browse more accessories</p>
-          </div>
-
-          <div className="service-card">
-            <div className="icon">
-              <FaPencilAlt />
-            </div>
-            <h3>Digital Products</h3>
+            <h3>Mining Containers</h3>
             <p>
-              We design and develop digital products that meet both your needs
-              and your customers' expectations.
+              Portable, scalable, and efficient—our mining containers allow you to expand operations without the need for additional space.
             </p>
           </div>
 
           <div className="service-card">
             <div className="icon">
-              <FaMobileAlt />
+              {/* <FaLaptopCode /> */}
             </div>
-            <h3>UX/UI Design</h3>
+            <h3>Mining Chips & Hardware</h3>
             <p>
-              Our designs are user-centric, ensuring intuitive interfaces that
-              enhance user engagement.
+              Equip your rigs with the latest mining chips and hardware, optimized for maximum hash rates and energy efficiency.
             </p>
           </div>
+
         </div>
       </div>
     </div>

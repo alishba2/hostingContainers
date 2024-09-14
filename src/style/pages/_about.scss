@@ -1,11 +1,10 @@
-/* Container for the About Us page */
 .about-us-container {
-  margin-top: 2rem;
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  // padding: 0 20px;
-  /* Padding for responsiveness */
+
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    // padding: 0 20px;
+    /* Padding for responsiveness */
 }
 
 /* Styling for the background image */
@@ -24,203 +23,203 @@
 
 /* Black overlay with reduced opacity */
 .background-image::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  /* Black background with 50% opacity */
-  z-index: 1;
-  /* Place overlay behind text */
-}
-
-/* Overlay text styling */
-.text-overlay {
-  position: relative;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  border-radius: 8px;
-  z-index: 2;
-  /* Place text above the overlay */
-  text-transform: uppercase;
-  word-spacing: 7px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
-
-/* Styling for the heading */
-.text-overlay h4 {
-  margin: 0;
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-.mission-bg {
-  position: relative;
-  background-image: url("../../assets/aboutus.jpg");
-  /* Path to your background image */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 500px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  &::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    /* Black color with 50% opacity */
-    z-index: 0;
-    /* Ensure the overlay is behind the content */
-  }
-
-  /* Styling for the mission statement card */
-  .missionStatement {
-    position: relative;
+    background: rgba(2, 2, 2, 0.5);
+    /* Black background with 50% opacity */
     z-index: 1;
-    // margin-top: 1rem;
+    /* Place overlay behind text */
+}
+
+/* Overlay text styling */
+.text-overlay {
+    position: relative;
+    color: white;
+    text-align: center;
     padding: 20px;
-    // background-color: black;
-    border: 1px solid white;
-    /* Light background color for the card */
-    border-radius: 12px;
-    /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow for depth */
-    max-width: 800px;
-    /* Max width for responsiveness */
-    margin-left: auto;
-    margin-right: auto;
-    /* Center the card horizontally */
-  }
+    border-radius: 8px;
+    z-index: 2;
+    /* Place text above the overlay */
+    text-transform: uppercase;
+    word-spacing: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
 
-  .missionStatement h3 {
-    margin-top: 0;
-    /* Dark color for the heading */
-    font-size: 1.8rem;
-    /* Adjust font size as needed */
-  }
+/* Styling for the heading */
+.text-overlay h4 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+}
 
-  .missionStatement p {
-    /* Gray color for the text */
-    line-height: 1.6;
-    /* Increase line-height for readability */
-    font-size: 1rem;
-    /* Adjust font size as needed */
-  }
+.mission-bg {
+    position: relative;
+    background-image: url("../../assets/bannerImg1.jpg");
+    /* Path to your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        /* Black color with 50% opacity */
+        z-index: 0;
+        /* Ensure the overlay is behind the content */
+    }
+
+    /* Styling for the mission statement card */
+    .missionStatement {
+        position: relative;
+        z-index: 1;
+        // margin-top: 1rem;
+        padding: 20px;
+        // background-color: black;
+        border: 1px solid white;
+        /* Light background color for the card */
+        border-radius: 12px;
+        /* Rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        /* Subtle shadow for depth */
+        max-width: 800px;
+        /* Max width for responsiveness */
+        margin-left: auto;
+        margin-right: auto;
+        /* Center the card horizontally */
+    }
+
+    .missionStatement h3 {
+        margin-top: 0;
+        /* Dark color for the heading */
+        font-size: 1.8rem;
+        /* Adjust font size as needed */
+    }
+
+    .missionStatement p {
+        /* Gray color for the text */
+        line-height: 1.6;
+        /* Increase line-height for readability */
+        font-size: 1rem;
+        /* Adjust font size as needed */
+    }
 }
 
 $primary-color: #a890d3;
 $shadow-light: rgba(0, 0, 0, 0.1);
 $shadow-dark: rgba(0, 0, 0, 0.2);
 
-/* Styling for the team section */
+/* Team section */
 .team-section {
-  margin-top: 6rem;
-  text-align: center;
+    margin-top: 6rem;
+    text-align: center;
 }
 
 .team-section h2 {
-  margin-bottom: 2rem;
-  font-size: 2rem;
-  color: white;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: white;
 }
 
 .team-members {
-  padding: 0px 5rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 80px;
+    padding: 0px 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 80px;
 }
 
 .team-card {
-  position: relative;
-  /* Position relative to allow absolute positioning for overlay */
-  background-color: #1c1c1c;
-  border-radius: 12px;
-  overflow: hidden;
-  width: 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
-
-  &:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-
-  .team-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    /* Semi-transparent background */
+    position: relative;
+    /* Position relative to allow absolute positioning for overlay */
+    background-color: #1c1c1c;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 300px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    flex-direction: row;
-    gap: 15px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: 10;
-    /* Make sure it appears above the content */
-  }
-
-  &:hover .team-overlay {
-    opacity: 1;
-    /* Show overlay on hover */
-  }
-
-  .team-info {
-    padding: 10px;
-  }
-
-  .team-name {
-    margin: 10px 0 5px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: white;
-  }
-
-  .team-role {
-    margin: 0;
-    font-size: 0.9rem;
-    color: white;
-  }
-
-  .team-image {
-    width: 100%;
-    height: 320px;
-    object-fit: cover;
-  }
-
-  .team-overlay a {
-    color: #a890d3;
-    /* Primary color for the social links */
-    font-size: 1.5rem;
-    transition: color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
 
     &:hover {
-      color: #fff;
-      /* White color on hover */
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
-  }
+
+    .team-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        /* Semi-transparent background */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 15px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 10;
+        /* Make sure it appears above the content */
+    }
+
+    &:hover .team-overlay {
+        opacity: 1;
+        /* Show overlay on hover */
+    }
+
+    .team-info {
+        padding: 10px;
+    }
+
+    .team-name {
+        margin: 10px 0 5px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: white;
+    }
+
+    .team-role {
+        margin: 0;
+        font-size: 0.9rem;
+        color: white;
+    }
+
+    .team-image {
+        width: 100%;
+        height: 320px;
+        object-fit: cover;
+    }
+
+    .team-overlay a {
+        color: #a890d3;
+        /* Primary color for the social links */
+        font-size: 1.5rem;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: #fff;
+            /* White color on hover */
+        }
+    }
 }
