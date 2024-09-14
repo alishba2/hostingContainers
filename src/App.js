@@ -8,6 +8,7 @@ import Hosting from "./pages/hosting";
 import ProductListing from "./pages/productListing";
 import Admin from "./pages/admin";
 import CryptoAtmLocator from "./pages/map";
+import TrackOrders from "./pages/trackOrders";
 function App() {
   return (
     <>
@@ -19,6 +20,7 @@ function App() {
         <Route path="/products" element={<ProductListing />} />
         <Route path="/admin" element={<Admin />} />
         <Route path="/map" element={<CryptoAtmLocator />} />
+        <Route path="/track-orders" element={<TrackOrders />} />
       </Routes>
       <Footer />
     </>

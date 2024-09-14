@@ -96,5 +96,7 @@
             "contractDuration": "Contract Duration",
             "contractDurationValue": "3 Years"
         }
-    }
+    },
+    "track_orders": "Track Orders",
+    "logout": "Logout"
 }

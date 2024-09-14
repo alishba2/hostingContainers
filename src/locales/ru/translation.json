@@ -96,5 +96,7 @@
             "contractDuration": "Срок контракта",
             "contractDurationValue": "3 года"
         }
-    }
+    },
+    "track_orders": "Отслеживать заказы",
+    "logout": "Выйти"
 }

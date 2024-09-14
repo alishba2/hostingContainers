@@ -96,5 +96,7 @@
             "contractDuration": "合同期限",
             "contractDurationValue": "3年"
         }
-    }
+    },
+    "track_orders": "跟踪订单",
+    "logout": "注销"
 }
