@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { Icon } from "@iconify/react";
-import { Button, Drawer } from "antd";
+import { Button, Drawer, Dropdown, Menu } from "antd";
 import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import logo from "../assets/logo.jpeg";
 import { useTranslation } from "react-i18next";
 import Login from "../Modals/login";
+import { isLoggedIn, getCurrentUserData, logout } from "../firebase/firebase";
+import {
+  FaUser
+} from "react-icons/fa";
 
 const Navbar = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -20,11 +24,23 @@ const Navbar = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const location = useLocation();
   const navigate = useNavigate();
+  const [userData, setUserData] = useState(null);
+
+  useEffect(() => {
+    const checkUserStatus = async () => {
+      if (await isLoggedIn()) {
+        const data = await getCurrentUserData();
+        setUserData(data);
+      }
+    };
+    checkUserStatus();
+  }, []);
 
   const handleplatformShow = () => {
     setplatformshow(true);
   };
   const onsigninbtnClick = () => {
+
     setIsModalOpen(true);
   };
   const handleplatformClose = () => {
@@ -79,6 +95,32 @@ const Navbar = () => {
   const handleLanguageChange = (lang) => {
     i18n.changeLanguage(lang);
   };
+
+
+  const handleLogout = async () => {
+    try {
+      await logout();
+      setUserData(null); // Update UI after logout
+      window.location.reload();
+    } catch (error) {
+      console.error('Logout failed', error);
+    }
+  };
+  const menu = (
+    <Menu>
+      <Menu.Item key="0">
+        <NavLink to="/track-orders">{t("track_orders")}</NavLink>
+      </Menu.Item>
+      <Menu.Item key="1" onClick={() => {
+        // Handle logout logic here
+        handleLogout();
+      }}>
+        {t("logout")}
+      </Menu.Item>
+    </Menu>
+  );
+
+
   return (
     <>
       <div className="navbar-container">
@@ -102,15 +144,14 @@ const Navbar = () => {
                 onMouseLeave={handleplatformClose}
               >
                 <li
-                  className={`li-platform cursor-pointer ${
-                    platformshow ||
+                  className={`li-platform cursor-pointer ${platformshow ||
                     location.pathname === "/platform" ||
                     location.pathname === "/work" ||
                     location.pathname === "/choose-us" ||
                     location.pathname === "/integrations"
-                      ? "activeClass"
-                      : ""
-                  }`}
+                    ? "activeClass"
+                    : ""
+                    }`}
                 >
                   <a className="v-center gap-1">
                     {t("products")}
@@ -134,24 +175,24 @@ const Navbar = () => {
                       <NavLink to="/work">
                         <div className="platform-items d-flex space-between">
                           <div className="left d-flex v-center">
-                            <h6>{t("how_it_works")}</h6>
+                            <h6>{t("mining-containers")}</h6>
                           </div>
                         </div>
                       </NavLink>
                       <NavLink to="/choose-us">
                         <div className="platform-items d-flex space-between">
                           <div className="left d-flex v-center">
-                            <h6>{t("why_choose_us")}</h6>
+                            <h6>{t("mining-chips")}</h6>
                           </div>
                         </div>
                       </NavLink>
-                      <NavLink to="/integrations">
+                      {/* <NavLink to="/integrations">
                         <div className="platform-items d-flex space-between">
                           <div className="left d-flex v-center">
                             <h6>{t("integration")}</h6>
                           </div>
                         </div>
-                      </NavLink>
+                      </NavLink> */}
                     </div>
                   </div>
                 )}
@@ -181,7 +222,28 @@ const Navbar = () => {
           </div>
           <div className="v-center gap-2">
             <div className="navbarbtn-container">
-              <button onClick={onsigninbtnClick}>{t("sign_in")}</button>
+              {userData ? (
+                <Dropdown overlay={menu} trigger={['click']}>
+                  <span className="name-container">
+
+
+                    <p>
+                      {userData?.fullName}
+                    </p>
+                    <span className="icon">
+                      <Icon
+                        color="#FFF"
+                        icon="mingcute:down-fill"
+                        className="icon-rotate"
+                      />
+                    </span>
+                  </span>
+
+
+                </Dropdown>
+              ) : (
+                <button onClick={onsigninbtnClick}>{t("sign_in")}</button>
+              )}
             </div>
 
             <div
@@ -193,10 +255,10 @@ const Navbar = () => {
                 {i18n.language === "en"
                   ? "English"
                   : i18n.language === "ru"
-                  ? "Русский"
-                  : i18n.language === "es"
-                  ? "Español"
-                  : "中文"}
+                    ? "Русский"
+                    : i18n.language === "es"
+                      ? "Español"
+                      : "中文"}
                 <Icon
                   color="#FFF"
                   icon="mingcute:down-fill"
@@ -242,6 +304,8 @@ const Navbar = () => {
                 </div>
               )}
             </div>
+
+
           </div>
         </div>
       </div>
@@ -410,7 +474,28 @@ const Navbar = () => {
 
           <div className="d-flex flex-column gap-2">
             <div className="navbarbtn-container">
-              <button onClick={onsigninbtnClick}>{t("sign_in")}</button>
+              {userData ? (
+                <Dropdown overlay={menu} trigger={['click']}>
+                  <span className="name-container">
+
+
+                    <p>
+                      {userData?.fullName}
+                    </p>
+                    <span className="icon">
+                      <Icon
+                        color="#FFF"
+                        icon="mingcute:down-fill"
+                        className="icon-rotate"
+                      />
+                    </span>
+                  </span>
+
+
+                </Dropdown>
+              ) : (
+                <button onClick={onsigninbtnClick}>{t("sign_in")}</button>
+              )}
             </div>
 
             <div
@@ -422,10 +507,10 @@ const Navbar = () => {
                 {i18n.language === "en"
                   ? "English"
                   : i18n.language === "ru"
-                  ? "Русский"
-                  : i18n.language === "es"
-                  ? "Español"
-                  : "中文"}
+                    ? "Русский"
+                    : i18n.language === "es"
+                      ? "Español"
+                      : "中文"}
                 <Icon
                   color="#FFF"
                   icon="mingcute:down-fill"

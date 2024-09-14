@@ -8,7 +8,7 @@ import Contactus from "../components/Home/contactus";
 import Hostingservices from "../components/Home/hostingservices";
 import Workwithus from "../components/Home/workwithus";
 import Demosection from "../components/Home/demosection";
-
+import DubaiVenueLocator from "./map";
 const Home = () => {
   return (
     <>
@@ -19,6 +19,7 @@ const Home = () => {
       <Hostingservices />
       <Demosection />
       <Whychooseus />
+      <DubaiVenueLocator />
       {/* <Workwithus /> */}
       <Contactus />
     </>

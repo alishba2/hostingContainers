@@ -7,7 +7,27 @@
   background-color: black;
   border-bottom: 1px solid #a890d3;
 }
+
 .navbarbtn-container {
+  .name-container {
+    display: flex;
+    font-size: 15px;
+    cursor: pointer;
+    color: white !important;
+
+    .icon {
+      margin-right: 6px;
+
+      margin-left: 3px;
+    }
+
+    p {
+      font-size: 15px !important;
+    }
+
+
+  }
+
   button {
     // width: 175px;
     display: inline-flex;
@@ -25,6 +45,7 @@
     //  text-transform: uppercase;
   }
 }
+
 .navbar-inner-section {
   display: flex;
   justify-content: space-between;
@@ -48,6 +69,7 @@
     ul {
       display: flex;
       color: var(--white);
+
       li {
         position: relative;
         color: var(--white);
@@ -57,17 +79,21 @@
         text-transform: capitalize;
         margin: 0px 30px;
         transition: all 0.3s ease;
+
         &:hover {
           color: var(--primary-light-1, #a890d3);
         }
+
         // height: 30px;
 
         a {
           color: var(--white);
+
           .icon-rotate {
             transform: rotate(0deg);
             transition: all 0.3s ease-in-out;
           }
+
           &:hover {
             color: #a890d3 !important;
           }
@@ -79,6 +105,7 @@
               transition: all 0.3s ease-in-out;
             }
           }
+
           &:hover:after {
             width: 100%;
             opacity: 0.9;
@@ -126,6 +153,7 @@
   max-width: 45%;
   position: absolute;
   left: 30%;
+
   .platform-hover-container {
     color: #fff;
     display: flex !important;
@@ -139,6 +167,7 @@
     overflow: hidden;
     z-index: 99999;
     top: 40px;
+
     .platform-items {
       cursor: pointer;
       width: 219px;
@@ -175,11 +204,13 @@
     }
   }
 }
+
 .languages-main-outer {
   padding-top: 3px;
   position: absolute;
   right: 8%;
   width: fit-content;
+
   // max-width: 100px;
   .platform-hover-container {
     color: #fff;
@@ -194,6 +225,7 @@
     overflow: hidden;
     z-index: 99999;
     top: 40px;
+
     .platform-items {
       cursor: pointer;
       height: 45px;
@@ -229,17 +261,20 @@
     }
   }
 }
+
 .mobile-navbar {
   display: none;
 }
 
 .activeClass {
   color: #a890d3 !important;
+
   .icon-rotate {
     color: #a890d3 !important;
     transform: rotate(180deg);
     transition: all 0.3s ease-in-out;
   }
+
   // &:after {
   //   width: 100%;
   //   content: "";
@@ -287,6 +322,8 @@
       }
 
       .navbarbtn-container {
+        color: white !important;
+
         button {
           width: 153px;
           padding: 13px;
@@ -349,6 +386,7 @@
 }
 
 @media screen and (max-width: 1000px) {
+
   .navbar-container,
   .platform-hover-container {
     display: none;
@@ -388,10 +426,12 @@
     width: auto;
     height: 40px;
   }
+
   .mobile-menu-drawer {
     background: black !important;
     border: 1px solid #4b2e83 !important;
   }
+
   ul {
     li {
       color: white;
@@ -465,10 +505,12 @@
   :where(.css-dev-only-do-not-override-1ae8k9u) a:hover {
     color: #4b2e83;
   }
+
   .languages-main-outer {
     right: 54%;
     // max-width: 100px;
   }
+
   // .ant-drawer-content-wrapper {
   //   width: 388px;
   // }
