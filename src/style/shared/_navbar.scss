@@ -7,7 +7,24 @@
   background-color: black;
   border-bottom: 1px solid #a890d3;
 }
-
+.navbarbtn-container {
+  button {
+    // width: 175px;
+    display: inline-flex;
+    height: 45px;
+    padding: 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 72px;
+    background: var(--primary-dark, #4b2e83);
+    color: #fff;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    //  text-transform: uppercase;
+  }
+}
 .navbar-inner-section {
   display: flex;
   justify-content: space-between;
@@ -102,25 +119,6 @@
       }
     }
   }
-
-  .navbarbtn-container {
-    button {
-      // width: 175px;
-      display: inline-flex;
-      height: 45px;
-      padding: 24px;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-      border-radius: 72px;
-      background: var(--primary-dark, #4b2e83);
-      color: #fff;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 600;
-      //  text-transform: uppercase;
-    }
-  }
 }
 
 .platform-main-outer {
@@ -178,9 +176,9 @@
   }
 }
 .languages-main-outer {
-  padding-top: 7px;
+  padding-top: 3px;
   position: absolute;
-  right: 4%;
+  right: 8%;
   width: fit-content;
   // max-width: 100px;
   .platform-hover-container {
@@ -350,7 +348,7 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   .navbar-container,
   .platform-hover-container {
     display: none;
@@ -358,7 +356,7 @@
 
   .mobile-navbar {
     width: 100%;
-    background: #fff;
+    background: black;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -390,10 +388,13 @@
     width: auto;
     height: 40px;
   }
-
+  .mobile-menu-drawer {
+    background: black !important;
+    border: 1px solid #4b2e83 !important;
+  }
   ul {
     li {
-      color: #000;
+      color: white;
       font-size: 18px;
       font-style: normal;
       font-weight: 400;
@@ -401,12 +402,12 @@
       list-style: none;
 
       a {
-        color: black;
+        color: white;
         text-decoration: none;
 
         &.active {
           font-weight: 700;
-          color: #000000;
+          color: white;
         }
       }
     }
@@ -464,7 +465,10 @@
   :where(.css-dev-only-do-not-override-1ae8k9u) a:hover {
     color: #4b2e83;
   }
-
+  .languages-main-outer {
+    right: 54%;
+    // max-width: 100px;
+  }
   // .ant-drawer-content-wrapper {
   //   width: 388px;
   // }

@@ -4,7 +4,6 @@ import { Button, Drawer } from "antd";
 import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import logo from "../assets/logo.jpeg";
 import { useTranslation } from "react-i18next";
-import Signup from "../Modals/signup";
 import Login from "../Modals/login";
 
 const Navbar = () => {
@@ -255,12 +254,10 @@ const Navbar = () => {
           onClick={showDrawer}
           className="menu-btn"
           type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasExample"
           aria-controls="offcanvasExample"
         >
           <Icon
-            color="black"
+            color="white"
             icon="material-symbols:menu"
             className="menu-btn-icon"
           />
@@ -288,7 +285,7 @@ const Navbar = () => {
               </NavLink>
             </li>
 
-            <li
+            {/* <li
               className={` ${
                 location.pathname === "/fabicare" || location.pathname === "/u"
                   ? "activeClass"
@@ -296,10 +293,10 @@ const Navbar = () => {
               }`}
             >
               <a onClick={handlesolutionSubmenu} className="v-center mt-3">
-                {t("solutions")}
+                {t("Products")}
                 <Icon
                   icon="mingcute:down-line"
-                  color="#4B2E83"
+                  color="white"
                   width="20"
                   height="20"
                   className="ms-2"
@@ -313,14 +310,10 @@ const Navbar = () => {
                     <NavLink
                       className="d-flex gap-2"
                       exact
-                      to="/fabicare"
+                      to="/hosting"
                       activeClassName="active"
                       onClick={() => setOpen(false)}
                     >
-                      <img
-                        src="../../../assets/images/drycleanIcon.svg"
-                        alt={t("dry_cleaning")}
-                      />
                       {t("dry_cleaning")}
                     </NavLink>
                   </li>
@@ -332,10 +325,6 @@ const Navbar = () => {
                       activeClassName="active"
                       onClick={() => setOpen(false)}
                     >
-                      <img
-                        src="../../../assets/images/lifeInsIcon.svg"
-                        alt={t("life_insurance")}
-                      />
                       {t("life_insurance")}
                     </NavLink>
                   </li>
@@ -386,20 +375,115 @@ const Navbar = () => {
                   </li>
                 </ul>
               </>
-            )}
+            )} */}
             <li className="my-3">
               <NavLink
                 exact
-                to="/pricing"
+                to="/products"
                 activeClassName="active"
                 onClick={() => setOpen(false)}
               >
-                {t("pricing")}
+                {t("Products")}
+              </NavLink>
+            </li>
+            <li className="my-3">
+              <NavLink
+                exact
+                to="/hosting"
+                activeClassName="active"
+                onClick={() => setOpen(false)}
+              >
+                {t("Hosting")}
+              </NavLink>
+            </li>
+            <li className="my-3">
+              <NavLink
+                exact
+                to="/about-us"
+                activeClassName="active"
+                onClick={() => setOpen(false)}
+              >
+                {t("About us")}
               </NavLink>
             </li>
           </ul>
 
-          <button onClick={onsigninbtnClick}>{t("sign_in")}</button>
+          <div className="d-flex flex-column gap-2">
+            <div className="navbarbtn-container">
+              <button onClick={onsigninbtnClick}>{t("sign_in")}</button>
+            </div>
+
+            <div
+              className="navbarbtn-container"
+              onMouseEnter={handlelanguageShow}
+              onMouseLeave={handlelanguagesClose}
+            >
+              <button className="dropdown-button v-center gap-2">
+                {i18n.language === "en"
+                  ? "English"
+                  : i18n.language === "ru"
+                  ? "Русский"
+                  : i18n.language === "es"
+                  ? "Español"
+                  : "中文"}
+                <Icon
+                  color="#FFF"
+                  icon="mingcute:down-fill"
+                  className="icon-rotate"
+                />
+              </button>
+              {languagesshow && (
+                <div className="languages-main-outer">
+                  <div className="platform-hover-container d-flex flex-column">
+                    <div
+                      onClick={() => {
+                        i18n.changeLanguage("en");
+                        onClose();
+                      }}
+                      className="platform-items d-flex space-between"
+                    >
+                      <div className="left d-flex v-center">
+                        <h6>English</h6>
+                      </div>
+                    </div>
+                    <div
+                      onClick={() => {
+                        i18n.changeLanguage("ru");
+                        onClose();
+                      }}
+                      className="platform-items d-flex space-between"
+                    >
+                      <div className="left d-flex v-center">
+                        <h6>Русский</h6>
+                      </div>
+                    </div>
+                    <div
+                      onClick={() => {
+                        i18n.changeLanguage("es");
+                        onClose();
+                      }}
+                      className="platform-items d-flex space-between"
+                    >
+                      <div className="left d-flex v-center">
+                        <h6>Español</h6>
+                      </div>
+                    </div>
+                    <div
+                      onClick={() => {
+                        i18n.changeLanguage("zh");
+                        onClose();
+                      }}
+                      className="platform-items d-flex space-between"
+                    >
+                      <div className="left d-flex v-center">
+                        <h6>中文</h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
         </Drawer>
       </div>
 

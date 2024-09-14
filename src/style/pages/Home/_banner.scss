@@ -41,3 +41,46 @@
     }
   }
 }
+@media only screen and (max-width: 1220px) {
+  .banner-main {
+    .banner-inner {
+      .banner-content {
+        max-width: 70%;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 850px) {
+  .banner-main {
+    .banner-inner {
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      .banner-content {
+        max-width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+
+        min-height: fit-content;
+
+        h1 {
+          font-size: 32px;
+        }
+        h1,
+        p,
+        h4 {
+          text-align: center;
+        }
+        h4 {
+          font-size: 22px;
+        }
+        p {
+          font-size: 16px;
+        }
+        button {
+          margin: auto;
+        }
+      }
+    }
+  }
+}

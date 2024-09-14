@@ -99,3 +99,96 @@
     }
   }
 }
+@media only screen and (max-width: 1200px) {
+  .workwithUs-section {
+    width: 90%;
+    .work-content {
+      height: 308px;
+
+      padding-top: 26px;
+      h1 {
+        max-width: 900px;
+        font-size: 42px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+      }
+
+      h5 {
+        max-width: 619px;
+        padding-top: 28px;
+      }
+      .letstalk-anim {
+        top: 72%;
+
+        label {
+          top: 10%;
+
+          font-size: 2rem;
+        }
+      }
+      &:hover,
+      &:focus {
+        h1 {
+        }
+
+        .letstalk-anim {
+          label {
+            top: 33%;
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 850px) {
+  .workwithUs-section {
+    width: 100%;
+    padding-bottom: 0px !important;
+    .work-content {
+      height: 308px;
+
+      padding-top: 26px;
+      h1 {
+        max-width: 900px;
+        width: 100%;
+        font-size: 32px;
+        margin-bottom: 20px;
+        padding-left: 40px;
+        padding-right: 40px;
+        margin-top: 20px;
+      }
+
+      h5 {
+        max-width: 619px;
+        padding-top: 28px;
+      }
+      .letstalk-anim {
+        top: 72%;
+
+        label {
+          top: 10%;
+
+          font-size: 2rem;
+        }
+      }
+      &:hover,
+      &:focus {
+        h1 {
+        }
+
+        .letstalk-anim {
+          label {
+            top: 33%;
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+  .workwithUs-section {
+    display: none;
+  }
+}
