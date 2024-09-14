@@ -13,15 +13,20 @@ const Login = ({ isModalOpen, setIsModalOpen }) => {
   const handleOk = () => {
     setIsModalOpen(false);
   };
+
   const handleCancel = () => {
     setIsModalOpen(false);
   };
+
   const onsignupbtnClick = () => {
-    setisSignupModal(true);
+    setisSignupModal(true);  // Open signup modal
+    setIsModalOpen(false);  // Close login modal
   };
+
   const onforgetbtnClick = () => {
     setisforgetModal(true);
   };
+
   return (
     <>
       <Modal
@@ -34,7 +39,7 @@ const Login = ({ isModalOpen, setIsModalOpen }) => {
       >
         <div className="modal-content v-center flex-column">
           <img src={logo} alt="logo" className="logo" />
-          <h4 className="text-white text-center">Create Your Account</h4>
+          <h4 className="text-white text-center">Login to Your Account</h4>
 
           <input type="email" name="email" placeholder="Email" />
           <div className="w-100 v-center flex-column">
@@ -50,13 +55,12 @@ const Login = ({ isModalOpen, setIsModalOpen }) => {
             </p>
           </div>
 
-          <button className="send-request-btn"> Login</button>
+          <button className="send-request-btn">Login</button>
           <p className="text-center text-white paraMedium mt-2">
             Don't have an account?{" "}
             <span
               onClick={() => {
-                onsignupbtnClick();
-                handleOk();
+                onsignupbtnClick();  // Opens signup modal and closes login modal
               }}
               className="cursor-pointer"
             >
@@ -65,10 +69,9 @@ const Login = ({ isModalOpen, setIsModalOpen }) => {
           </p>
         </div>
       </Modal>
-      <Signup
-        isSignupModal={isSignupModal}
-        setisSignupModal={setisSignupModal}
-      />
+      
+      {/* Signup Modal */}
+      <Signup isSignupModal={isSignupModal} setisSignupModal={setisSignupModal} />
       <ForgetPswd
         isforgetModal={isforgetModal}
         setisforgetModal={setisforgetModal}

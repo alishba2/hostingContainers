@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import product1 from "../assets/product.jpg";
 import product2 from "../assets/product2.jpg";
-import Footer from "./footer";
+import Contactus from "../components/Home/contactus";
 
 export default function ProductListing() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -186,8 +186,7 @@ export default function ProductListing() {
           ))}
         </div>
       </div>
-
-      <Footer />
+      <Contactus />
     </div>
   );
 }

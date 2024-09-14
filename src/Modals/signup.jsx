@@ -5,7 +5,7 @@ import { Modal } from "antd";
 import Login from "./login";
 
 const Signup = ({ isSignupModal, setisSignupModal }) => {
-  const [isloginModalOpen, setIsloginModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const navigate = useNavigate();
   const handleOk = () => {
     setisSignupModal(false);
@@ -14,7 +14,7 @@ const Signup = ({ isSignupModal, setisSignupModal }) => {
     setisSignupModal(false);
   };
   const onsigninbtnClick = () => {
-    setIsloginModalOpen(true);
+    setIsModalOpen(true);
   };
   return (
     <>
@@ -53,7 +53,7 @@ const Signup = ({ isSignupModal, setisSignupModal }) => {
           </p>
         </div>
       </Modal>
-      {/* <Login isloginModalOpen={isloginModalOpen} setIsloginModalOpen={setIsloginModalOpen} /> */}
+      {/* <Login isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} /> */}
     </>
   );
 };

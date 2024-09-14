@@ -1,4 +1,6 @@
 .product-listing-container {
+  padding-top: 50px;
+  padding-bottom: 30px;
   h1 {
     text-align: center;
     margin-bottom: 20px; // Increased space from text
@@ -102,7 +104,7 @@
           justify-content: space-between;
 
           .power {
-            color: #e3b710;
+            color: #a890d3;
           }
         }
 

@@ -5,7 +5,6 @@ const Whychooseus = () => {
   return (
     <>
       <div className="why-choose-container">
-        <h1 className="text-center">Why Choose Us</h1>
         <div className="listItem">
           <div className="order">
             <Icon color="#FFF" icon="et:documents" width={40} height={40} />
