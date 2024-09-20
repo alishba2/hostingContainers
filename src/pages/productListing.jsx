@@ -1,98 +1,42 @@
-import React, { useState } from "react";
-import product1 from "../assets/product.jpg";
-import product2 from "../assets/product2.jpg";
-import Contactus from "../components/Home/contactus";
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import { getAllProducts } from '../firebase/firebase'; // Assume this fetches products from Firebase
 
 export default function ProductListing() {
+    const location = useLocation();
+
+    const [category, setCategory] = useState(null);
+
+
+    useEffect(() => {
+        console.log(location, "locationnnnnnnnnnnnnnnnnn");
+        if (location?.state) {
+            console.log(location?.state, "location in products");
+            setCategory(location?.state?.category)
+        }
+    }, [location])
     const [searchTerm, setSearchTerm] = useState("");
     const [filters, setFilters] = useState({
         inStock: false,
         minPrice: "",
         maxPrice: "",
     });
+    const [products, setProducts] = useState([]);
 
-    const products = [
-        {
-            id: 1,
-            name: "Miner A",
-            image: product1,
-            price: 1200,
-            inStock: true,
-            power: "20W",
-        },
-        {
-            id: 2,
-            name: "Miner B",
-            image: product2,
-            price: 1400,
-            inStock: false,
-            power: "34W",
-        },
-        {
-            id: 3,
-            name: "Miner C",
-            image: product1,
-            price: 1300,
-            inStock: true,
-            power: "20W",
-        },
-        {
-            id: 4,
-            name: "Miner D",
-            image: product2,
-            price: 1250,
-            inStock: true,
-            power: "34W",
-        },
-        {
-            id: 5,
-            name: "Miner E",
-            image: product1,
-            price: 1100,
-            inStock: false,
-            power: "20W",
-        },
-        {
-            id: 6,
-            name: "Miner F",
-            image: product2,
-            price: 1350,
-            inStock: true,
-            power: "34W",
-        },
-        {
-            id: 7,
-            name: "Miner G",
-            image: product1,
-            price: 1500,
-            inStock: true,
-            power: "20W",
-        },
-        {
-            id: 8,
-            name: "Miner H",
-            image: product2,
-            price: 1600,
-            inStock: false,
-            power: "34W",
-        },
-        {
-            id: 9,
-            name: "Miner I",
-            image: product1,
-            price: 1450,
-            inStock: true,
-            power: "20W",
-        },
-        {
-            id: 10,
-            name: "Miner J",
-            image: product2,
-            price: 1700,
-            inStock: true,
-            power: "34W",
-        },
-    ];
+    // Fetch products from Firebase when the component mounts or when the category changes
+    useEffect(() => {
+        const fetchProducts = async () => {
+            try {
+                const allProducts = await getAllProducts(); // Assume this returns all products from Firebase
+                const filteredProducts = allProducts.filter(product => product.type === category);
+                setProducts(filteredProducts);
+            } catch (error) {
+                console.error("Error fetching products:", error);
+            }
+        };
+
+        fetchProducts(); // Call fetch function
+    }, [category]);
 
     const handleSearch = (event) => setSearchTerm(event.target.value);
 
@@ -116,9 +60,9 @@ export default function ProductListing() {
 
     return (
         <div className="product-listing-container">
-            <h1>Miners</h1>
+            <h1>{category}</h1> {/* Display selected category */}
             <p>
-                Find the best miners to suit your needs. Use the search bar and filters
+                Find the best {category} to suit your needs. Use the search bar and filters
                 to explore our range of products.
             </p>
 
@@ -169,24 +113,20 @@ export default function ProductListing() {
 
                 {/* Product Grid */}
                 <div className="product-grid">
-                    {filteredProducts.map((product) => (
+                    {filteredProducts.length > 0 ? filteredProducts.map((product) => (
                         <div key={product.id} className="product-card">
                             <img src={product.image} alt={product.name} />
                             <h3>{product.name}</h3>
                             <div className="product-name">
                                 <p>${product.price}</p>
-                                <p className="power">{product.power}</p>{" "}
-                                {/* Added power rating */}
+                                <p className="power">{product.power}</p> {/* Added power rating */}
                             </div>
-
-                            {/* <p className={product.inStock ? '' : 'out-of-stock'}>
-                                {product.inStock ? 'In Stock' : 'Out of Stock'}
-                            </p> */}
                         </div>
-                    ))}
+                    )) : (
+                        <p>No products available for this category.</p>
+                    )}
                 </div>
             </div>
-            {/* <Contactus /> */}
         </div>
     );
 }

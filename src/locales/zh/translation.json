@@ -98,5 +98,7 @@
         }
     },
     "track_orders": "跟踪订单",
-    "logout": "注销"
+    "logout": "注销",
+    "mining-chips": "矿机芯片",
+    "mining-containers": "矿机集装箱"
 }
