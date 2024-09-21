@@ -25,7 +25,7 @@
     "aboutUsText": "成立于2017年，Hash International Hosting LLC 已成长为加密货币挖矿行业的关键参与者，在非洲、美国、俄罗斯、哈萨克斯坦、阿联酋以及其他海湾国家拥有强大的影响力。我们的使命是提供创新和可靠的挖矿解决方案，使客户能够最大化其回报，同时减少运营复杂性。我们特别关注阿联酋，我们的站点设计旨在保持最佳的环境条件，确保矿工在最高效率下运行。我们拥有100多名专业人士，拥有丰富的挖矿和基础设施管理经验，推动我们在多个大洲的成功。",
     "aboutUsHeading": "关于我们",
     "ourTeam": "我们的团队",
-    "whyChooseUs": "为什么选择我们",
+    "whyChooseUs2": "为什么选择我们",
     "service1Title": "服务 1",
     "service1Description": "服务 1 的描述",
     "service2Title": "服务 2",
@@ -100,5 +100,58 @@
     "track_orders": "跟踪订单",
     "logout": "注销",
     "mining-chips": "矿机芯片",
-    "mining-containers": "矿机集装箱"
+    "mining-containers": "矿机集装箱",
+    "banner": {
+        "header": "与加密矿工一起开始您的采矿之旅",
+        "title": "托管容器",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. 我们的价值可以理解。Lorem ipsum dolor sit amet consectetur adipisicing elit. 我们的价值可以理解。",
+        "button": "立即开始",
+        "loading": "加载中..."
+    },
+    "benefits": {
+        "title": "优化您的加密货币挖矿潜力",
+        "description": "通过我们的定制解决方案，解锁加密货币挖矿的全部潜力，满足初学者和专家矿工的需求。",
+        "miners": {
+            "title": "加密货币矿机",
+            "description": "想要挖矿但缺乏基础设施？探索我们的顶级矿机，为您的挖矿操作提供无与伦比的性能。"
+        },
+        "containers": {
+            "title": "挖矿容器",
+            "description": "便携、可扩展且高效——我们的挖矿容器让您无需额外空间即可扩展操作。"
+        },
+        "hardware": {
+            "title": "挖矿芯片与硬件",
+            "description": "为您的挖矿设备配备最新的挖矿芯片和硬件，优化哈希率和能源效率。"
+        }
+    },
+    "reserve": {
+        "title": "预订您的位置并于8月开始挖矿",
+        "description": "我们正在引领更加可持续和有利可图的挖矿未来。我们的初期项目拥有1.5兆瓦的容量，仅有200台机器可用，这对投资者来说是一个精英机会。这是一个站在环保挖矿前沿的独特机会，托管价格仅为$0.069/KWH。最低订单为5台，确保满足您的挖矿需求。机器必须在5月5日之前订购。",
+        "button": "立即预订"
+    },
+    "hostingServices": {
+        "title": "托管服务",
+        "description": "在CryptoMiners，我们以提供顶级的阿联酋加密托管服务为荣，无论您是经验丰富的矿工还是刚刚开始您的旅程，我们的加密挖矿托管服务为您的挖矿设备提供了完美的环境。通过我们的尖端设施、先进的冷却系统和强大的安全措施，我们确保您的加密挖矿设备能够达到最佳性能和最大运行时间。我们经验丰富的专家团队致力于为您提供无缝的支持、监控和维护。无论您是在寻找获得比特大陆认证的技术人员、顶级加密矿业专家，还是最新的机器，CryptoMiners都是您找到最佳加密挖矿托管服务的首选。"
+    },
+    "atmSection": {
+        "title": "加密货币ATM",
+        "description": "加密货币ATM提供了一种简单安全的方式，通过现金或银行卡购买和出售加密货币。在CryptoMiners，我们在阿联酋扩展的ATM网络为用户提供快速访问多种数字货币的机会，使得加密交易就像访问最近的机器一样简单。无论您是经验丰富的投资者还是第一次使用者，我们的ATM确保您管理加密货币时拥有无缝且安全的体验。"
+    },
+    "whyChooseUs": {
+        "comprehensiveReportsTitle": "全面的性能报告",
+        "comprehensiveReportsDescription": "一旦签署合同，您将随时了解我们团队的工作情况。从您的加密货币矿机开始运行的那一刻起，您将通过全面、完全透明的报告保持最新状态。",
+        "profitableInvestmentTitle": "有利可图的投资",
+        "profitableInvestmentDescription": "凭借我们庞大的业务量，我们提供世界上最低的矿机和电力价格。今天就与我们的代表联系，了解您的投资能有多么有利可图。立即开始吧！",
+        "certifiedExpertsTitle": "认证专家",
+        "certifiedExpertsDescription": "维持矿机的最高效率是一个巨大的挑战，这就是为什么CryptoMiners拥有认证专家，确保所有矿机以最佳容量运行。",
+        "passiveIncomeTitle": "被动收入",
+        "passiveIncomeDescription": "直接将您选择的加密货币（如BTC、LTC等）接收至您的钱包中。CryptoMiners不对您的挖矿收取任何佣金，这意味着您完全保留所有收益，您的机器产出的全部收益每日返回至您的钱包中。"
+    },
+    "demoSection": {
+        "title": "为什么选择我们",
+        "projectsCompleted": "完成的项目",
+        "happyCustomers": "满意的客户",
+        "yearsExperience": "经验年限",
+        "countriesServed": "服务的国家"
+    }
 }

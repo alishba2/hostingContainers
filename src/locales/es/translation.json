@@ -25,7 +25,7 @@
     "aboutUsText": "Основанная в 2017 году, компания Hash International Hosting LLC выросла и стала ключевым игроком в индустрии криптовалютного майнинга, имея сильное присутствие в Африке, США, России, Казахстане, ОАЭ и других странах Персидского залива. Наша миссия - предоставлять инновационные и надежные решения для майнинга, которые позволяют нашим клиентам максимизировать свою прибыль, минимизируя операционные сложности. С особым акцентом на ОАЭ, наши объекты спроектированы для поддержания оптимальных экологических условий, обеспечивая работу майнеров на максимальной эффективности. Наша команда из более чем 100 профессионалов с обширным опытом в управлении майнингом и инфраструктурой обеспечивает наш успех на нескольких континентах.",
     "aboutUsHeading": "Sobre nosotros",
     "ourTeam": "Nuestro Equipo",
-    "whyChooseUs": "Por qué Elegirnos",
+    "whyChooseUs2": "Por qué Elegirnos",
     "service1Title": "Servicio 1",
     "service1Description": "Descripción del Servicio 1",
     "service2Title": "Servicio 2",
@@ -100,5 +100,58 @@
     "track_orders": "Rastrear pedidos",
     "logout": "Cerrar sesión",
     "mining-chips": "chips de minería",
-    "mining-containers": "contenedores de minería"
+    "mining-containers": "contenedores de minería",
+    "banner": {
+        "header": "Comienza tu viaje minero con Crypto Miners",
+        "title": "CONTENEDORES DE HOSTING",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet nobis voluptas sapiente. Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet nobis voluptas sapiente.",
+        "button": "Comenzar ahora",
+        "loading": "Cargando..."
+    },
+    "benefits": {
+        "title": "Optimizando tu Potencial de Minería de Criptomonedas",
+        "description": "Desbloquea todo el poder de la minería de criptomonedas con nuestras soluciones personalizadas, diseñadas para satisfacer las demandas de mineros novatos y expertos.",
+        "miners": {
+            "title": "Mineros de Criptomonedas",
+            "description": "¿Quieres minar criptomonedas pero te falta infraestructura? Explora nuestros mineros de primera línea, que ofrecen un rendimiento inigualable para tus operaciones de minería."
+        },
+        "containers": {
+            "title": "Contenedores de Minería",
+            "description": "Portátiles, escalables y eficientes: nuestros contenedores de minería te permiten expandir tus operaciones sin necesidad de espacio adicional."
+        },
+        "hardware": {
+            "title": "Chips y Hardware de Minería",
+            "description": "Equipa tus plataformas con los últimos chips y hardware de minería, optimizados para obtener las máximas tasas de hash y eficiencia energética."
+        }
+    },
+    "reserve": {
+        "title": "ASEGURA TU LUGAR Y COMIENZA A MINAR EN AGOSTO",
+        "description": "Estamos liderando el camino hacia un futuro de minería más sostenible y rentable. Nuestro proyecto inicial cuenta con una capacidad de 1.5 MW y solo 200 máquinas disponibles, lo que lo convierte en una oportunidad exclusiva para los inversores. Esta es una oportunidad única para estar a la vanguardia de la minería ecológica, con un precio de hospedaje de $0.069/KWH. El pedido mínimo es de 5 unidades, lo que garantiza un enfoque personalizado para tus necesidades de minería. Las máquinas deben ordenarse antes del 5 de mayo.",
+        "button": "Reserva Ahora"
+    },
+    "hostingServices": {
+        "title": "Servicios de Hosting",
+        "description": "En CryptoMiners, nos enorgullecemos de ofrecer un servicio de hosting de criptominería de primera línea en los EAU en nuestras granjas de minería. Ya seas un minero experimentado o estés comenzando tu viaje, nuestros servicios de hosting de criptominería brindan el entorno perfecto para que tus máquinas prosperen. Con nuestras instalaciones de vanguardia, sistemas de enfriamiento avanzados y sólidas medidas de seguridad, garantizamos un rendimiento óptimo y el máximo tiempo de actividad para tus rigs de criptominería. Nuestro equipo dedicado de expertos está comprometido a proporcionarte soporte, monitoreo y mantenimiento sin interrupciones. Ya sea que estés buscando técnicos certificados por Bitmain, expertos en criptominería de primer nivel o las máquinas más recientes, puedes encontrar el mejor servicio de hosting de criptominería en CryptoMiners."
+    },
+    "atmSection": {
+        "title": "Cajeros Automáticos de Criptomonedas",
+        "description": "Los cajeros automáticos de criptomonedas brindan una forma simple y segura de comprar y vender criptomonedas utilizando efectivo o tarjetas. En CryptoMiners, nuestra creciente red de cajeros automáticos en los EAU ofrece a los usuarios un acceso rápido a una variedad de monedas digitales, haciendo que las transacciones con criptomonedas sean tan fáciles como visitar su máquina más cercana. Ya seas un inversionista experimentado o un usuario por primera vez, nuestros cajeros automáticos aseguran una experiencia fluida y segura para manejar tu criptomoneda."
+    },
+    "whyChooseUs": {
+        "comprehensiveReportsTitle": "Informes completos de rendimiento",
+        "comprehensiveReportsDescription": "Tan pronto como firme su contrato, se le mantendrá informado del trabajo de nuestro equipo. Desde el momento en que su máquina de minería de criptomonedas esté en funcionamiento, se le mantendrá actualizado con informes completos y totalmente transparentes.",
+        "profitableInvestmentTitle": "Inversión rentable",
+        "profitableInvestmentDescription": "Gracias a nuestro volumen de negocio, ofrecemos los precios más bajos de máquinas de minería y electricidad en el mundo. Hable con nuestros representantes hoy mismo y descubra cuán rentable puede ser su inversión. ¡Empiece hoy!",
+        "certifiedExpertsTitle": "Expertos certificados",
+        "certifiedExpertsDescription": "Mantener las máquinas de minería funcionando a su máxima eficiencia es un gran desafío, por lo que CryptoMiners cuenta con expertos certificados que garantizan que todas las máquinas funcionen a su capacidad óptima.",
+        "passiveIncomeTitle": "Ingreso pasivo",
+        "passiveIncomeDescription": "Reciba la criptomoneda de su elección (BTC, LTC, etc.) directamente en su propia cartera. CryptoMiners no cobra comisiones sobre su minería, lo que significa que conserva todo lo que gana; la producción total de sus máquinas se le devuelve diariamente en su cartera."
+    },
+    "demoSection": {
+        "title": "Por Qué Elegirnos",
+        "projectsCompleted": "Proyectos Completados",
+        "happyCustomers": "Clientes Satisfechos",
+        "yearsExperience": "Años De Experiencia",
+        "countriesServed": "Países Servidos"
+    }
 }

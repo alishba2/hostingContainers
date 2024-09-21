@@ -1,16 +1,19 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const Demosection = () => {
+  const { t } = useTranslation();
+
   const data = [
-    { id: 1, heading: "25K+", para: "Projects Completed" },
-    { id: 2, heading: "8K+", para: "Happy Customers" },
-    { id: 3, heading: "10", para: "Years Of Experience" },
-    { id: 4, heading: "10", para: "Countries Served" },
+    { id: 1, heading: "25K+", para: t("demoSection.projectsCompleted") },
+    { id: 2, heading: "8K+", para: t("demoSection.happyCustomers") },
+    { id: 3, heading: "10", para: t("demoSection.yearsExperience") },
+    { id: 4, heading: "10", para: t("demoSection.countriesServed") },
   ];
 
   return (
     <div className="main-demo v-center h-center flex-column">
-      <h1 className="text-center">Why Choose Us</h1>
+      <h1 className="text-center">{t("demoSection.title")}</h1>
       <div className="demoSection">
         {data.map((item) => (
           <div key={item.id} className="demoCard h-center">

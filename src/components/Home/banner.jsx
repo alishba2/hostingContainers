@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
 
 const Banner = () => {
   const [exchangeRates, setExchangeRates] = useState([]);
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     const fetchAllCryptoRates = async () => {
@@ -83,14 +85,11 @@ const Banner = () => {
             {/* <p className="paraSmall">
               The Best Crypto Mining Service Providers in GCC
             </p> */}
-            <h4>Start your mining Journey with Crypto Miners</h4>
-            <h1 className="">HOSTING CONTAINERS</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
-              nobis voluptas sapiente. Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Amet nobis voluptas sapiente.
-            </p>
-            <button className="btn-primary mt-2">Start Now</button>
+            <h4>{t('banner.header')}</h4>
+            <h1>{t('banner.title')}</h1>
+            <p>{t('banner.description')}</p>
+
+            <button className="btn-primary mt-2">{t('banner.button')}</button>
           </div>
         </div>
       </div>
