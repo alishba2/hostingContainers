@@ -121,6 +121,11 @@ const Navbar = () => {
   );
 
 
+  const handleNavigation2 = (category) => {
+    navigate("/products", { state: { category } });
+  };
+
+
   return (
     <>
       <div className="navbar-container">
@@ -165,27 +170,23 @@ const Navbar = () => {
                 {platformshow && (
                   <div className="platform-main-outer">
                     <div className="platform-hover-container d-flex flex-column">
-                      <NavLink to="/products">
-                        <div className="platform-items d-flex space-between">
-                          <div className="left d-flex v-center">
-                            <h6>{t("Miners")}</h6>
-                          </div>
+                      <div className="platform-items d-flex space-between" onClick={() => handleNavigation2("Miners")}>
+                        <div className="left d-flex v-center">
+                          <h6>{t("Miners")}</h6>
                         </div>
-                      </NavLink>
-                      <NavLink to="/work">
-                        <div className="platform-items d-flex space-between">
-                          <div className="left d-flex v-center">
-                            <h6>{t("mining-containers")}</h6>
-                          </div>
+                      </div>
+                      <div className="platform-items d-flex space-between" onClick={() => handleNavigation2("Mining Containers")}>
+                        <div className="left d-flex v-center">
+                          <h6>{t("mining-containers")}</h6>
                         </div>
-                      </NavLink>
-                      <NavLink to="/choose-us">
-                        <div className="platform-items d-flex space-between">
-                          <div className="left d-flex v-center">
-                            <h6>{t("mining-chips")}</h6>
-                          </div>
+                      </div>
+                      <div className="platform-items d-flex space-between" onClick={() => handleNavigation2("Mining Chips")}>
+                        <div className="left d-flex v-center">
+                          <h6>{t("mining-chips")}</h6>
                         </div>
-                      </NavLink>
+                      </div>
+
+
                       {/* <NavLink to="/integrations">
                         <div className="platform-items d-flex space-between">
                           <div className="left d-flex v-center">

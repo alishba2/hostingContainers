@@ -98,5 +98,7 @@
         }
     },
     "track_orders": "Track Orders",
-    "logout": "Logout"
+    "logout": "Logout",
+    "mining-chips": "Mining Chips",
+    "mining-containers": "Mining Containers"
 }

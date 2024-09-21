@@ -1,6 +1,7 @@
 .workwithUs-section {
   width: 90%;
   padding: 46px 20px;
+
   .work-content {
     position: relative;
     max-width: 1580px;
@@ -11,36 +12,44 @@
     border: 4px dashed #000;
     padding-top: 56px;
     overflow: hidden;
+
     h1 {
       max-width: 900px;
       width: 100%;
       color: #fff;
       margin-bottom: 20px;
     }
+
     .workLabel {
       animation: movesdown 1s;
+
       @keyframes movesdown {
         from {
           transform: translateY(-1200%);
         }
+
         to {
           transform: translateY(0%);
         }
       }
     }
+
     h5 {
       max-width: 619px;
       padding-top: 48px;
       animation: zoomOut 1s ease-in-out;
+
       @keyframes zoomOut {
         0% {
           transform: scale(0);
         }
+
         100% {
           transform: scale(1);
         }
       }
     }
+
     .letstalk-anim {
       position: absolute;
       width: 326px;
@@ -49,41 +58,49 @@
       background: white;
       top: 72%;
       transition: all 0.7s ease-in-out;
+
       label {
         position: relative;
         top: 16%;
         transition: top 1s ease-out;
         color: #a890d3;
         font-size: 2rem;
-        text-shadow: 2px 2px 2px #4b2e83, 2px 2px 2px #4b2e83,
-          2px 2px 2px #4b2e83, 2px 2px 2px #4b2e83;
+        // text-shadow: 2px 2px 2px #4b2e83, 2px 2px 2px #4b2e83,
+        //   2px 2px 2px #4b2e83, 2px 2px 2px #4b2e83;
       }
     }
+
     &:hover,
     &:focus {
       .workLabel {
         // z-index: 9;
         animation: movesup 3s;
+
         @keyframes movesup {
           from {
             transform: translateY(0%);
           }
+
           to {
             transform: translateY(-1200%);
           }
         }
       }
+
       h1 {
         // z-index: 1;
         // max-width: 500px;
         animation: zoom-in-zoom-out 3s ease-in-out;
+
         @keyframes zoom-in-zoom-out {
           0% {
             transform: scale(1, 1);
           }
+
           50% {
             transform: scale(0, 0);
           }
+
           100% {
             transform: scale(1, 1);
           }
@@ -92,6 +109,7 @@
 
       .letstalk-anim {
         transform: scale(6);
+
         label {
           top: 30%;
         }
@@ -99,13 +117,16 @@
     }
   }
 }
+
 @media only screen and (max-width: 1200px) {
   .workwithUs-section {
     width: 90%;
+
     .work-content {
       height: 308px;
 
       padding-top: 26px;
+
       h1 {
         max-width: 900px;
         font-size: 42px;
@@ -117,6 +138,7 @@
         max-width: 619px;
         padding-top: 28px;
       }
+
       .letstalk-anim {
         top: 72%;
 
@@ -126,10 +148,10 @@
           font-size: 2rem;
         }
       }
+
       &:hover,
       &:focus {
-        h1 {
-        }
+        h1 {}
 
         .letstalk-anim {
           label {
@@ -141,14 +163,17 @@
     }
   }
 }
+
 @media only screen and (max-width: 850px) {
   .workwithUs-section {
     width: 100%;
     padding-bottom: 0px !important;
+
     .work-content {
       height: 308px;
 
       padding-top: 26px;
+
       h1 {
         max-width: 900px;
         width: 100%;
@@ -163,6 +188,7 @@
         max-width: 619px;
         padding-top: 28px;
       }
+
       .letstalk-anim {
         top: 72%;
 
@@ -172,10 +198,10 @@
           font-size: 2rem;
         }
       }
+
       &:hover,
       &:focus {
-        h1 {
-        }
+        h1 {}
 
         .letstalk-anim {
           label {
@@ -187,6 +213,7 @@
     }
   }
 }
+
 @media only screen and (max-width: 600px) {
   .workwithUs-section {
     display: none;

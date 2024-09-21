@@ -3,10 +3,11 @@
     font-size: 3rem;
     color: #fff;
     margin-bottom: 20px;
-    text-shadow: 4px 4px 4px #4b2e83, 4px 4px 4px #4b2e83, 4px 4px 4px #4b2e83,
-      4px 4px 4px #4b2e83;
+    // text-shadow: 4px 4px 4px #4b2e83, 4px 4px 4px #4b2e83, 4px 4px 4px #4b2e83,
+    //   4px 4px 4px #4b2e83;
     margin-top: 30px;
   }
+
   .demoSection {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -14,6 +15,7 @@
     justify-items: center;
     gap: 10px;
     width: 90%;
+
     .demoCard {
       background-color: #1c1c1c;
       width: 100%;
@@ -26,6 +28,7 @@
       overflow: hidden;
       transition: all 1.5s linear;
       border: 1px solid white;
+
       // h4 {
       //   transition: all 1.5s ease-in-out;
       // }
@@ -34,12 +37,14 @@
       // }
       &:hover,
       &:focus {
+
         h4,
         p {
           color: var(--black) !important;
           transition: all 1.5s linear;
         }
       }
+
       .circle-anim {
         position: absolute;
         top: 88%;
@@ -52,6 +57,7 @@
         transition: all 1.5s ease-in-out;
         z-index: -1;
       }
+
       &:hover,
       &:focus {
         .circle-anim {
@@ -63,12 +69,14 @@
     }
   }
 }
+
 @media only screen and (max-width: 1200px) {
   .main-demo {
     .demoSection {
       grid-template-columns: repeat(2, 1fr);
 
       width: 90%;
+
       .demoCard {
         width: 100%;
         max-width: 100%;
@@ -76,11 +84,13 @@
     }
   }
 }
+
 @media only screen and (max-width: 700px) {
   .main-demo {
     h1 {
       font-size: 32px;
     }
+
     .demoSection {
       grid-template-columns: repeat(1, 1fr);
 

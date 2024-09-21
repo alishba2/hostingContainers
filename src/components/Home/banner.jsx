@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 const Banner = () => {
-  const [exchangeRates, setExchangeRates] = useState("Loading...");
+  const [exchangeRates, setExchangeRates] = useState([]);
 
   useEffect(() => {
     const fetchAllCryptoRates = async () => {
@@ -20,16 +20,16 @@ const Banner = () => {
           }
         );
         const coins = response.data;
-        console.log(coins, "coinsssssssss");
 
+        const formattedRates = coins.map((coin) => ({
+          name: coin.symbol.toUpperCase(),
+          price: coin.current_price.toFixed(2),
+        }));
 
-        const formattedRates = coins
-          .map((coin) => `${coin.symbol}: $${coin.current_price.toFixed(2)}`)
-          .join(" | ");
         setExchangeRates(formattedRates);
       } catch (error) {
         console.error("Error fetching exchange rates:", error);
-        setExchangeRates("Error fetching rates");
+        setExchangeRates([]);
       }
     };
 
@@ -41,7 +41,10 @@ const Banner = () => {
 
   // Function to download exchange rates as a file
   const downloadRates = () => {
-    const fileData = new Blob([exchangeRates], { type: "text/plain" });
+    const ratesString = exchangeRates
+      .map((rate) => `${rate.name}: $${rate.price}`)
+      .join(" | ");
+    const fileData = new Blob([ratesString], { type: "text/plain" });
     const tempLink = document.createElement("a");
     tempLink.href = URL.createObjectURL(fileData);
     tempLink.download = "all_exchange_rates.txt";
@@ -54,15 +57,32 @@ const Banner = () => {
     <>
       <div className="banner-main">
         <div className="marquee-main">
-          <marquee width="100%" direction="right" height="100px">
-            {exchangeRates}
-          </marquee>
+          <div className="marquee-main">
+            <marquee
+              width="100%"
+              direction="right"
+              height="40px" // Adjust the height as needed
+              scrollamount="5" // Adjust this value for speed (higher = faster)
+              behavior="scroll"
+            >
+              {exchangeRates.length ? (
+                exchangeRates.map((rate, index) => (
+                  <span key={index} className="marquee-item">
+                    <strong style={{ color: "#a890d3" }}>{rate.name}</strong>: <span>${rate.price}</span>  &nbsp; {/* Add spacing between items */}
+                  </span>
+                ))
+              ) : (
+                <span>Loading...</span>
+              )}
+            </marquee>
+          </div>
+
         </div>
         <div className="banner-inner">
           <div className="banner-content h-center flex-column">
-            <p className="paraSmall">
+            {/* <p className="paraSmall">
               The Best Crypto Mining Service Providers in GCC
-            </p>
+            </p> */}
             <h4>Start your mining Journey with Crypto Miners</h4>
             <h1 className="">HOSTING CONTAINERS</h1>
             <p>
@@ -71,9 +91,6 @@ const Banner = () => {
               adipisicing elit. Amet nobis voluptas sapiente.
             </p>
             <button className="btn-primary mt-2">Start Now</button>
-            <button className="btn-secondary mt-2" onClick={downloadRates}>
-              Download All Exchange Rates
-            </button>
           </div>
         </div>
       </div>

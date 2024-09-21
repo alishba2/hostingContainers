@@ -98,5 +98,7 @@
         }
     },
     "track_orders": "Rastrear pedidos",
-    "logout": "Cerrar sesión"
+    "logout": "Cerrar sesión",
+    "mining-chips": "chips de minería",
+    "mining-containers": "contenedores de minería"
 }
