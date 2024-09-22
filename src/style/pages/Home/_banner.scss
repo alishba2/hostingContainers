@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap');
+
 .banner-main {
   height: 100%;
 
@@ -25,10 +27,12 @@
     width: 100%;
     height: 100%;
     min-height: 80vh;
-    background-image: url(../../../assets/containerImgday12.jpeg);
+    background-image: url(../../../assets/crypto7.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left;
+    font-family: "Gowun Batang", serif;
+
 
     /* Add black overlay */
     &::before {
@@ -50,14 +54,23 @@
       color: #fff;
       z-index: 1;
 
+      p {
+        font-size: 17px !important;
+
+        width: 807px !important;
+      }
+
       h1,
       p,
       h4 {
         // text-shadow: 1px 1px 1px #4b2e83, 1px 1px 1px #4b2e83,
         //   1px 1px 1px #4b2e83, 1px 1px 1px #4b2e83;
+        // font-family: "Gowun Batang", serif !important;
       }
 
       h1 {
+        font-family: "Gowun Batang", serif !important;
+        font-weight: bold;
         // text-shadow: 4px 4px 4px #4b2e83, 4px 4px 4px #4b2e83,
         //   4px 4px 4px #4b2e83, 4px 4px 4px #4b2e83;
       }
@@ -92,6 +105,11 @@
 
         h1 {
           font-size: 32px;
+        }
+
+        p {
+          font-size: 10px !important;
+          width: 300px !important;
         }
 
         h1,

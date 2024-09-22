@@ -1,5 +1,4 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
 import {
   FaCode,
   FaPencilAlt,
@@ -10,35 +9,45 @@ import {
 } from "react-icons/fa";
 
 export default function Benefits() {
-  const { t } = useTranslation();
-
   return (
     <div className="service-container">
       <div className="container">
-        <h2>{t("benefits.title")}</h2>
-        <p>{t("benefits.description")}</p>
+        <h2>Boost Your Crypto Mining</h2>
+        {/* <p>
+          Unlock the full power of cryptocurrency mining with our tailored solutions, designed to meet the demands of both novice and expert miners.
+        </p> */}
 
         <div className="row">
           <div className="service-card active">
             <div className="icon">
+              {/* <FaPaintBrush /> */}
             </div>
-            <h3>{t("benefits.miners.title")}</h3>
-            <p>{t("benefits.miners.description")}</p>
+            <h3>Cryptocurrency Miners</h3>
+            <p>
+              Want to mine crypto but lack the infrastructure? Explore our top-of-the-line miners, offering unparalleled performance for your mining operations.
+            </p>
           </div>
 
           <div className="service-card">
             <div className="icon">
+              {/* <FaCode />/ */}
             </div>
-            <h3>{t("benefits.containers.title")}</h3>
-            <p>{t("benefits.containers.description")}</p>
+            <h3>Mining Containers</h3>
+            <p>
+              Portable, scalable, and efficient—our mining containers allow you to expand operations without the need for additional space.
+            </p>
           </div>
 
           <div className="service-card">
             <div className="icon">
+              {/* <FaLaptopCode /> */}
             </div>
-            <h3>{t("benefits.hardware.title")}</h3>
-            <p>{t("benefits.hardware.description")}</p>
+            <h3>Mining Chips & Hardware</h3>
+            <p>
+              Equip your rigs with the latest mining chips and hardware, optimized for maximum hash rates and energy efficiency.
+            </p>
           </div>
+
         </div>
       </div>
     </div>
