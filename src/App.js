@@ -9,6 +9,7 @@ import ProductListing from "./pages/productListing";
 import Admin from "./pages/admin";
 import CryptoAtmLocator from "./pages/map";
 import TrackOrders from "./pages/trackOrders";
+import ShowBlogs from "./pages/showBlogs";
 function App() {
   return (
     <>
@@ -21,6 +22,7 @@ function App() {
         <Route path="/admin" element={<Admin />} />
         <Route path="/map" element={<CryptoAtmLocator />} />
         <Route path="/track-orders" element={<TrackOrders />} />
+        <Route path="/blogs" element={<ShowBlogs />} />
       </Routes>
       <Footer />
     </>

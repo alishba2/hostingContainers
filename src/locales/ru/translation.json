@@ -153,5 +153,14 @@
         "happyCustomers": "Довольные Клиенты",
         "yearsExperience": "Годы Опытa",
         "countriesServed": "Страны, Где Мы Работали"
-    }
+    },
+    "contact_us": "Связаться с нами",
+    "first_name": "Имя*",
+    "last_name": "Фамилия*",
+    "company": "Компания*",
+    "job_title": "Должность*",
+    "work_email": "Рабочий электронный адрес*",
+    "phone_number": "Номер телефона*",
+    "your_message": "Ваше сообщение...",
+    "send": "Отправить"
 }

@@ -153,5 +153,14 @@
         "happyCustomers": "满意的客户",
         "yearsExperience": "经验年限",
         "countriesServed": "服务的国家"
-    }
+    },
+    "contact_us": "联系我们",
+    "first_name": "名*",
+    "last_name": "姓*",
+    "company": "公司*",
+    "job_title": "职位*",
+    "work_email": "工作电子邮件*",
+    "phone_number": "电话号码*",
+    "your_message": "您的消息...",
+    "send": "发送"
 }

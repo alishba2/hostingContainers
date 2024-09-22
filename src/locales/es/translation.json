@@ -153,5 +153,14 @@
         "happyCustomers": "Clientes Satisfechos",
         "yearsExperience": "Años De Experiencia",
         "countriesServed": "Países Servidos"
-    }
+    },
+    "contact_us": "Contáctenos",
+    "first_name": "Nombre*",
+    "last_name": "Apellido*",
+    "company": "Empresa*",
+    "job_title": "Título del trabajo*",
+    "work_email": "Correo electrónico de trabajo*",
+    "phone_number": "Número de teléfono*",
+    "your_message": "Tu mensaje...",
+    "send": "Enviar"
 }

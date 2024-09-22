@@ -3,6 +3,7 @@ import { initializeApp } from "firebase/app";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendPasswordResetEmail, onAuthStateChanged } from "firebase/auth";
 import { getFirestore, doc, setDoc, getDoc, addDoc, collection, getDocs, query, where, } from "firebase/firestore"; // Firestore imports
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage"; // Firebase Storage functions
+import { deleteDoc } from "firebase/firestore";
 
 const firebaseConfig = {
     apiKey: "AIzaSyAF24JRzJyPEdPjzq7ttcREm31SSzD9c7Q",
@@ -216,5 +217,76 @@ const getProductsByType = async (type) => {
     }
 };
 
-export { saveProduct };
-export { registerUser, loginUser, resetPassword, getCurrentUserData, isLoggedIn, getAllProducts, getProductsByType };
+// Function to add a blog
+async function addBlog(blogName, blogDescription, imageFile) {
+    try {
+        // Upload image to Firebase Storage
+        const imageRef = ref(storage, `blogImages/${imageFile.name}`);
+        const snapshot = await uploadBytes(imageRef, imageFile);
+        const imageUrl = await getDownloadURL(snapshot.ref);
+
+        // Create blog entry in Firestore
+        const blogRef = await addDoc(collection(db, "blogs"), {
+            blogName: blogName,
+            blogDescription: blogDescription,
+            imageUrl: imageUrl, // Storing the image URL
+            createdAt: new Date() // Optional: Add a timestamp
+        });
+
+        console.log("Blog added with ID: ", blogRef.id);
+    } catch (error) {
+        console.error("Error adding blog: ", error);
+    }
+}
+// Function to get all blogs
+async function getBlogs() {
+    try {
+        const blogs = [];
+        const querySnapshot = await getDocs(collection(db, "blogs"));
+
+        querySnapshot.forEach((doc) => {
+            blogs.push({
+                id: doc.id,
+                ...doc.data() // Get all the blog data (name, description, imageUrl)
+            });
+        });
+
+        console.log("Blogs: ", blogs);
+        return blogs;
+    } catch (error) {
+        console.error("Error getting blogs: ", error);
+    }
+}
+
+const deleteProduct = async (productId) => {
+    try {
+        // Reference to the product document
+        const productRef = doc(db, "products", productId);
+
+        // Delete the document
+        await deleteDoc(productRef);
+        console.log(`Product with ID ${productId} deleted successfully.`);
+    } catch (error) {
+        console.error("Error deleting product:", error);
+        throw error;
+    }
+};
+
+
+// Function to delete a blog by ID
+const deleteBlog = async (blogId) => {
+    try {
+        // Reference to the blog document
+        const blogRef = doc(db, "blogs", blogId);
+
+        // Delete the document
+        await deleteDoc(blogRef);
+        console.log(`Blog with ID ${blogId} deleted successfully.`);
+    } catch (error) {
+        console.error("Error deleting blog:", error);
+        throw error;
+    }
+};
+
+export { saveProduct, deleteProduct, deleteBlog };
+export { registerUser, loginUser, resetPassword, getCurrentUserData, isLoggedIn, getAllProducts, getProductsByType, addBlog, getBlogs };

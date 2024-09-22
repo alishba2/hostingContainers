@@ -1,0 +1,104 @@
+.show-blogs {
+    .intro-text {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 20px;
+        color: #ffffff;
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        text-align: center;
+
+        h2 {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .blog-card {
+        position: relative;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: none;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        color: white !important;
+
+        &:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-img-top {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            max-height: 200px;
+            object-fit: cover;
+            opacity: 0.9;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7); // Semi-transparent background
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0; // Start hidden
+            transition: opacity 0.3s ease;
+            border-radius: 10px; // Match card corners
+            z-index: 1; // Ensure it appears on top
+
+            .overlay-text {
+                color: #a890d3;
+                font-size: 22px;
+                font-weight: bold;
+                letter-spacing: 2px;
+                text-align: center;
+            }
+        }
+
+        &:hover .overlay {
+            opacity: 1; // Show overlay on hover
+        }
+    }
+
+    .blog-detail-card {
+        background-color: transparent;
+        border: none;
+        border-radius: 10px;
+        overflow: hidden;
+        padding: 20px;
+        color: white !important;
+
+        .card-img-top {
+            max-height: 400px;
+            object-fit: cover;
+            opacity: 0.9;
+            border-radius: 10px;
+        }
+
+    }
+
+    .blog-details {
+        margin-top: 30px;
+        color: #fff;
+
+        h2 {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 13px !important;
+        }
+    }
+
+    .back-arrow {
+        cursor: pointer;
+        margin-bottom: 20px;
+    }
+}

@@ -1,32 +1,36 @@
 import React, { useState, useEffect } from 'react';
 import "../style/pages/_product.scss";
-import { saveProduct, getAllProducts } from '../firebase/firebase'; // Import getAllProducts
+import { saveProduct, getAllProducts, deleteProduct } from '../firebase/firebase';
 import { notification } from 'antd';
+import { CloseOutlined } from '@ant-design/icons'; // Importing the close icon
 
 export default function Product() {
     const [products, setProducts] = useState([]);
     const [newProduct, setNewProduct] = useState({
         name: '',
-        type: 'Miners', // Default to Miner
+        type: 'Miners',
         price: '',
         power: '',
         image: null,
-        imageName: '' // Track image name
+        imageName: ''
     });
-
     const [showModal, setShowModal] = useState(false);
-    const [loading, setLoading] = useState(false); // Loading state for submit button
+    const [loading, setLoading] = useState(false);
+
+    // Pagination state
+    const [currentPage, setCurrentPage] = useState(1);
+    const productsPerPage = 10;
+
     const fetchProducts = async () => {
         try {
-            const productsData = await getAllProducts(); // Get all products from Firestore
+            const productsData = await getAllProducts();
             setProducts(productsData);
         } catch (error) {
             console.error("Error fetching products:", error);
         }
     };
+
     useEffect(() => {
-
-
         fetchProducts();
     }, []);
 
@@ -40,11 +44,11 @@ export default function Product() {
 
     const handleImageChange = (e) => {
         const file = e.target.files[0];
-        if (file && file.type.startsWith('image/')) { // Check if file is an image
+        if (file && file.type.startsWith('image/')) {
             setNewProduct({
                 ...newProduct,
                 image: file,
-                imageName: file.name // Update image name
+                imageName: file.name
             });
         } else {
             notification.error({
@@ -57,7 +61,7 @@ export default function Product() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setLoading(true); // Start loading
+        setLoading(true);
 
         try {
             const productToSave = {
@@ -68,8 +72,7 @@ export default function Product() {
                 image: newProduct.image
             };
 
-            await saveProduct(productToSave); // Save the product with image
-
+            await saveProduct(productToSave);
             setProducts([...products, productToSave]);
             setNewProduct({
                 name: '',
@@ -77,14 +80,14 @@ export default function Product() {
                 price: '',
                 power: '',
                 image: null,
-                imageName: '' // Reset image name
+                imageName: ''
             });
             notification.success({
                 message: "Success",
                 description: "Product saved successfully!",
             });
             fetchProducts();
-            setShowModal(false); // Close the modal
+            setShowModal(false);
         } catch (error) {
             console.error("Error saving product:", error);
             notification.error({
@@ -92,9 +95,32 @@ export default function Product() {
                 description: "There was an error saving the product.",
             });
         } finally {
-            setLoading(false); // Stop loading
+            setLoading(false);
         }
     };
+
+    const handleDelete = async (productId) => {
+        try {
+            await deleteProduct(productId);
+            notification.success({
+                message: "Success",
+                description: "Product deleted successfully!",
+            });
+            fetchProducts(); // Refresh the product list
+        } catch (error) {
+            console.error("Error deleting product:", error);
+            notification.error({
+                message: "Error",
+                description: "There was an error deleting the product.",
+            });
+        }
+    };
+
+    // Pagination logic
+    const indexOfLastProduct = currentPage * productsPerPage;
+    const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+    const currentProducts = products.slice(indexOfFirstProduct, indexOfLastProduct);
+    const totalPages = Math.ceil(products.length / productsPerPage);
 
     return (
         <div className="product-page">
@@ -109,10 +135,11 @@ export default function Product() {
                         <th>Price</th>
                         <th>Power</th>
                         <th>Image</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {products.length > 0 ? products.map((product, index) => (
+                    {currentProducts.length > 0 ? currentProducts.map((product, index) => (
                         <tr key={index}>
                             <td>{product.name}</td>
                             <td>{product.type}</td>
@@ -125,20 +152,43 @@ export default function Product() {
                                     'No Image'
                                 )}
                             </td>
+                            <td>
+                                <button onClick={() => handleDelete(product.id)}>Delete</button>
+                            </td>
                         </tr>
                     )) : (
                         <tr>
-                            <td colSpan="5">No products available.</td>
+                            <td colSpan="6">No products available.</td>
                         </tr>
                     )}
                 </tbody>
             </table>
 
+            {/* Pagination Controls */}
+            <div className="pagination">
+                <button
+                    style={{ color: 'white' }}
+                    onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+                    disabled={currentPage === 1}
+                >
+                    Previous
+                </button>
+                <span>Page {currentPage} of {totalPages}</span>
+                <button
+                    onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+                    disabled={currentPage === totalPages}
+                >
+                    Next
+                </button>
+            </div>
+
             {/* Modal for adding new products */}
             {showModal && (
                 <div className="modal">
-                    <div className="modal-content">
-                        <span className="" onClick={() => setShowModal(false)}>Close</span>
+                    <div className="modal-content" > {/* Adjusted height */}
+                        <span style={{ color: 'black', float: 'right', cursor: 'pointer' }} onClick={() => setShowModal(false)}>
+                            <CloseOutlined />
+                        </span>
                         <h2>Add New Product</h2>
                         <form className="product-form" onSubmit={handleSubmit}>
                             <div className="form-group">
