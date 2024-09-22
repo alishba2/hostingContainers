@@ -6,36 +6,39 @@ import img3 from "../../assets/containerImgday11.jpeg";
 import img4 from "../../assets/bitcoin.jpg";
 import img5 from "../../assets/mining3.jpg";
 import img6 from "../../assets/mining.jpg";
+import { useTranslation } from "react-i18next";
 
 const Hostingservices = () => {
+  const { t } = useTranslation();
+
   // Slick carousel settings
   const settings = {
-    dots: true, // Enable dots navigation
-    infinite: true, // Infinite scroll
-    speed: 500, // Transition speed
-    slidesToShow: 4, // Number of images per slide
-    slidesToScroll: 1, // Scroll one slide at a time
-    autoplay: true, // Automatically scroll
-    autoplaySpeed: 3000, // Autoplay interval (3 seconds)
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
     responsive: [
       {
-        breakpoint: 1024, // For screen widths less than 1024px
+        breakpoint: 1024,
         settings: {
-          slidesToShow: 3, // Show 3 images per slide
+          slidesToShow: 3,
           slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 768, // For screen widths less than 768px
+        breakpoint: 768,
         settings: {
-          slidesToShow: 2, // Show 2 images per slide
+          slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 480, // For screen widths less than 480px
+        breakpoint: 480,
         settings: {
-          slidesToShow: 1, // Show 1 image per slide
+          slidesToShow: 1,
           slidesToScroll: 1,
         },
       },
@@ -43,49 +46,34 @@ const Hostingservices = () => {
   };
 
   return (
-    <>
-      <div className="hosting-services-main v-center flex-column">
-        <h1 className="text-center">Hosting Services</h1>
-        <p className="paraSmall text-center">
-          At CryptoMiners, we take pride in offering top-of-the-line crypto
-          hosting service UAE in our crypto mining farms. Whether you're a
-          seasoned miner or just starting your journey, our crypto-mining
-          hosting services provide the perfect environment for your mining
-          machines to thrive. With our cutting-edge facilities, advanced cooling
-          systems, and robust security measures, we ensure optimal performance
-          and maximum uptime for your crypto mining rigs. Our dedicated team of
-          experts is committed to providing you with seamless support,
-          monitoring, and maintenance. Whether you are looking for
-          Bitmain-certified technicians, top-notch crypto mining experts, or the
-          latest machines, you can find the best Crypto mining hosting service
-          at CryptoMiners.
-        </p>
+    <div className="hosting-services-main v-center flex-column">
+      <h1 className="text-center">{t("hostingServices.title")}</h1>
+      <p className="paraSmall text-center">{t("hostingServices.description")}</p>
 
-        {/* Slick Carousel */}
-        <div className="carousel-container">
-          <Slider {...settings}>
-            <div>
-              <img src={img1} alt="Mining facility 1" />
-            </div>
-            <div>
-              <img src={img2} alt="Mining facility 2" />
-            </div>
-            <div>
-              <img src={img3} alt="Mining facility 3" />
-            </div>
-            <div>
-              <img src={img4} alt="Bitcoin" />
-            </div>
-            <div>
-              <img src={img5} alt="Mining 1" />
-            </div>
-            <div>
-              <img src={img6} alt="Mining 2" />
-            </div>
-          </Slider>
-        </div>
+      {/* Slick Carousel */}
+      <div className="carousel-container">
+        <Slider {...settings}>
+          <div>
+            <img src={img1} alt="Mining facility 1" />
+          </div>
+          <div>
+            <img src={img2} alt="Mining facility 2" />
+          </div>
+          <div>
+            <img src={img3} alt="Mining facility 3" />
+          </div>
+          <div>
+            <img src={img4} alt="Bitcoin" />
+          </div>
+          <div>
+            <img src={img5} alt="Mining 1" />
+          </div>
+          <div>
+            <img src={img6} alt="Mining 2" />
+          </div>
+        </Slider>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -9,6 +9,7 @@ import Hostingservices from "../components/Home/hostingservices";
 import Workwithus from "../components/Home/workwithus";
 import Demosection from "../components/Home/demosection";
 import DubaiVenueLocator from "./map";
+import AtmSection from "../components/Home/atmsection";
 const Home = () => {
   return (
     <>
@@ -17,6 +18,7 @@ const Home = () => {
       <ProductSlider />
       <Reserve />
       <Hostingservices />
+      <AtmSection />
       <Demosection />
       <Whychooseus />
       <DubaiVenueLocator />
