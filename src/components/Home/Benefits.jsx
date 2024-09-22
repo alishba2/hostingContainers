@@ -32,7 +32,7 @@ export default function Benefits() {
             <div className="icon">
               {/* <FaCode />/ */}
             </div>
-            <h3>Mining Containers</h3>
+            <h3>Mining <br></br> Containers</h3>
             <p>
               Portable, scalable, and efficient—our mining containers allow you to expand operations without the need for additional space.
             </p>

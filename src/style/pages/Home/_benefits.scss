@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap');
+
 .service-container {
-  padding: 7em 0 2em 0;
+  padding: 7em 0 1em 0;
   position: relative;
   width: 100%;
   text-align: center;
@@ -7,10 +9,12 @@
   padding-right: 20px;
 
   .container {
-    max-width: 1050px;
+    max-width: 1300px;
     margin: 0 auto;
 
     h2 {
+      font-family: "Gowun Batang", serif !important;
+      font-weight: bold;
       // text-shadow: 4px 4px 4px #4b2e83, 4px 4px 4px #4b2e83, 4px 4px 4px #4b2e83,
       //   4px 4px 4px #4b2e83;
     }
@@ -18,7 +22,7 @@
     .row {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
+      // justify-content: space-between;
       margin: 0 -15px;
     }
 
@@ -28,12 +32,13 @@
       /* Fallback color */
       padding: 30px;
       margin: 15px;
-      text-align: center;
+      // text-align: center;
       border-radius: 5px;
       position: relative;
       transition: all 0.3s ease;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       color: white;
+      height: 270px;
       /* Default text color for better contrast */
 
       /* Pseudo-element for overlay */
@@ -49,7 +54,12 @@
         background-color: rgba(0, 0, 0, 0.6);
         /* Adjust opacity for a darker overlay */
         z-index: 1;
+
         /* Place overlay above the image but below the text */
+      }
+
+      h3 {
+        text-align: start;
       }
 
       h3,
@@ -57,6 +67,7 @@
         position: relative;
         /* Position text above the overlay */
         z-index: 2;
+        text-align: start;
         /* Ensure text is above the overlay */
       }
 
