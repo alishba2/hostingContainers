@@ -9,7 +9,8 @@
   }
 
   .product-card {
-    background-color: #4b2e83;
+    background-color: #1c1c1c;
+
     padding: 15px;
     border-radius: 8px;
     text-align: center;
@@ -20,7 +21,7 @@
     max-width: 200px;
     margin: 0 auto;
 
-    &:hover {
+    r &:hover {
       transform: translateY(-5px);
     }
 

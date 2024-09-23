@@ -87,11 +87,19 @@
         transition: transform 0.2s ease-in-out;
         color: #fff;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        height: 356px;
-        width: 236px;
+        height: 370px;
+        width: 300px;
 
         &:hover {
           transform: translateY(-5px);
+        }
+
+        p {
+          line-height: 30px !important;
+        }
+
+        h3 {
+          line-height: 30px !important;
         }
 
         img {

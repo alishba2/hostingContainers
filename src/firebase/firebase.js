@@ -150,20 +150,22 @@ const uploadImage = async (imageFile) => {
         throw error;
     }
 };
-
-// Function to save a product to Firestore with an image
 const saveProduct = async (product) => {
     try {
-        // Check if there is an image to upload
-        let imageURL = null;
-        if (product.image) {
-            imageURL = await uploadImage(product.image); // Upload image and get the URL
+        const imageURLs = [];
+
+        // Check if there are images to upload
+        if (product.images && product.images.length > 0) {
+            for (const image of product.images) {
+                const imageURL = await uploadImage(image); // Upload each image and get the URL
+                imageURLs.push(imageURL); // Add URL to the array
+            }
         }
 
-        // Prepare product data including the image URL
+        // Prepare product data including the array of image URLs
         const productData = {
             ...product,
-            image: imageURL // Store the image URL
+            images: imageURLs // Store the array of image URLs
         };
 
         // Add a new product document to the "products" collection
@@ -174,7 +176,6 @@ const saveProduct = async (product) => {
         throw error;
     }
 };
-
 const getAllProducts = async () => {
     try {
         // Reference to the 'products' collection in Firestore
