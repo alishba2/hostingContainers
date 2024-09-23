@@ -54,7 +54,7 @@ export default function SingleProduct() {
 
     return (
         <div className="single-product-container">
-            <Title level={1}>{name}</Title>
+            {/* <h6 style={{ color: "white !important" }} >{name}</h6> */}
             <Row gutter={16} className="product-row">
                 {/* Left Column - Image Gallery */}
                 <Col xs={24} md={12}>

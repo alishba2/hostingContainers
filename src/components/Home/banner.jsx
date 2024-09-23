@@ -74,7 +74,9 @@ const Banner = () => {
                   </span>
                 ))
               ) : (
-                <span>Loading...</span>
+                <>
+                </>
+                // <span>Loading...</span>
               )}
             </marquee>
           </div>

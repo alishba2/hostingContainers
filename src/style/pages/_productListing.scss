@@ -79,6 +79,13 @@
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 20px;
 
+      .truncated-name {
+        white-space: nowrap; // Prevent line breaks
+        overflow: hidden; // Hide overflow
+        text-overflow: ellipsis; // Add ellipsis
+        max-width: 100%; // Ensure it doesn't exceed the container width
+      }
+
       .product-card {
         background-color: #333;
         padding: 15px;
