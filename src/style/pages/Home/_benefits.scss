@@ -4,7 +4,7 @@
   padding: 7em 0 1em 0;
   position: relative;
   width: 100%;
-  text-align: center;
+  // text-align: center;
   padding-left: 20px;
   padding-right: 20px;
 
@@ -15,6 +15,7 @@
     h2 {
       font-family: "Gowun Batang", serif !important;
       font-weight: bold;
+
       // text-shadow: 4px 4px 4px #4b2e83, 4px 4px 4px #4b2e83, 4px 4px 4px #4b2e83,
       //   4px 4px 4px #4b2e83;
     }
@@ -60,14 +61,23 @@
 
       h3 {
         text-align: start;
+        margin-top: 100px !important;
+        color: white !important;
+        z-index: 2;
+        position: relative;
+
       }
 
-      h3,
-      p {
+      button {
         position: relative;
         /* Position text above the overlay */
         z-index: 2;
         text-align: start;
+        padding: 4px 8px;
+        background-color: transparent;
+        border: 2px solid white;
+        color: white;
+        border-radius: 20px;
         /* Ensure text is above the overlay */
       }
 
@@ -79,7 +89,7 @@
       }
 
       &:nth-child(2) {
-        background-image: url(../../../assets/crypto2.jpg);
+        background-image: url(../../../assets/containerImgday10.jpeg);
         /* Replace with your image path */
         background-size: cover;
         background-position: center;
@@ -159,6 +169,8 @@
 
 @media only screen and (max-width: 700px) {
   .service-container {
+    padding: 2em 0 1em 0;
+
     h2 {
       font-size: 32px;
       line-height: 40px;

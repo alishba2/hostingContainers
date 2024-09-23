@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap');
+
+.loading-container {
+    display: flex; // Use flexbox to center the spinner
+    justify-content: center; // Center horizontally
+    align-items: center; // Center vertically
+    height: 500px; // Set the height to 700px
+}
+
+.single-product-container {
+    padding: 20px;
+
+
+    .product-row {
+        margin-top: 20px;
+    }
+
+    .image-gallery {
+        .main-image {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border: 1px solid #f0f0f0;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            background: transparent !important;
+        }
+
+        .thumbnail-images {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            .thumbnail {
+                width: 100px;
+                height: 100px;
+                cursor: pointer;
+                object-fit: cover;
+                border: 1px solid #f0f0f0;
+                border-radius: 4px;
+                transition: border-color 0.3s;
+
+                &:hover {
+                    border-color: #1890ff; // Ant Design primary color on hover
+                }
+            }
+        }
+    }
+
+    .product-info {
+        margin-top: 20px;
+        padding: 20px;
+        background: transparent;
+        color: white !important;
+        border-radius: 4px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+        .ant-card-head {
+            font-size: 25px;
+            color: white !important;
+
+        }
+
+        .ant-typography.price.css-dev-only-do-not-override-vn1oyg {
+            font-size: 25px;
+            color: white !important;
+
+        }
+
+        .ant-typography.css-dev-only-do-not-override-vn1oyg {
+            font-size: 17px;
+            color: white !important;
+        }
+
+        .price {
+            font-size: 30px;
+            font-family: "Gowun Batang", serif !important;
+        }
+
+        .buy-now-button {
+            margin-top: 20px;
+            background-color: #1890ff; // Ant Design primary color
+            border-color: #1890ff;
+            font-size: 18px;
+
+            &:hover {
+                background-color: #40a9ff; // Hover effect
+                border-color: #40a9ff;
+            }
+        }
+    }
+
+    .specifications {
+        margin-top: 40px;
+        color: white;
+
+        Title {
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+
+            li {
+                margin-bottom: 10px;
+                font-family: "Gowun Batang", serif !important;
+
+                strong {
+                    color: #1890ff; // Highlight spec names
+                }
+            }
+        }
+    }
+
+    // Responsive styles
+    @media (max-width: 768px) {
+        .product-info {
+            padding: 10px;
+        }
+
+        .specifications {
+            margin-top: 20px;
+        }
+    }
+}
+
+
+.tabs {
+    margin-top: 5rem;
+
+    :where(.css-dev-only-do-not-override-vn1oyg).ant-tabs .ant-tabs-tab {
+        color: white !important;
+    }
+
+    :where(.css-dev-only-do-not-override-vn1oyg).ant-tabs .ant-tabs-tab-btn {
+        color: white;
+    }
+
+    .ant-tabs-nav-wrap {
+        color: white; // Ant Design primary color
+        background-color: #a890d3;
+    }
+
+    :where(.css-dev-only-do-not-override-vn1oyg).ant-tabs .ant-tabs-tab:hover {
+        background-color: transparent;
+        color: white;
+    }
+
+    :where(.css-dev-only-do-not-override-vn1oyg).ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+        color: white !important;
+    }
+}
+
+.specifications {
+    // margin-top: 40px;
+    color: white;
+
+    Title {
+        margin-bottom: 20px;
+    }
+
+    colgroup {
+        width: 350px;
+    }
+
+    .ant-table {
+        background: transparent;
+        color: white;
+    }
+
+    .ant-table-thead>tr>th {
+        color: white; // Ant Design primary color
+        background-color: #a890d3;
+        display: none;
+    }
+
+    .ant-table-tbody>tr>td {
+        color: white; // Ensure text is white for table cells
+    }
+
+    :where(.css-dev-only-do-not-override-vn1oyg).ant-table-wrapper .ant-table-tbody .ant-table-row>.ant-table-cell-row-hover {
+        color: black;
+    }
+
+    span {
+        font-size: 18px;
+        font-family: "Gowun Batang", serif !important;
+    }
+}
+
+.qualities-table {
+    margin-top: 5rem;
+    color: white;
+
+
+    table {
+        background: black;
+    }
+
+    .ant-table {
+        background: black;
+        color: white;
+
+
+
+
+        .ant-table-thead>tr>th {
+            color: white; // Ant Design primary color
+            background-color: #a890d3; // Light background for header
+            padding: 16px; // Increase padding for header cells
+        }
+
+        .ant-table-tbody>tr>td {
+            color: white; // Ensure text is white for table cells
+            padding: 16px; // Increase padding for body cells
+        }
+
+        .tr.ant-table-row.ant-table-row-level-0 {
+            color: white !important;
+        }
+
+        .ant-table-row.ant-table-row-level-0 {
+            color: white !important;
+        }
+
+        .ant-table-tbody>tr>td {
+            color: white; // Ensure text is white for table cells
+        }
+    }
+}
+
+.toggle-buttons {
+    display: flex; // Use flex to align buttons
+    margin-top: 6rem;
+
+    button {
+        padding: 10px 20px;
+        // margin-right: 10px; // Space between buttons
+        border: none; // Remove default border
+        // border-radius: 4px; // Rounded corners
+        cursor: pointer; // Pointer cursor on hover
+        transition: background-color 0.3s, color 0.3s;
+        background-color: transparent;
+        color: white;
+
+        // &:hover {
+        //     background-color: rgba(255, 255, 255, 0.2); // Hover effect
+        // }
+
+        &.active {
+            background-color: #a890d3; // Active button color
+            color: white; // Active button text color
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    .single-product-container .image-gallery .main-image {
+
+        margin-top: -133px;
+    }
+
+    .loading-container {
+        display: flex; // Use flexbox to center the spinner
+        justify-content: center; // Center horizontally
+        align-items: center; // Center vertically
+        height: 200px; // Set the height to 700px
+    }
+
+}

@@ -10,6 +10,7 @@ import Admin from "./pages/admin";
 import CryptoAtmLocator from "./pages/map";
 import TrackOrders from "./pages/trackOrders";
 import ShowBlogs from "./pages/showBlogs";
+import SingleProduct from "./pages/singleProduct";
 function App() {
   return (
     <>
@@ -23,6 +24,7 @@ function App() {
         <Route path="/map" element={<CryptoAtmLocator />} />
         <Route path="/track-orders" element={<TrackOrders />} />
         <Route path="/blogs" element={<ShowBlogs />} />
+        <Route path="/product/:id" element={<SingleProduct />} />
       </Routes>
       <Footer />
     </>

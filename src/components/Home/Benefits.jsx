@@ -23,9 +23,12 @@ export default function Benefits() {
               {/* <FaPaintBrush /> */}
             </div>
             <h3>Cryptocurrency Miners</h3>
-            <p>
+            <button className="seeMore">
+              See More
+            </button>
+            {/* <p>
               Want to mine crypto but lack the infrastructure? Explore our top-of-the-line miners, offering unparalleled performance for your mining operations.
-            </p>
+            </p> */}
           </div>
 
           <div className="service-card">
@@ -33,9 +36,12 @@ export default function Benefits() {
               {/* <FaCode />/ */}
             </div>
             <h3>Mining <br></br> Containers</h3>
-            <p>
+            {/* <p>
               Portable, scalable, and efficient—our mining containers allow you to expand operations without the need for additional space.
-            </p>
+            </p> */}
+            <button className="seeMore">
+              See More
+            </button>
           </div>
 
           <div className="service-card">
@@ -43,9 +49,12 @@ export default function Benefits() {
               {/* <FaLaptopCode /> */}
             </div>
             <h3>Mining Chips & Hardware</h3>
-            <p>
+            {/* <p>
               Equip your rigs with the latest mining chips and hardware, optimized for maximum hash rates and energy efficiency.
-            </p>
+            </p> */}
+            <button className="seeMore">
+              See More
+            </button>
           </div>
 
         </div>

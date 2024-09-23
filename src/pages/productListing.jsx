@@ -1,20 +1,21 @@
 import React, { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { getAllProducts } from '../firebase/firebase'; // Assume this fetches products from Firebase
 
 export default function ProductListing() {
     const location = useLocation();
+    const navigate = useNavigate(); // Initialize useNavigate
 
     const [category, setCategory] = useState(null);
-
 
     useEffect(() => {
         console.log(location, "locationnnnnnnnnnnnnnnnnn");
         if (location?.state) {
             console.log(location?.state, "location in products");
-            setCategory(location?.state?.category)
+            setCategory(location?.state?.category);
         }
-    }, [location])
+    }, [location]);
+
     const [searchTerm, setSearchTerm] = useState("");
     const [filters, setFilters] = useState({
         inStock: false,
@@ -57,6 +58,11 @@ export default function ProductListing() {
         .filter(
             (product) => !filters.maxPrice || product.price <= filters.maxPrice
         );
+
+    // Function to navigate to SingleProduct
+    const handleProductClick = (productId) => {
+        navigate(`/product/${productId}`, { state: { category } });
+    };
 
     return (
         <div className="product-listing-container">
@@ -114,12 +120,16 @@ export default function ProductListing() {
                 {/* Product Grid */}
                 <div className="product-grid">
                     {filteredProducts.length > 0 ? filteredProducts.map((product) => (
-                        <div key={product.id} className="product-card">
-                            <img src={product.image} alt={product.name} />
+                        <div
+                            key={product.id}
+                            className="product-card"
+                            onClick={() => handleProductClick(product.id)} // Navigate on click
+                        >
+                            <img src={product.images[0]} alt={product.name} />
                             <h3>{product.name}</h3>
                             <div className="product-name">
                                 <p>${product.price}</p>
-                                <p className="power">{product.power}</p> {/* Added power rating */}
+                                <p className="power">{product.powerSupply}</p> {/* Added power rating */}
                             </div>
                         </div>
                     )) : (

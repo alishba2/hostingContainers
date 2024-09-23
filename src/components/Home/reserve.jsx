@@ -10,7 +10,7 @@ const Reserve = () => {
       <div className="content-section">
         <h1>{t("reserve.title")}</h1>
         <p>{t("reserve.description")}</p>
-        <button className="btn-primary">{t("reserve.button")}</button>
+        {/* <button className="btn-primary">{t("reserve.button")}</button> */}
       </div>
       <div className="image-section">
         <img src={img} alt="Reserve" />
