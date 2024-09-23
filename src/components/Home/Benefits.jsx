@@ -13,6 +13,10 @@ export default function Benefits() {
     <div className="service-container">
       <div className="container">
         <h2>Boost Your Crypto Mining</h2>
+
+        <div className="line">
+
+        </div>
         {/* <p>
           Unlock the full power of cryptocurrency mining with our tailored solutions, designed to meet the demands of both novice and expert miners.
         </p> */}

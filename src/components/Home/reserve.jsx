@@ -1,5 +1,5 @@
 import React from "react";
-import img from "../../assets/bannerImg1.jpg";
+import img from "../../assets/miningChips.jpg";
 import { useTranslation } from "react-i18next";
 
 const Reserve = () => {

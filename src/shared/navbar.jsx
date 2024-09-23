@@ -310,22 +310,12 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-
       <div className="mobile-navbar">
         <NavLink to="/">
           <img src={logo} alt={t("logo_alt")} className="mobileLogo" />
         </NavLink>
-        <Button
-          onClick={showDrawer}
-          className="menu-btn"
-          type="button"
-          aria-controls="offcanvasExample"
-        >
-          <Icon
-            color="white"
-            icon="material-symbols:menu"
-            className="menu-btn-icon"
-          />
+        <Button onClick={showDrawer} className="menu-btn" type="button">
+          <Icon color="white" icon="material-symbols:menu" className="menu-btn-icon" />
         </Button>
         <Drawer
           placement={placement}
@@ -337,241 +327,63 @@ const Navbar = () => {
           className="mobile-menu-drawer"
         >
           <img src={logo} alt={t("logo_alt")} className="logostyle" />
-
           <ul className="mt-5">
             <li>
-              <NavLink
-                exact
-                to="/"
-                activeClassName="active"
-                onClick={() => setOpen(false)}
-              >
+              <NavLink exact to="/" activeClassName="active" onClick={() => setOpen(false)}>
                 {t("home")}
               </NavLink>
             </li>
-
-            {/* <li
-              className={` ${
-                location.pathname === "/fabicare" || location.pathname === "/u"
-                  ? "activeClass"
-                  : ""
-              }`}
+            <li
+              onMouseEnter={handleSubmenu}
+              onMouseLeave={handleSubmenu}
+              className={`li-platform ${showSubmenu ? "activeClass" : ""}`}
             >
-              <a onClick={handlesolutionSubmenu} className="v-center mt-3">
-                {t("Products")}
-                <Icon
-                  icon="mingcute:down-line"
-                  color="white"
-                  width="20"
-                  height="20"
-                  className="ms-2"
-                />
+              <a onClick={() => setShowSubmenu(!showSubmenu)} className="v-center mt-3">
+                {t("products")}
+                <Icon icon="mingcute:down-fill" color="white" />
               </a>
-            </li>
-            {showsolSubmenu && (
-              <>
-                <ul className="mobil-dropdown">
-                  <li>
-                    <NavLink
-                      className="d-flex gap-2"
-                      exact
-                      to="/hosting"
-                      activeClassName="active"
-                      onClick={() => setOpen(false)}
-                    >
-                      {t("dry_cleaning")}
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink
-                      className="d-flex gap-2"
-                      exact
-                      to="/life"
-                      activeClassName="active"
-                      onClick={() => setOpen(false)}
-                    >
-                      {t("life_insurance")}
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink
-                      className="d-flex gap-2"
-                      exact
-                      to="/automobile"
-                      activeClassName="active"
-                      onClick={() => setOpen(false)}
-                    >
-                      <img
-                        src="../../../assets/images/automobileIcon.svg"
-                        alt={t("auto_mobile")}
-                      />
-                      {t("auto_mobile")}
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink
-                      className="d-flex gap-2"
-                      exact
-                      to="/education"
-                      activeClassName="active"
-                      onClick={() => setOpen(false)}
-                    >
-                      <img
-                        src="../../../assets/images/educationIcon.svg"
-                        alt={t("education")}
-                      />
-                      {t("education")}
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink
-                      className="d-flex gap-2"
-                      exact
-                      to="/transport"
-                      activeClassName="active"
-                      onClick={() => setOpen(false)}
-                    >
-                      <img
-                        src="../../../assets/images/transportIcon.svg"
-                        alt={t("transportation")}
-                      />
-                      {t("transportation")}
-                    </NavLink>
-                  </li>
-                </ul>
-              </>
-            )} */}
-            <li className="my-3">
-              <NavLink
-                exact
-                to="/products"
-                activeClassName="active"
-                onClick={() => setOpen(false)}
-              >
-                {t("Products")}
-              </NavLink>
-            </li>
-            <li className="my-3">
-              <NavLink
-                exact
-                to="/hosting"
-                activeClassName="active"
-                onClick={() => setOpen(false)}
-              >
-                {t("Hosting")}
-              </NavLink>
-            </li>
-            <li className="my-3">
-              <NavLink
-                exact
-                to="/about-us"
-                activeClassName="active"
-                onClick={() => setOpen(false)}
-              >
-                {t("About us")}
-              </NavLink>
-            </li>
-          </ul>
-
-          <div className="d-flex flex-column gap-2">
-            <div className="navbarbtn-container">
-              {userData ? (
-                <Dropdown overlay={menu} trigger={['click']}>
-                  <span className="name-container">
-
-
-                    <p>
-                      {userData?.fullName}
-                    </p>
-                    <span className="icon">
-                      <Icon
-                        color="#FFF"
-                        icon="mingcute:down-fill"
-                        className="icon-rotate"
-                      />
-                    </span>
-                  </span>
-
-
-                </Dropdown>
-              ) : (
-                <button onClick={onsigninbtnClick}>{t("sign_in")}</button>
-              )}
-            </div>
-
-            <div
-              className="navbarbtn-container"
-              onMouseEnter={handlelanguageShow}
-              onMouseLeave={handlelanguagesClose}
-            >
-              <button className="dropdown-button v-center gap-2">
-                {i18n.language === "en"
-                  ? "English"
-                  : i18n.language === "ru"
-                    ? "Русский"
-                    : i18n.language === "es"
-                      ? "Español"
-                      : "中文"}
-                <Icon
-                  color="#FFF"
-                  icon="mingcute:down-fill"
-                  className="icon-rotate"
-                />
-              </button>
-              {languagesshow && (
-                <div className="languages-main-outer">
-                  <div className="platform-hover-container d-flex flex-column">
-                    <div
-                      onClick={() => {
-                        i18n.changeLanguage("en");
-                        onClose();
-                      }}
-                      className="platform-items d-flex space-between"
-                    >
-                      <div className="left d-flex v-center">
-                        <h6>English</h6>
-                      </div>
-                    </div>
-                    <div
-                      onClick={() => {
-                        i18n.changeLanguage("ru");
-                        onClose();
-                      }}
-                      className="platform-items d-flex space-between"
-                    >
-                      <div className="left d-flex v-center">
-                        <h6>Русский</h6>
-                      </div>
-                    </div>
-                    <div
-                      onClick={() => {
-                        i18n.changeLanguage("es");
-                        onClose();
-                      }}
-                      className="platform-items d-flex space-between"
-                    >
-                      <div className="left d-flex v-center">
-                        <h6>Español</h6>
-                      </div>
-                    </div>
-                    <div
-                      onClick={() => {
-                        i18n.changeLanguage("zh");
-                        onClose();
-                      }}
-                      className="platform-items d-flex space-between"
-                    >
-                      <div className="left d-flex v-center">
-                        <h6>中文</h6>
-                      </div>
-                    </div>
+              {showSubmenu && (
+                <div className="submenu">
+                  <div onClick={() => { setOpen(false); handleNavigation2("Miners") }}>
+                    {t("Miners")}
+                  </div>
+                  <div onClick={() => { setOpen(false); handleNavigation2("Mining Containers") }}>
+                    {t("mining-containers")}
+                  </div>
+                  <div onClick={() => { setOpen(false); handleNavigation2("Mining Chips") }}>
+                    {t("mining-chips")}
                   </div>
                 </div>
               )}
-            </div>
+            </li>
+            <li className="my-3">
+              <NavLink exact to="/hosting" activeClassName="active" onClick={() => setOpen(false)}>
+                {t("hosting")}
+              </NavLink>
+            </li>
+            <li className="my-3">
+              <NavLink exact to="/about-us" activeClassName="active" onClick={() => setOpen(false)}>
+                {t("about_us")}
+              </NavLink>
+            </li>
+          </ul>
+          <div className="navbarbtn-container">
+            {userData ? (
+              <Dropdown overlay={menu} trigger={['click']}>
+                <span className="name-container">
+                  <p>{userData?.fullName}</p>
+                  <span className="icon">
+                    <Icon color="#FFF" icon="mingcute:down-fill" className="icon-rotate" />
+                  </span>
+                </span>
+              </Dropdown>
+            ) : (
+              <button onClick={onsigninbtnClick}>{t("sign_in")}</button>
+            )}
           </div>
         </Drawer>
       </div>
+
 
       <Login isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
     </>
