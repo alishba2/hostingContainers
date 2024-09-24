@@ -36,7 +36,7 @@ export default function SingleProduct() {
     const { name, description, images, price, specifications } = product;
     const specificationsData = Object.entries(product)
         .filter(([key, value]) =>
-            value && key !== 'name' && key !== 'description' && key !== 'images' && key !== 'price' && key !== 'id'
+            value && key !== 'name' && key !== 'description' && key !== 'images' && key !== 'price' && key !== 'id' && key !== 'type'
         )
         .map(([key, value]) => ({
             key, // Use the key as the row key
@@ -89,7 +89,7 @@ export default function SingleProduct() {
                 </Col>
             </Row>
 
-            <div>
+            {specificationsData.length > 0 && < div >
                 <div className="toggle-buttons">
                     <button
                         className={showSpecifications ? 'active' : ''}
@@ -105,7 +105,7 @@ export default function SingleProduct() {
                     </button>
                 </div>
 
-                {showSpecifications ? (
+                {specificationsData.length > 0 ? (
                     <div className="specifications">
                         {specificationsData.length > 0 ? (
                             <Table
@@ -137,7 +137,7 @@ export default function SingleProduct() {
                         </Table> */}
                     </div>
                 )}
-            </div>
-        </div>
+            </div>}
+        </div >
     );
 }

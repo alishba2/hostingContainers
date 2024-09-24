@@ -162,5 +162,12 @@
     "work_email": "工作电子邮件*",
     "phone_number": "电话号码*",
     "your_message": "您的消息...",
-    "send": "发送"
+    "send": "发送",
+    "benefit": {
+        "title": "提升您的加密货币挖矿",
+        "cryptocurrencyMiners": "加密货币矿工",
+        "miningContainers": "挖矿容器",
+        "miningChipsHardware": "挖矿芯片和硬件",
+        "seeMore": "查看更多"
+    }
 }

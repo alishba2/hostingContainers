@@ -47,7 +47,7 @@ const AtmSection = () => {
 
     return (
         <div className="hosting-services-main v-center flex-column">
-            <h1 className="text-center">{t("atmSection.title")}</h1>
+            <h1 >{t("atmSection.title")}</h1>
             <p className="paraSmall text-center">{t("atmSection.description")}</p>
 
             {/* Slick Carousel */}

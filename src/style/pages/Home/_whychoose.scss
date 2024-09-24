@@ -1,5 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap');
+
 .why-choose-container {
   padding: 50px 20px 30px 20px;
+
+  h1 {
+    font-family: "Gowun Batang", serif !important;
+    font-weight: bold;
+  }
 
   .listItem {
     width: 80%;
@@ -30,21 +37,28 @@
     }
   }
 }
+
 @media only screen and (max-width: 800px) {
   .why-choose-container {
     h1 {
       font-size: 2rem;
+      font-family: "Gowun Batang", serif !important;
+      font-weight: bold;
     }
+
+
     .listItem {
       grid-template-columns: repeat(1, 1fr);
       gap: 36px;
       width: 100%;
+
       .order {
         padding: 30px;
         gap: 15px;
 
         h2 {
           font-size: 24px;
+
         }
       }
     }

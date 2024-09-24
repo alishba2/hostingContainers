@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import {
   FaCode,
   FaPencilAlt,
@@ -9,42 +10,33 @@ import {
 } from "react-icons/fa";
 
 export default function Benefits() {
+  const { t } = useTranslation();
+
   return (
     <div className="service-container">
       <div className="container">
-        <h2>Boost Your Crypto Mining</h2>
+        <h2>{t('benefits.title')}</h2>
 
-        <div className="line">
-
-        </div>
-        {/* <p>
-          Unlock the full power of cryptocurrency mining with our tailored solutions, designed to meet the demands of both novice and expert miners.
-        </p> */}
+        <div className="line"></div>
 
         <div className="row">
           <div className="service-card active">
             <div className="icon">
               {/* <FaPaintBrush /> */}
             </div>
-            <h3>Cryptocurrency Miners</h3>
+            <h3>{t('benefit.cryptocurrencyMiners')}</h3>
             <button className="seeMore">
-              See More
+              {t('benefit.seeMore')}
             </button>
-            {/* <p>
-              Want to mine crypto but lack the infrastructure? Explore our top-of-the-line miners, offering unparalleled performance for your mining operations.
-            </p> */}
           </div>
 
           <div className="service-card">
             <div className="icon">
-              {/* <FaCode />/ */}
+              {/* <FaCode /> */}
             </div>
-            <h3>Mining <br></br> Containers</h3>
-            {/* <p>
-              Portable, scalable, and efficient—our mining containers allow you to expand operations without the need for additional space.
-            </p> */}
+            <h3>{t('benefit.miningContainers')}</h3>
             <button className="seeMore">
-              See More
+              {t('benefit.seeMore')}
             </button>
           </div>
 
@@ -52,15 +44,11 @@ export default function Benefits() {
             <div className="icon">
               {/* <FaLaptopCode /> */}
             </div>
-            <h3>Mining Chips & Hardware</h3>
-            {/* <p>
-              Equip your rigs with the latest mining chips and hardware, optimized for maximum hash rates and energy efficiency.
-            </p> */}
+            <h3>{t('benefit.miningChipsHardware')}</h3>
             <button className="seeMore">
-              See More
+              {t('benefit.seeMore')}
             </button>
           </div>
-
         </div>
       </div>
     </div>

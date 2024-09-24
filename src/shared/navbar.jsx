@@ -190,6 +190,11 @@ const Navbar = () => {
                         </div>
                       </div>
 
+                      <div className="platform-items d-flex space-between" onClick={() => handleNavigation2("Others")}>
+                        <div className="left d-flex v-center">
+                          <h6>{t("Accessories")}</h6>
+                        </div>
+                      </div>
 
                       {/* <NavLink to="/integrations">
                         <div className="platform-items d-flex space-between">
@@ -219,8 +224,8 @@ const Navbar = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/gallery" activeClassName="active">
-                  {t("gallery")}
+                <NavLink to="/atm" activeClassName="active">
+                  {t("Atms")}
                 </NavLink>
               </li>
             </ul>
@@ -355,13 +360,13 @@ const Navbar = () => {
               </a>
               {showSubmenu && (
                 <div className="submenu">
-                  <div onClick={() => { setOpen(false); handleNavigation2("Miners") }}>
+                  <div className="menuItem" onClick={() => { setOpen(false); handleNavigation2("Miners") }}>
                     {t("Miners")}
                   </div>
-                  <div onClick={() => { setOpen(false); handleNavigation2("Mining Containers") }}>
+                  <div className="menuItem" onClick={() => { setOpen(false); handleNavigation2("Mining Containers") }}>
                     {t("mining-containers")}
                   </div>
-                  <div onClick={() => { setOpen(false); handleNavigation2("Mining Chips") }}>
+                  <div className="menuItem" onClick={() => { setOpen(false); handleNavigation2("Mining Chips") }}>
                     {t("mining-chips")}
                   </div>
                 </div>
@@ -394,7 +399,7 @@ const Navbar = () => {
                 </span>
               </Dropdown>
             ) : (
-              <button onClick={onsigninbtnClick}>{t("sign_in")}</button>
+              <button className="button2" onClick={onsigninbtnClick}>{t("sign_in")}</button>
             )}
           </div>
         </Drawer>

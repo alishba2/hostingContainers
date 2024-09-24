@@ -71,14 +71,17 @@
   }
 }
 
-@media only screen and (max-width: 700px) {
-  .requestDemo-main-container {
-    width: 80%;
-    padding: 30px 20px;
+@media (max-width: 576px) {
+  .footer-section {
+    text-align: center;
+    flex: 1 1 100%;
+  }
 
-    .requestDemo-twoInputbox {
-      grid-template-columns: 1fr;
-      gap: 0;
-    }
+  .footer-bottom {
+    font-size: 12px;
+  }
+
+  .social-icons {
+    justify-content: center;
   }
 }

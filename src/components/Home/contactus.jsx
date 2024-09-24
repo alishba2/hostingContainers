@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import { saveContactForm } from "../../firebase/firebase";
-
 const Contactus = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
-  // State to manage form inputs and loading
+  // State to manage form inputs
   const [formData, setFormData] = useState({
     fname: "",
     lname: "",
@@ -17,7 +16,6 @@ const Contactus = () => {
     phone: "",
     message: "",
   });
-  const [loading, setLoading] = useState(false);
 
   // Handle input change
   const handleChange = (e) => {
@@ -31,7 +29,6 @@ const Contactus = () => {
   // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault(); // Prevent the default form submission
-    setLoading(true); // Set loading state
 
     try {
       await saveContactForm(formData);
@@ -48,8 +45,6 @@ const Contactus = () => {
       alert(t('message_sent_successfully')); // Provide success message
     } catch (error) {
       alert(t('error_sending_message')); // Provide error feedback
-    } finally {
-      setLoading(false); // Reset loading state
     }
   };
 
@@ -111,13 +106,7 @@ const Contactus = () => {
             value={formData.message}
             onChange={handleChange}
           ></textarea>
-          <button type="submit" className="send-request-btn" disabled={loading}>
-            {loading ? (
-              <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-            ) : (
-              t('send')
-            )}
-          </button>
+          <button type="submit" className="send-request-btn">{t('send')}</button>
         </form>
       </div>
     </div>

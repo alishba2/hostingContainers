@@ -42,6 +42,29 @@
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
+
+    @media only screen and (max-width: 1200px) {
+      /* Adjust margins for screens smaller than 1200px */
+      margin-top: 10px;
+      /* Example adjustment */
+      margin-left: 0;
+      /* Reset left margin */
+      padding: 20px;
+      /* Adjust padding if necessary */
+    }
+
+    @media only screen and (max-width: 1000px) {
+      /* Further adjustments for mobile screens */
+      margin-top: 19px;
+      /* Example adjustment */
+      margin-left: -3px;
+      /* Reset left margin */
+      // padding: 15px;
+      /* Further adjust padding */
+      font-size: 14px;
+      /* Adjust font size */
+    }
+
     //  text-transform: uppercase;
   }
 }
@@ -329,6 +352,8 @@
           padding: 13px;
           gap: 10px;
           font-size: 16px;
+          margin-top: 17px;
+          margin-left: -7px;
         }
       }
     }
@@ -514,4 +539,25 @@
   // .ant-drawer-content-wrapper {
   //   width: 388px;
   // }
+}
+
+.submenu {
+  color: white;
+  font-weight: normal;
+  padding: 3px 0px;
+
+
+  .menuItem {
+    padding-top: 10px;
+  }
+
+  .button2 {
+    width: 153px;
+    padding: 13px;
+    gap: 10px;
+    font-size: 16px;
+    margin-top: 17px;
+    margin-left: -7px;
+  }
+
 }
