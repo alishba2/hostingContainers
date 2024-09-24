@@ -21,7 +21,7 @@ const Home = () => {
       <AtmSection />
       <Demosection />
       <Whychooseus />
-      <DubaiVenueLocator />
+      {/* <DubaiVenueLocator /> */}
       {/* <Workwithus /> */}
       <Contactus />
     </>

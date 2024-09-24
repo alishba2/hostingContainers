@@ -5,10 +5,10 @@ const Demosection = () => {
   const { t } = useTranslation();
 
   const data = [
-    { id: 1, heading: "25K+", para: t("demoSection.projectsCompleted") },
-    { id: 2, heading: "8K+", para: t("demoSection.happyCustomers") },
-    { id: 3, heading: "10", para: t("demoSection.yearsExperience") },
-    { id: 4, heading: "10", para: t("demoSection.countriesServed") },
+    { id: 1, heading: "30+", para: t("demoSection.projectsCompleted") },
+    { id: 2, heading: "6K+", para: t("demoSection.happyCustomers") },
+    { id: 3, heading: "8", para: t("demoSection.yearsExperience") },
+    { id: 4, heading: "13", para: t("demoSection.countriesServed") },
   ];
 
   return (
