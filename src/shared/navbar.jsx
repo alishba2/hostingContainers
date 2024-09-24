@@ -372,50 +372,107 @@ const Navbar = () => {
                 </div>
               )}
             </li>
-            <li>
-              <NavLink to="/hosting" activeClassName="active" onClick={() => setOpen(false)}>
+            <li className="my-3">
+              <NavLink exact to="/hosting" activeClassName="active" onClick={() => setOpen(false)}>
                 {t("hosting")}
               </NavLink>
             </li>
-            {/* Additional Links */}
+            <li className="my-3">
+              <NavLink exact to="/about-us" activeClassName="active" onClick={() => setOpen(false)}>
+                {t("about_us")}
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/blogs" activeClassName="active">
+                {t("blogs")}
+              </NavLink>
+            </li>
           </ul>
+          <div className="navbarbtn-container">
+            {userData ? (
+              <Dropdown overlay={menu} trigger={['click']}>
+                <span className="name-container">
+                  <p>{userData?.fullName}</p>
+                  <span className="icon">
+                    <Icon color="#FFF" icon="mingcute:down-fill" className="icon-rotate" />
+                  </span>
+                </span>
+              </Dropdown>
+            ) : (
+              <>
+                <div
+                  className="navbarbtn-container"
+                  onMouseEnter={handlelanguageShow}
+                  onMouseLeave={handlelanguagesClose}
+                >
+                  <button className="dropdown-button v-center gap-2">
+                    {i18n.language === "en"
+                      ? "English"
+                      : i18n.language === "ru"
+                        ? "Русский"
+                        : i18n.language === "es"
+                          ? "Español"
+                          : i18n.language === "ar" // Add Arabic language check
+                            ? "العربية"
+                            : "中文"}
+                    <Icon
+                      color="#FFF"
+                      icon="mingcute:down-fill"
+                      className="icon-rotate"
+                    />
+                  </button>
+                  {languagesshow && (
+                    <div className="languages-main-outer">
+                      <div className="platform-hover-container d-flex flex-column">
+                        <div
+                          onClick={() => i18n.changeLanguage("en")}
+                          className="platform-items d-flex space-between"
+                        >
+                          <div className="left d-flex v-center">
+                            <h6>English</h6>
+                          </div>
+                        </div>
+                        <div
+                          onClick={() => i18n.changeLanguage("ru")}
+                          className="platform-items d-flex space-between"
+                        >
+                          <div className="left d-flex v-center">
+                            <h6>Русский</h6>
+                          </div>
+                        </div>
+                        <div
+                          onClick={() => i18n.changeLanguage("es")}
+                          className="platform-items d-flex space-between"
+                        >
+                          <div className="left d-flex v-center">
+                            <h6>Español</h6>
+                          </div>
+                        </div>
+                        <div
+                          onClick={() => i18n.changeLanguage("zh")}
+                          className="platform-items d-flex space-between"
+                        >
+                          <div className="left d-flex v-center">
+                            <h6>中文</h6>
+                          </div>
+                        </div>
+                        <div onClick={() => handleLanguageChange("ar")} className="platform-items d-flex space-between"> {/* Add Arabic option */}
+                          <div className="left d-flex v-center">
+                            <h6>العربية</h6>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+                <button className="button2" onClick={onsigninbtnClick}>{t("sign_in")}</button>
 
-          {/* Language Button in the Mobile Navbar */}
-          <div className="language-selection">
-            <button className="dropdown-button v-center gap-2">
-              {i18n.language === "en"
-                ? "English"
-                : i18n.language === "ru"
-                  ? "Русский"
-                  : i18n.language === "es"
-                    ? "Español"
-                    : i18n.language === "ar"
-                      ? "العربية"
-                      : "中文"}
-              <Icon color="#FFF" icon="mingcute:down-fill" className="icon-rotate" />
-            </button>
-            <div className="languages-list">
-              <div onClick={() => i18n.changeLanguage("en")}>
-                <h6>English</h6>
-              </div>
-              <div onClick={() => i18n.changeLanguage("ru")}>
-                <h6>Русский</h6>
-              </div>
-              <div onClick={() => i18n.changeLanguage("es")}>
-                <h6>Español</h6>
-              </div>
-              <div onClick={() => i18n.changeLanguage("zh")}>
-                <h6>中文</h6>
-              </div>
-              <div onClick={() => i18n.changeLanguage("ar")}>
-                <h6>العربية</h6>
-              </div>
-            </div>
+              </>
+
+            )}
           </div>
-
         </Drawer>
       </div>
-
 
 
       <Login isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
