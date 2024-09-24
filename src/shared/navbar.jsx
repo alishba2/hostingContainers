@@ -369,6 +369,12 @@ const Navbar = () => {
                   <div className="menuItem" onClick={() => { setOpen(false); handleNavigation2("Mining Chips") }}>
                     {t("mining-chips")}
                   </div>
+                  <div className="menuItem" onClick={() => { setOpen(false); handleNavigation2("Others") }}>
+
+                    {t("Accessories")}
+
+                  </div>
+
                 </div>
               )}
             </li>
@@ -387,6 +393,8 @@ const Navbar = () => {
                 {t("blogs")}
               </NavLink>
             </li>
+
+
           </ul>
           <div className="navbarbtn-container">
             {userData ? (
