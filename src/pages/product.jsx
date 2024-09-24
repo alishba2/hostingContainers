@@ -77,12 +77,21 @@ export default function Product() {
         });
     };
 
+
     const handleImageChange = (file) => {
         if (file && file.type.startsWith('image/')) {
-            setNewProduct((prev) => ({
-                ...prev,
-                images: [...prev.images, file]
-            }));
+            const existingImage = newProduct.images.find(img => img.name === file.name);
+            if (!existingImage) {
+                setNewProduct((prev) => ({
+                    ...prev,
+                    images: [...prev.images, file]
+                }));
+            } else {
+                notification.error({
+                    message: "Duplicate Image",
+                    description: "This image has already been uploaded.",
+                });
+            }
         } else {
             notification.error({
                 message: "Invalid File Type",
@@ -98,13 +107,17 @@ export default function Product() {
         }));
     };
 
+    useEffect(() => {
+        console.log(newProduct, "new product");
+
+    }, [newProduct])
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
 
         try {
             const productToSave = { ...newProduct };
-            console.log(productToSave, "products To save");
             await saveProduct(productToSave);
             setProducts([...products, productToSave]);
             setNewProduct({
@@ -207,7 +220,7 @@ export default function Product() {
             {showForm ? (
                 <div className="product-form">
                     <h2 style={{ color: 'white' }}>Add New Product</h2>
-                    <Form layout="vertical" style={{ background: "white", padding: '40px' }} onSubmit={handleSubmit}>
+                    <Form layout="vertical" style={{ background: "white", padding: '40px' }}>
                         <Form.Item label="Name" required>
                             <Input name="name" value={newProduct.name} onChange={handleInputChange} />
                         </Form.Item>
@@ -262,7 +275,7 @@ export default function Product() {
                             </Form.Item>
                         )}
                         {categoryFields.includes('capacity') && (
-                            <Form.Item label="Capacity" required>
+                            <Form.Item label="Capacity">
                                 <Input name="capacity" value={newProduct.capacity} onChange={handleInputChange} />
                             </Form.Item>
                         )}
@@ -357,69 +370,76 @@ export default function Product() {
                             </Form.Item>
                         )}
                         {categoryFields.includes('kasHashRate') && (
-                            <Form.Item label="Kas Hash Rate" required>
+                            <Form.Item label="Kas Hash Rate">
                                 <Input name="kasHashRate" value={newProduct.kasHashRate} onChange={handleInputChange} />
                             </Form.Item>
                         )}
                         {categoryFields.includes('wallPower') && (
-                            <Form.Item label="Wall Power" required>
+                            <Form.Item label="Wall Power">
                                 <Input name="wallPower" value={newProduct.wallPower} onChange={handleInputChange} />
                             </Form.Item>
                         )}
                         {categoryFields.includes('specifications') && (
-                            <Form.Item label="Specifications" required>
+                            <Form.Item label="Specifications">
                                 <Input name="specifications" value={newProduct.specifications} onChange={handleInputChange} />
                             </Form.Item>
                         )}
                         {categoryFields.includes('dimensionsWithPackaging') && (
-                            <Form.Item label="Dimension (With Packaging)" required>
+                            <Form.Item label="Dimensions with Packaging">
                                 <Input name="dimensionsWithPackaging" value={newProduct.dimensionsWithPackaging} onChange={handleInputChange} />
                             </Form.Item>
                         )}
                         {categoryFields.includes('grossWeight') && (
-                            <Form.Item label="Gross Weight" required>
+                            <Form.Item label="Gross Weight">
                                 <Input name="grossWeight" value={newProduct.grossWeight} onChange={handleInputChange} />
                             </Form.Item>
                         )}
                         {categoryFields.includes('netWeight') && (
-                            <Form.Item label="Net Weight" required>
+                            <Form.Item label="Net Weight">
                                 <Input name="netWeight" value={newProduct.netWeight} onChange={handleInputChange} />
                             </Form.Item>
                         )}
                         {categoryFields.includes('connection') && (
-                            <Form.Item label="Connection" required>
+                            <Form.Item label="Connection">
                                 <Input name="connection" value={newProduct.connection} onChange={handleInputChange} />
                             </Form.Item>
                         )}
                         {categoryFields.includes('voltageInput') && (
-                            <Form.Item label="Voltage Input" required>
+                            <Form.Item label="Voltage Input">
                                 <Input name="voltageInput" value={newProduct.voltageInput} onChange={handleInputChange} />
                             </Form.Item>
                         )}
                         {categoryFields.includes('operatingTemp') && (
-                            <Form.Item label="Operating Temperature" required>
+                            <Form.Item label="Operating Temp">
                                 <Input name="operatingTemp" value={newProduct.operatingTemp} onChange={handleInputChange} />
                             </Form.Item>
                         )}
+
                         <Form.Item label="Images">
-                            <Upload onChange={({ file }) => handleImageChange(file)} showUploadList={false}>
-                                <Button>Upload Image</Button>
+                            <Upload
+                                beforeUpload={handleImageChange}
+                                onRemove={(file) => handleRemoveImage(newProduct.images.indexOf(file))}
+                                fileList={newProduct.images.map((img, index) => ({
+                                    uid: index,
+                                    name: img.name,
+                                    status: 'done'
+                                }))}
+                                showUploadList={true}
+                            >
+                                <Button>Upload</Button>
                             </Upload>
-                            {newProduct.images.map((image, index) => (
-                                <div key={index} className="uploaded-image">
-                                    <img src={URL.createObjectURL(image)} alt="uploaded" />
+                            {newProduct.images.length > 0 && newProduct.images.map((image, index) => (
+                                <div key={index} className="uploaded-file">
+                                    <span>{image.name}</span>
                                     <Button type="link" icon={<CloseOutlined />} onClick={() => handleRemoveImage(index)}>Remove</Button>
                                 </div>
                             ))}
                         </Form.Item>
-                        <Form.Item label="Description">
-                            <Input.TextArea name="description" value={newProduct.description} onChange={handleInputChange} />
-                        </Form.Item>
                         <Form.Item>
-                            <Button type="primary" htmlType="submit" loading={loading}>Submit</Button>
-                            <Button type="default" onClick={() => setShowForm(false)} style={{ marginLeft: '10px' }}>Cancel</Button>
+                            <Button type="primary" loading={loading} onClick={handleSubmit}>Submit</Button>
                         </Form.Item>
                     </Form>
+                    <Button onClick={() => setShowForm(false)}>Cancel</Button>
                 </div>
             ) : (
                 <Table dataSource={products} rowKey="id">
@@ -427,7 +447,7 @@ export default function Product() {
                     <Column title="Category" dataIndex="type" key="type" />
                     <Column title="Price" dataIndex="price" key="price" />
                     <Column title="Actions" key="actions" render={(text, record) => (
-                        <Button type="link" onClick={() => handleDelete(record.id)}>Delete</Button>
+                        <Button onClick={() => handleDelete(record.id)}>Delete</Button>
                     )} />
                 </Table>
             )}

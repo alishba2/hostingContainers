@@ -163,5 +163,12 @@
     "phone_number": "Phone Number*",
     "your_message": "Your message...",
     "send": "Send",
-    "message_sent_successfully": "Message sent successfully!"
+    "message_sent_successfully": "Message sent successfully!",
+    "benefit": {
+        "title": "Boost Your Crypto Mining",
+        "cryptocurrencyMiners": "Cryptocurrency Miners",
+        "miningContainers": "Mining Containers",
+        "miningChipsHardware": "Mining Chips & Hardware",
+        "seeMore": "See More"
+    }
 }

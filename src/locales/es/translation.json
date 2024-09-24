@@ -162,5 +162,12 @@
     "work_email": "Correo electrónico de trabajo*",
     "phone_number": "Número de teléfono*",
     "your_message": "Tu mensaje...",
-    "send": "Enviar"
+    "send": "Enviar",
+    "benefit": {
+        "title": "Impulsa tu minería de criptomonedas",
+        "cryptocurrencyMiners": "Mineros de criptomonedas",
+        "miningContainers": "Contenedores de minería",
+        "miningChipsHardware": "Chips y hardware de minería",
+        "seeMore": "Ver más"
+    }
 }

@@ -96,7 +96,7 @@ export default function ProductListing() {
                         {/* Side Filters */}
                         <div className="side-filters">
                             <h3>Filters</h3>
-                            <label>
+                            {/* <label>
                                 <input
                                     type="checkbox"
                                     name="inStock"
@@ -104,7 +104,7 @@ export default function ProductListing() {
                                     onChange={handleFilterChange}
                                 />
                                 In Stock
-                            </label>
+                            </label> */}
                             <label>
                                 Min Price:
                                 <input

@@ -11,13 +11,13 @@ import CryptoAtmLocator from "./pages/map";
 import TrackOrders from "./pages/trackOrders";
 import ShowBlogs from "./pages/showBlogs";
 import SingleProduct from "./pages/singleProduct";
+import Atm from "./pages/atm";
 import { AdminProvider } from "./Context/appContext";
 
 function App() {
   return (
     <>
       <AdminProvider>
-
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -29,6 +29,8 @@ function App() {
           <Route path="/track-orders" element={<TrackOrders />} />
           <Route path="/blogs" element={<ShowBlogs />} />
           <Route path="/product/:id" element={<SingleProduct />} />
+          <Route path="/atm" element={<Atm />} />
+
         </Routes>
         <Footer />
       </AdminProvider>

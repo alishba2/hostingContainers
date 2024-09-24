@@ -190,6 +190,11 @@ const Navbar = () => {
                         </div>
                       </div>
 
+                      <div className="platform-items d-flex space-between" onClick={() => handleNavigation2("Others")}>
+                        <div className="left d-flex v-center">
+                          <h6>{t("Accessories")}</h6>
+                        </div>
+                      </div>
 
                       {/* <NavLink to="/integrations">
                         <div className="platform-items d-flex space-between">
@@ -219,8 +224,8 @@ const Navbar = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/gallery" activeClassName="active">
-                  {t("gallery")}
+                <NavLink to="/atm" activeClassName="active">
+                  {t("Atms")}
                 </NavLink>
               </li>
             </ul>

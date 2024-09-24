@@ -163,5 +163,12 @@
     "phone_number": "رقم الهاتف*",
     "your_message": "رسالتك...",
     "send": "إرسال",
-    "message_sent_successfully": "تم إرسال الرسالة بنجاح!"
+    "message_sent_successfully": "تم إرسال الرسالة بنجاح!",
+    "benefit": {
+        "title": "عزز تعدين العملات الرقمية",
+        "cryptocurrencyMiners": "معدّنون للعملات الرقمية",
+        "miningContainers": "حاويات التعدين",
+        "miningChipsHardware": "رقائق وأجهزة التعدين",
+        "seeMore": "المزيد"
+    }
 }
