@@ -370,6 +370,11 @@ const Navbar = () => {
                 {t("about_us")}
               </NavLink>
             </li>
+            <li>
+              <NavLink to="/blogs" activeClassName="active">
+                {t("blogs")}
+              </NavLink>
+            </li>
           </ul>
           <div className="navbarbtn-container">
             {userData ? (
