@@ -1,92 +1,116 @@
-import React from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import {
-  FaEnvelope,
-  FaPhone,
-  FaMapMarkerAlt,
-  FaInstagram,
-  FaTwitter,
-  FaFacebookF,
-  FaTiktok,
-  FaLinkedinIn,
-} from "react-icons/fa";
-
-export default function Footer() {
+import { useNavigate } from "react-router-dom";
+import { saveContactForm } from "../../firebase/firebase";
+const Contactus = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
+
+  // State to manage form inputs
+  const [formData, setFormData] = useState({
+    fname: "",
+    lname: "",
+    company: "",
+    title: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  // Handle input change
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  // Handle form submission
+  const handleSubmit = async (e) => {
+    e.preventDefault(); // Prevent the default form submission
+
+    try {
+      await saveContactForm(formData);
+      // Optionally reset the form or provide feedback to the user
+      setFormData({
+        fname: "",
+        lname: "",
+        company: "",
+        title: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+      alert(t('message_sent_successfully')); // Provide success message
+    } catch (error) {
+      alert(t('error_sending_message')); // Provide error feedback
+    }
+  };
 
   return (
-    <div className="footer-container">
-      {/* Contact Info Section */}
-      <div className="footer-row">
-        <div className="footer-section">
-          <h3>{t("contactUs")}</h3>
-          <div className="contact-info">
-            <div className="info-item">
-
-              <FaEnvelope />
-              <p>{t("email")}</p>
-            </div>
-            <div className="info-item">
-              <FaPhone />
-              <p>{t("phone")}</p>
-            </div>
-            <div className="info-item">
-              {/* <FaMapMarkerAlt /> */}
-              <p>{t("address")}</p>
-            </div>
+    <div className="requestDemo-main-container">
+      <div className="requestDemo-flex-box-right content">
+        <h2 className="text-white text-center mb-3">{t('contact_us')}</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="requestDemo-twoInputbox">
+            <input
+              type="text"
+              name="fname"
+              placeholder={t('first_name')}
+              value={formData.fname}
+              onChange={handleChange}
+            />
+            <input
+              type="text"
+              name="lname"
+              placeholder={t('last_name')}
+              value={formData.lname}
+              onChange={handleChange}
+            />
           </div>
-        </div>
-
-        {/* Quick Links Section */}
-        <div className="footer-section">
-          <h3>{t("quickLinks")}</h3>
-          <ul>
-            <li>
-              <a href="#">{t("products")}</a>
-            </li>
-            <li>
-              <a href="#">{t("gallery")}</a>
-            </li>
-            <li>
-              <a href="#">{t("aboutUs")}</a>
-            </li>
-            <li>
-              <a href="#">{t("blog")}</a>
-            </li>
-            <li>
-              <a href="#">{t("faq")}</a>
-            </li>
-            <li>
-              <a href="#">{t("privacyPolicy")}</a>
-            </li>
-          </ul>
-        </div>
-
-        {/* Social Media Section */}
-        <div className="footer-section">
-          <h3>{t("socialMedia")}</h3>
-          <div className="social-icons">
-            <a href="#">
-              <FaInstagram />
-            </a>
-            <a href="#">
-              <FaTwitter />
-            </a>
-            <a href="#">
-              <FaFacebookF />
-            </a>
-            <a href="#">
-              <FaTiktok />
-            </a>
-            <a href="#">
-              <FaLinkedinIn />
-            </a>
+          <div className="requestDemo-twoInputbox">
+            <input
+              type="text"
+              name="company"
+              placeholder={t('company')}
+              value={formData.company}
+              onChange={handleChange}
+            />
+            <input
+              type="text"
+              name="title"
+              placeholder={t('job_title')}
+              value={formData.title}
+              onChange={handleChange}
+            />
           </div>
-        </div>
+          <input
+            type="email"
+            name="email"
+            placeholder={t('work_email')}
+            value={formData.email}
+            onChange={handleChange}
+          />
+          <input
+            type="number"
+            name="phone"
+            placeholder={t('phone_number')}
+            value={formData.phone}
+            onChange={handleChange}
+          />
+          <textarea
+            placeholder={t('your_message')}
+            name="message"
+            rows="5"
+            value={formData.message}
+            onChange={handleChange}
+          ></textarea>
+          <button type="submit" className="send-request-btn">{t('send')}</button>
+        </form>
       </div>
-
-      {/* Footer Bottom Section */}
-      <div className="footer-bottom">{t("copyright")}</div>
     </div>
   );
-}
+};
+
+export default Contactus;
