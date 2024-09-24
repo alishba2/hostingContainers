@@ -80,8 +80,8 @@ export default function SingleProduct() {
                 {/* Right Column - Product Details */}
                 <Col xs={24} md={12}>
                     <Card bordered={false} title={name} className="product-info">
-                        <Paragraph className="price">${price}</Paragraph>
-                        <Paragraph>{description}</Paragraph>
+                        <span className="price">${price}</span>
+                        <span className="description">{description}</span>
                         {/* <Button type="primary" size="large" className="buy-now-button">
                             Buy Now
                         </Button> */}
