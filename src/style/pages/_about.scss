@@ -149,6 +149,12 @@ $shadow-dark: rgba(0, 0, 0, 0.2);
     gap: 80px;
 }
 
+.small-height {
+    // height: 500px !important; // Adjust this value to the desired height
+    object-fit: cover !important; // Ensures the image maintains its aspect ratio
+    // width: ;
+}
+
 .team-card {
     position: relative;
     /* Position relative to allow absolute positioning for overlay */
@@ -156,6 +162,7 @@ $shadow-dark: rgba(0, 0, 0, 0.2);
     border-radius: 12px;
     overflow: hidden;
     width: 300px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
