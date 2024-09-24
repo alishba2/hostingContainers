@@ -42,7 +42,16 @@ export default function Product() {
         firmware: '',
         warranty: '',
         manufacturer: '',
-        additionalFeatures: ''
+        additionalFeatures: '',
+        kasHashRate: '',
+        wallPower: '',
+        specifications: '',
+        dimensionsWithPackaging: '',
+        grossWeight: '',
+        netWeight: '',
+        connection: '',
+        voltageInput: '',
+        operatingTemp: ''
     });
     const [showForm, setShowForm] = useState(false);
     const [loading, setLoading] = useState(false);
@@ -90,8 +99,7 @@ export default function Product() {
     };
 
     const handleSubmit = async (e) => {
-        alert("here");
-
+        e.preventDefault();
         setLoading(true);
 
         try {
@@ -131,7 +139,16 @@ export default function Product() {
                 firmware: '',
                 warranty: '',
                 manufacturer: '',
-                additionalFeatures: ''
+                additionalFeatures: '',
+                kasHashRate: '',
+                wallPower: '',
+                specifications: '',
+                dimensionsWithPackaging: '',
+                grossWeight: '',
+                netWeight: '',
+                connection: '',
+                voltageInput: '',
+                operatingTemp: ''
             });
             notification.success({
                 message: "Success",
@@ -170,10 +187,14 @@ export default function Product() {
     const handleCategoryChange = (value) => {
         setNewProduct({ ...newProduct, type: value });
         const fields = {
-            Miners: ['hashRate', 'algorithm', 'powerSupply', 'dimensions', 'weight', 'coolingType'],
+            Miners: [
+                'hashRate', 'algorithm', 'powerSupply', 'dimensions', 'weight', 'coolingType',
+                'kasHashRate', 'wallPower', 'specifications', 'dimensionsWithPackaging',
+                'grossWeight', 'netWeight', 'connection', 'voltageInput', 'operatingTemp'
+            ],
             'Mining Containers': ['dimensions', 'weight', 'material', 'capacity', 'ventilation', 'powerSupplyCompatibility', 'insulation', 'temperatureRange', 'portability', 'numberOfRacks', 'coolingSystem', 'powerRequirements', 'securityFeatures'],
             'Hash Chips': ['hashRate', 'powerConsumption', 'efficiency', 'supportedCoins', 'operatingTemperature', 'noiseLevel', 'dimensions', 'weight', 'coolingSystem', 'connectivity', 'firmware', 'warranty', 'manufacturer', 'additionalFeatures'],
-            CoolingFans: ['dimensions', 'weight', 'power', 'coolingType', 'noiseLevel', 'powerRequirements', 'additionalFeatures'], // New category
+            CoolingFans: ['dimensions', 'weight', 'power', 'coolingType', 'noiseLevel', 'powerRequirements', 'additionalFeatures'],
             Others: []
         };
         setCategoryFields(fields[value] || []);
@@ -186,7 +207,7 @@ export default function Product() {
             {showForm ? (
                 <div className="product-form">
                     <h2 style={{ color: 'white' }}>Add New Product</h2>
-                    <Form layout="vertical" style={{ background: "white", padding: '40px' }} >
+                    <Form layout="vertical" style={{ background: "white", padding: '40px' }} onSubmit={handleSubmit}>
                         <Form.Item label="Name" required>
                             <Input name="name" value={newProduct.name} onChange={handleInputChange} />
                         </Form.Item>
@@ -195,7 +216,7 @@ export default function Product() {
                                 <Option value="Miners">Miners</Option>
                                 <Option value="Mining Containers">Mining Containers</Option>
                                 <Option value="Hash Chips">Hash Chips</Option>
-                                <Option value="CoolingFans">Cooling Fans</Option> {/* New option */}
+                                <Option value="CoolingFans">Cooling Fans</Option>
                                 <Option value="Others">Others</Option>
                             </Select>
                         </Form.Item>
@@ -246,125 +267,167 @@ export default function Product() {
                             </Form.Item>
                         )}
                         {categoryFields.includes('ventilation') && (
-                            <Form.Item label="Ventilation" required>
+                            <Form.Item label="Ventilation">
                                 <Input name="ventilation" value={newProduct.ventilation} onChange={handleInputChange} />
                             </Form.Item>
                         )}
                         {categoryFields.includes('powerSupplyCompatibility') && (
-                            <Form.Item label="Power Supply Compatibility" required>
+                            <Form.Item label="Power Supply Compatibility">
                                 <Input name="powerSupplyCompatibility" value={newProduct.powerSupplyCompatibility} onChange={handleInputChange} />
                             </Form.Item>
                         )}
                         {categoryFields.includes('insulation') && (
-                            <Form.Item label="Insulation" required>
+                            <Form.Item label="Insulation">
                                 <Input name="insulation" value={newProduct.insulation} onChange={handleInputChange} />
                             </Form.Item>
                         )}
                         {categoryFields.includes('temperatureRange') && (
-                            <Form.Item label="Temperature Range" required>
+                            <Form.Item label="Temperature Range">
                                 <Input name="temperatureRange" value={newProduct.temperatureRange} onChange={handleInputChange} />
                             </Form.Item>
                         )}
                         {categoryFields.includes('portability') && (
-                            <Form.Item label="Portability" required>
+                            <Form.Item label="Portability">
                                 <Input name="portability" value={newProduct.portability} onChange={handleInputChange} />
                             </Form.Item>
                         )}
                         {categoryFields.includes('numberOfRacks') && (
-                            <Form.Item label="Number of Racks" required>
+                            <Form.Item label="Number of Racks">
                                 <Input name="numberOfRacks" value={newProduct.numberOfRacks} onChange={handleInputChange} />
                             </Form.Item>
                         )}
                         {categoryFields.includes('coolingSystem') && (
-                            <Form.Item label="Cooling System" required>
+                            <Form.Item label="Cooling System">
                                 <Input name="coolingSystem" value={newProduct.coolingSystem} onChange={handleInputChange} />
                             </Form.Item>
                         )}
                         {categoryFields.includes('powerRequirements') && (
-                            <Form.Item label="Power Requirements" required>
+                            <Form.Item label="Power Requirements">
                                 <Input name="powerRequirements" value={newProduct.powerRequirements} onChange={handleInputChange} />
                             </Form.Item>
                         )}
                         {categoryFields.includes('securityFeatures') && (
-                            <Form.Item label="Security Features" required>
+                            <Form.Item label="Security Features">
                                 <Input name="securityFeatures" value={newProduct.securityFeatures} onChange={handleInputChange} />
                             </Form.Item>
                         )}
                         {categoryFields.includes('efficiency') && (
-                            <Form.Item label="Efficiency" required>
+                            <Form.Item label="Efficiency">
                                 <Input name="efficiency" value={newProduct.efficiency} onChange={handleInputChange} />
                             </Form.Item>
                         )}
                         {categoryFields.includes('supportedCoins') && (
-                            <Form.Item label="Supported Coins" required>
+                            <Form.Item label="Supported Coins">
                                 <Input name="supportedCoins" value={newProduct.supportedCoins} onChange={handleInputChange} />
                             </Form.Item>
                         )}
                         {categoryFields.includes('operatingTemperature') && (
-                            <Form.Item label="Operating Temperature" required>
+                            <Form.Item label="Operating Temperature">
                                 <Input name="operatingTemperature" value={newProduct.operatingTemperature} onChange={handleInputChange} />
                             </Form.Item>
                         )}
                         {categoryFields.includes('noiseLevel') && (
-                            <Form.Item label="Noise Level" required>
+                            <Form.Item label="Noise Level">
                                 <Input name="noiseLevel" value={newProduct.noiseLevel} onChange={handleInputChange} />
                             </Form.Item>
                         )}
                         {categoryFields.includes('connectivity') && (
-                            <Form.Item label="Connectivity" required>
+                            <Form.Item label="Connectivity">
                                 <Input name="connectivity" value={newProduct.connectivity} onChange={handleInputChange} />
                             </Form.Item>
                         )}
                         {categoryFields.includes('firmware') && (
-                            <Form.Item label="Firmware" required>
+                            <Form.Item label="Firmware">
                                 <Input name="firmware" value={newProduct.firmware} onChange={handleInputChange} />
                             </Form.Item>
                         )}
                         {categoryFields.includes('warranty') && (
-                            <Form.Item label="Warranty" required>
+                            <Form.Item label="Warranty">
                                 <Input name="warranty" value={newProduct.warranty} onChange={handleInputChange} />
                             </Form.Item>
                         )}
                         {categoryFields.includes('manufacturer') && (
-                            <Form.Item label="Manufacturer" required>
+                            <Form.Item label="Manufacturer">
                                 <Input name="manufacturer" value={newProduct.manufacturer} onChange={handleInputChange} />
                             </Form.Item>
                         )}
                         {categoryFields.includes('additionalFeatures') && (
-                            <Form.Item label="Additional Features" required>
+                            <Form.Item label="Additional Features">
                                 <Input name="additionalFeatures" value={newProduct.additionalFeatures} onChange={handleInputChange} />
                             </Form.Item>
                         )}
-                        <Form.Item label="Description" required>
+                        {categoryFields.includes('kasHashRate') && (
+                            <Form.Item label="Kas Hash Rate" required>
+                                <Input name="kasHashRate" value={newProduct.kasHashRate} onChange={handleInputChange} />
+                            </Form.Item>
+                        )}
+                        {categoryFields.includes('wallPower') && (
+                            <Form.Item label="Wall Power" required>
+                                <Input name="wallPower" value={newProduct.wallPower} onChange={handleInputChange} />
+                            </Form.Item>
+                        )}
+                        {categoryFields.includes('specifications') && (
+                            <Form.Item label="Specifications" required>
+                                <Input name="specifications" value={newProduct.specifications} onChange={handleInputChange} />
+                            </Form.Item>
+                        )}
+                        {categoryFields.includes('dimensionsWithPackaging') && (
+                            <Form.Item label="Dimension (With Packaging)" required>
+                                <Input name="dimensionsWithPackaging" value={newProduct.dimensionsWithPackaging} onChange={handleInputChange} />
+                            </Form.Item>
+                        )}
+                        {categoryFields.includes('grossWeight') && (
+                            <Form.Item label="Gross Weight" required>
+                                <Input name="grossWeight" value={newProduct.grossWeight} onChange={handleInputChange} />
+                            </Form.Item>
+                        )}
+                        {categoryFields.includes('netWeight') && (
+                            <Form.Item label="Net Weight" required>
+                                <Input name="netWeight" value={newProduct.netWeight} onChange={handleInputChange} />
+                            </Form.Item>
+                        )}
+                        {categoryFields.includes('connection') && (
+                            <Form.Item label="Connection" required>
+                                <Input name="connection" value={newProduct.connection} onChange={handleInputChange} />
+                            </Form.Item>
+                        )}
+                        {categoryFields.includes('voltageInput') && (
+                            <Form.Item label="Voltage Input" required>
+                                <Input name="voltageInput" value={newProduct.voltageInput} onChange={handleInputChange} />
+                            </Form.Item>
+                        )}
+                        {categoryFields.includes('operatingTemp') && (
+                            <Form.Item label="Operating Temperature" required>
+                                <Input name="operatingTemp" value={newProduct.operatingTemp} onChange={handleInputChange} />
+                            </Form.Item>
+                        )}
+                        <Form.Item label="Images">
+                            <Upload onChange={({ file }) => handleImageChange(file)} showUploadList={false}>
+                                <Button>Upload Image</Button>
+                            </Upload>
+                            {newProduct.images.map((image, index) => (
+                                <div key={index} className="uploaded-image">
+                                    <img src={URL.createObjectURL(image)} alt="uploaded" />
+                                    <Button type="link" icon={<CloseOutlined />} onClick={() => handleRemoveImage(index)}>Remove</Button>
+                                </div>
+                            ))}
+                        </Form.Item>
+                        <Form.Item label="Description">
                             <Input.TextArea name="description" value={newProduct.description} onChange={handleInputChange} />
                         </Form.Item>
-                        <Form.Item label="Upload Images">
-                            <Upload
-                                beforeUpload={handleImageChange}
-                                showUploadList={false}
-                                multiple
-                            >
-                                <Button>Upload</Button>
-                            </Upload>
-                            <div className="image-preview">
-                                {newProduct.images.map((image, index) => (
-                                    <div key={index} className="image-container">
-                                        <img src={URL.createObjectURL(image)} alt={`preview-${index}`} />
-                                        <CloseOutlined onClick={() => handleRemoveImage(index)} />
-                                    </div>
-                                ))}
-                            </div>
+                        <Form.Item>
+                            <Button type="primary" htmlType="submit" loading={loading}>Submit</Button>
+                            <Button type="default" onClick={() => setShowForm(false)} style={{ marginLeft: '10px' }}>Cancel</Button>
                         </Form.Item>
-                        <Button onClick={handleSubmit} type="primary" htmlType="submit" loading={loading}>Save Product</Button>
                     </Form>
                 </div>
             ) : (
-                <Table dataSource={products} rowKey="_id">
+                <Table dataSource={products} rowKey="id">
                     <Column title="Name" dataIndex="name" key="name" />
                     <Column title="Category" dataIndex="type" key="type" />
                     <Column title="Price" dataIndex="price" key="price" />
-                    <Column title="Action" key="action" render={(text, record) => (
-                        <Button type="danger" onClick={() => handleDelete(record.id)}>Delete</Button>
+                    <Column title="Actions" key="actions" render={(text, record) => (
+                        <Button type="link" onClick={() => handleDelete(record.id)}>Delete</Button>
                     )} />
                 </Table>
             )}
