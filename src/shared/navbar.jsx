@@ -263,7 +263,9 @@ const Navbar = () => {
                     ? "Русский"
                     : i18n.language === "es"
                       ? "Español"
-                      : "中文"}
+                      : i18n.language === "ar" // Add Arabic language check
+                        ? "العربية"
+                        : "中文"}
                 <Icon
                   color="#FFF"
                   icon="mingcute:down-fill"
@@ -303,6 +305,11 @@ const Navbar = () => {
                     >
                       <div className="left d-flex v-center">
                         <h6>中文</h6>
+                      </div>
+                    </div>
+                    <div onClick={() => handleLanguageChange("ar")} className="platform-items d-flex space-between"> {/* Add Arabic option */}
+                      <div className="left d-flex v-center">
+                        <h6>العربية</h6>
                       </div>
                     </div>
                   </div>

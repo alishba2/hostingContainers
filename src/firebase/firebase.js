@@ -298,6 +298,14 @@ const deleteBlog = async (blogId) => {
         throw error;
     }
 };
-
-export { saveProduct, deleteProduct, deleteBlog };
+const saveContactForm = async (formData) => {
+    try {
+        const docRef = await addDoc(collection(db, "contacts"), formData);
+        console.log("Contact form submitted successfully:", docRef.id);
+    } catch (error) {
+        console.error("Error submitting contact form:", error);
+        throw error;
+    }
+};
+export { saveProduct, deleteProduct, deleteBlog, saveContactForm };
 export { registerUser, loginUser, resetPassword, getCurrentUserData, isLoggedIn, getAllProducts, getProductsByType, addBlog, getBlogs };
