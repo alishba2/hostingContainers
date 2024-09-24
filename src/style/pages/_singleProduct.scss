@@ -75,6 +75,14 @@
         .price {
             font-size: 30px;
             font-family: "Gowun Batang", serif !important;
+            color: white !important;
+            display: block;
+        }
+
+        .description {
+            margin-top: 10px;
+            font-size: 17px;
+            color: white !important;
         }
 
         .buy-now-button {
@@ -259,7 +267,7 @@
 
     .single-product-container .image-gallery .main-image {
 
-        margin-top: -133px;
+        // margin-top: px;
     }
 
     .loading-container {

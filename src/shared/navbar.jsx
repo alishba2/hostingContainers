@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Icon } from "@iconify/react";
 import { Button, Drawer, Dropdown, Menu } from "antd";
-import { NavLink, useNavigate, useLocation } from "react-router-dom";
+import { NavLink, useNavigate, useLocation, useMatch } from "react-router-dom";
 import logo from "../assets/logo.jpeg";
 import { useTranslation } from "react-i18next";
 import Login from "../Modals/login";
@@ -9,6 +9,7 @@ import { isLoggedIn, getCurrentUserData, logout } from "../firebase/firebase";
 import {
   FaUser
 } from "react-icons/fa";
+import { useAdmin } from "../Context/appContext";
 
 const Navbar = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -25,11 +26,14 @@ const Navbar = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const [userData, setUserData] = useState(null);
+  const { checkIfAdmin } = useAdmin();
 
   useEffect(() => {
     const checkUserStatus = async () => {
       if (await isLoggedIn()) {
         const data = await getCurrentUserData();
+        checkIfAdmin(data?.isAdmin);
+        console.log(data, "data in navaar");
         setUserData(data);
       }
     };

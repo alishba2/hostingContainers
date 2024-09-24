@@ -109,6 +109,16 @@ const getCurrentUserData = async () => {
     }
 };
 
+
+export const checkIfAdmin = async () => {
+    try {
+        const userData = await getCurrentUserData();
+        return userData?.isAdmin || false; // Return true if isAdmin exists and is true, otherwise false
+    } catch (error) {
+        console.error("Error checking admin status:", error);
+        return false; // In case of error, assume the user is not admin
+    }
+};
 // Check if a user is logged in
 const isLoggedIn = () => {
     return new Promise((resolve) => {
