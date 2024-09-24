@@ -162,5 +162,6 @@
     "work_email": "Work Email*",
     "phone_number": "Phone Number*",
     "your_message": "Your message...",
-    "send": "Send"
+    "send": "Send",
+    "message_sent_successfully": "Message sent successfully!"
 }
