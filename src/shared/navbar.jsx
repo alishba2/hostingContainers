@@ -223,11 +223,11 @@ const Navbar = () => {
                   {t("blogs")}
                 </NavLink>
               </li>
-              <li>
+              {/* <li>
                 <NavLink to="/atm" activeClassName="active">
                   {t("Atms")}
                 </NavLink>
-              </li>
+              </li> */}
             </ul>
           </div>
           <div className="v-center gap-2">
@@ -372,38 +372,50 @@ const Navbar = () => {
                 </div>
               )}
             </li>
-            <li className="my-3">
-              <NavLink exact to="/hosting" activeClassName="active" onClick={() => setOpen(false)}>
+            <li>
+              <NavLink to="/hosting" activeClassName="active" onClick={() => setOpen(false)}>
                 {t("hosting")}
               </NavLink>
             </li>
-            <li className="my-3">
-              <NavLink exact to="/about-us" activeClassName="active" onClick={() => setOpen(false)}>
-                {t("about_us")}
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/blogs" activeClassName="active">
-                {t("blogs")}
-              </NavLink>
-            </li>
+            {/* Additional Links */}
           </ul>
-          <div className="navbarbtn-container">
-            {userData ? (
-              <Dropdown overlay={menu} trigger={['click']}>
-                <span className="name-container">
-                  <p>{userData?.fullName}</p>
-                  <span className="icon">
-                    <Icon color="#FFF" icon="mingcute:down-fill" className="icon-rotate" />
-                  </span>
-                </span>
-              </Dropdown>
-            ) : (
-              <button className="button2" onClick={onsigninbtnClick}>{t("sign_in")}</button>
-            )}
+
+          {/* Language Button in the Mobile Navbar */}
+          <div className="language-selection">
+            <button className="dropdown-button v-center gap-2">
+              {i18n.language === "en"
+                ? "English"
+                : i18n.language === "ru"
+                  ? "Русский"
+                  : i18n.language === "es"
+                    ? "Español"
+                    : i18n.language === "ar"
+                      ? "العربية"
+                      : "中文"}
+              <Icon color="#FFF" icon="mingcute:down-fill" className="icon-rotate" />
+            </button>
+            <div className="languages-list">
+              <div onClick={() => i18n.changeLanguage("en")}>
+                <h6>English</h6>
+              </div>
+              <div onClick={() => i18n.changeLanguage("ru")}>
+                <h6>Русский</h6>
+              </div>
+              <div onClick={() => i18n.changeLanguage("es")}>
+                <h6>Español</h6>
+              </div>
+              <div onClick={() => i18n.changeLanguage("zh")}>
+                <h6>中文</h6>
+              </div>
+              <div onClick={() => i18n.changeLanguage("ar")}>
+                <h6>العربية</h6>
+              </div>
+            </div>
           </div>
+
         </Drawer>
       </div>
+v>
 
 
       <Login isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
