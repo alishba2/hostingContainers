@@ -107,18 +107,19 @@
 
         h1 {
           font-size: 32px;
+          text-align: justify;
         }
 
         p {
           font-size: 10px !important;
           width: 300px !important;
-          margin-left: 34px;
+          // margin-left: 34px;
         }
 
         h1,
         p,
         h4 {
-          text-align: center;
+          text-align: justify !important;
         }
 
         h4 {
