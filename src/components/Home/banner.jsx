@@ -58,28 +58,28 @@ const Banner = () => {
   return (
     <>
       <div className="banner-main">
-        <div className="marquee-main">
+        <div >
           <div className="marquee-main">
             <marquee
               width="100%"
-              direction="right"
-              height="40px" // Adjust the height as needed
-              scrollamount="5" // Adjust this value for speed (higher = faster)
+              direction="left"  // Move from right to left
+              height="40px"     // Adjust the height as needed
+              scrollamount="5"  // Adjust this value for speed (higher = faster)
               behavior="scroll"
             >
               {exchangeRates.length ? (
                 exchangeRates.map((rate, index) => (
                   <span key={index} className="marquee-item">
-                    <strong style={{ color: "#a890d3" }}>{rate.name}</strong>: <span>${rate.price}</span>  &nbsp; {/* Add spacing between items */}
+                    <strong style={{ color: "#a890d3" }}>{rate.name}</strong>: <span>${rate.price}</span> &nbsp; {/* Add spacing between items */}
                   </span>
                 ))
               ) : (
                 <>
                 </>
-                // <span>Loading...</span>
               )}
             </marquee>
           </div>
+
 
         </div>
         <div className="banner-inner">

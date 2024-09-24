@@ -10,7 +10,7 @@ import "../../src/style/pages/_about.scss";
 import videoSrc from "../assets/blockchainn2.mp4"; // Add your background video here
 import img1 from "../assets/ceo2.png";
 import img2 from "../assets/team102.jpeg"
-import img3 from "../assets/team103.jpeg";
+import img3 from "../assets/teamman.jpeg";
 import img4 from "../assets/main.jpg";
 import img5 from "../assets/images/main2.jpg";
 
@@ -44,29 +44,18 @@ export default function AboutUs() {
               <img
                 src={member.image}
                 alt={member.name}
-                className="team-image"
+                className={`team-image ${member.name === "Roberto Rodriguez" ? "small-height" : ""}`}
               />
               <div className="team-info">
                 <h5 className="team-name">{member.name}</h5>
                 <p className="team-role">{member.role}</p>
               </div>
               <div className="team-overlay">
-                {/* <a href="#">
-                  <FaFacebookF />
-                </a>
-                <a href="#">
-                  <FaTwitter />
-                </a>
-                <a href="#">
-                  <FaInstagram />
-                </a>
-                <a href="#">
-                  <FaLinkedinIn />
-                </a> */}
                 {member.description}
               </div>
             </div>
           ))}
+
         </div>
       </div>
     </div>

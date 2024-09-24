@@ -62,7 +62,7 @@
 
 .mission-bg {
     position: relative;
-    background-image: url("../../assets/bannerImg1.jpg");
+    background-image: url("../../assets/male-hand-with-golden-bitcoin-blue-background_155003-5308.jpg");
     /* Path to your background image */
     background-size: cover;
     background-position: center;
@@ -71,6 +71,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+
 
     &::before {
         content: "";
@@ -82,6 +84,7 @@
         background-color: rgba(0, 0, 0, 0.5);
         /* Black color with 50% opacity */
         z-index: 0;
+
         /* Ensure the overlay is behind the content */
     }
 
@@ -102,6 +105,7 @@
         /* Max width for responsiveness */
         margin-left: auto;
         margin-right: auto;
+
         /* Center the card horizontally */
     }
 
@@ -145,6 +149,12 @@ $shadow-dark: rgba(0, 0, 0, 0.2);
     gap: 80px;
 }
 
+.small-height {
+    // height: 500px !important; // Adjust this value to the desired height
+    object-fit: cover !important; // Ensures the image maintains its aspect ratio
+    // width: ;
+}
+
 .team-card {
     position: relative;
     /* Position relative to allow absolute positioning for overlay */
@@ -152,6 +162,7 @@ $shadow-dark: rgba(0, 0, 0, 0.2);
     border-radius: 12px;
     overflow: hidden;
     width: 300px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
