@@ -47,7 +47,7 @@ const Hostingservices = () => {
 
   return (
     <div className="hosting-services-main v-center flex-column">
-      <h1 className="text-center">{t("hostingServices.title")}</h1>
+      <h1 >{t("hostingServices.title")}</h1>
       <p className="paraSmall text-center">{t("hostingServices.description")}</p>
 
       {/* Slick Carousel */}

@@ -355,13 +355,13 @@ const Navbar = () => {
               </a>
               {showSubmenu && (
                 <div className="submenu">
-                  <div onClick={() => { setOpen(false); handleNavigation2("Miners") }}>
+                  <div className="menuItem" onClick={() => { setOpen(false); handleNavigation2("Miners") }}>
                     {t("Miners")}
                   </div>
-                  <div onClick={() => { setOpen(false); handleNavigation2("Mining Containers") }}>
+                  <div className="menuItem" onClick={() => { setOpen(false); handleNavigation2("Mining Containers") }}>
                     {t("mining-containers")}
                   </div>
-                  <div onClick={() => { setOpen(false); handleNavigation2("Mining Chips") }}>
+                  <div className="menuItem" onClick={() => { setOpen(false); handleNavigation2("Mining Chips") }}>
                     {t("mining-chips")}
                   </div>
                 </div>
@@ -394,7 +394,7 @@ const Navbar = () => {
                 </span>
               </Dropdown>
             ) : (
-              <button onClick={onsigninbtnClick}>{t("sign_in")}</button>
+              <button className="button2" onClick={onsigninbtnClick}>{t("sign_in")}</button>
             )}
           </div>
         </Drawer>

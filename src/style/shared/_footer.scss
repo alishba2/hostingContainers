@@ -42,12 +42,12 @@
     .contact-info {
       display: flex;
       flex-direction: column;
-
       margin-bottom: 1em;
 
       svg {
         color: #a890d3 !important;
         margin-right: 10px;
+
       }
 
       .info-item {
@@ -97,6 +97,13 @@
     .footer-section {
       flex: 1 1 100%;
       margin-bottom: 2em;
+
+      .contact-info {
+        align-items: center;
+        /* Center items in contact info */
+        text-align: center;
+        /* Center text for smaller screens */
+      }
     }
 
     .social-icons {

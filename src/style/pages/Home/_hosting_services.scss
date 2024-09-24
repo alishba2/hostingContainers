@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap');
+
 .hosting-services-main {
   padding: 50px 20px 30px 20px;
 
@@ -36,7 +38,11 @@
 @media only screen and (max-width: 700px) {
   .hosting-services-main {
     h1 {
-      font-size: 32px;
+      font-size: 34px;
+      text-align: start !important;
+      font-family: "Gowun Batang", serif !important;
+      font-weight: bold;
+      margin-bottom: 10px;
     }
 
     p {
