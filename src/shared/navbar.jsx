@@ -415,7 +415,7 @@ const Navbar = () => {
 
         </Drawer>
       </div>
-v>
+
 
 
       <Login isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
