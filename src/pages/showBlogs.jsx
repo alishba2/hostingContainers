@@ -41,9 +41,9 @@ export default function ShowBlogs() {
     return (
         <div className="container mt-5 show-blogs">
             {/* Introductory text */}
-            <div className="intro-text">
+            {/* <div className="intro-text">
                 <h2 className="text-center mb-4">Our Latest Blogs</h2>
-            </div>
+            </div> */}
 
             {!selectedBlog ? (
                 <div className="row mt-5">
@@ -76,7 +76,7 @@ export default function ShowBlogs() {
                         onClick={() => setSelectedBlog(null)}
                         style={{ cursor: 'pointer', marginBottom: '20px' }}
                     >
-                        <FaArrowLeft size={24} color="#ffffff" /> {/* Back arrow */}
+                        {/* <FaArrowLeft size={24} color="#ffffff" /> Back arrow */}
                     </div>
                     <div className="card blog-detail-card">
                         <img
