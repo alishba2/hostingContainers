@@ -15,6 +15,7 @@ import img4 from "../assets/main.jpg";
 import img5 from "../assets/images/main2.jpg";
 
 
+
 export default function AboutUs() {
   const { t } = useTranslation();
 

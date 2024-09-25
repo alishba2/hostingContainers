@@ -1,0 +1,211 @@
+/* Purple-black gradient background */
+.app-container {
+    background: radial-gradient(#7b1788, #000000);
+    min-height: 100vh;
+    color: white;
+    position: relative;
+    padding: 50px 20px;
+    /* Added padding for small screens */
+}
+
+/* Logo and company name */
+.company-logo {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.company-name {
+    font-size: 1.8rem;
+    font-weight: normal;
+    margin: 10px 0;
+}
+
+/* Description text styling */
+.description {
+    font-size: 1.2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+    display: inline-block;
+    max-width: 80%;
+    text-align: center;
+}
+
+/* Executive Summary Styling */
+.summary-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.text-container {
+    padding: 20px;
+}
+
+/* Image Section Styling */
+.atm-image-container {
+    padding: 20px;
+}
+
+.atm-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    transform: rotate(5deg);
+}
+
+/* Market Opportunity Section Styling */
+.market-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+.market-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    background-color: #007bff;
+    /* Blue background */
+    padding: 15px;
+    /* Padding for the title */
+    border-radius: 8px;
+    /* Rounded corners */
+    color: white;
+    /* White text color */
+}
+
+.market-description {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.target-marketing p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.target-list {
+    list-style-type: decimal;
+    /* Ordered list */
+    padding-left: 20px;
+    /* Indent the list */
+    margin-top: 10px;
+    /* Spacing above the list */
+}
+
+.target-list li {
+    background-color: #007bff;
+    /* Blue background for list items */
+    color: white;
+    /* White text color */
+    margin-bottom: 10px;
+    /* Space between items */
+    padding: 10px;
+    /* Padding inside list items */
+    border-radius: 8px;
+    /* Rounded corners */
+}
+
+/* Image Section: Market Opportunity */
+.image-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container {
+    margin-bottom: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .company-logo {
+        font-size: 2.5rem;
+    }
+
+    .company-name {
+        font-size: 1.2rem;
+    }
+
+    .summary-title {
+        font-size: 1.8rem;
+    }
+
+    .market-title {
+        font-size: 2rem;
+
+    }
+
+    .market-description {
+        font-size: 1rem;
+    }
+
+    .target-list {
+        font-size: 1rem;
+    }
+
+    .image-section {
+        margin-top: 20px;
+    }
+
+    .atm-image {
+        max-width: 80%;
+        margin-bottom: 15px;
+        transform: none;
+        /* Remove tilt on smaller screens */
+    }
+
+    /* Adjust padding and margins for smaller screens */
+    .market-text {
+        padding: 10px;
+    }
+
+    .target-marketing {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .company-logo {
+        font-size: 2rem;
+    }
+
+    .summary-title {
+        font-size: 1.6rem;
+    }
+
+    .market-title {
+        font-size: 1.8rem;
+    }
+
+    .market-description {
+        font-size: 0.9rem;
+    }
+
+    .target-list {
+        font-size: 0.9rem;
+    }
+
+    .atm-image {
+        max-width: 100%;
+        margin: 0 auto 15px;
+        transform: none;
+        /* Remove tilt on smaller screens */
+    }
+
+    /* Further adjustments for very small screens */
+    .market-text {
+        padding: 5px;
+    }
+
+    .description {
+        max-width: 100%;
+        /* Allow full width on small screens */
+    }
+}
