@@ -5,6 +5,7 @@ import img1 from "../../assets/containerday.jpeg";
 import img2 from "../../assets/mingingcontainer.jpg";
 import img3 from "../../assets/containerImgday12.jpeg"
 import axios from "axios";
+
 const Banner = () => {
   const [exchangeRates, setExchangeRates] = useState([]);
 
@@ -85,7 +86,7 @@ const Banner = () => {
           <img src={img3} alt="Slide 1" className="carousel-image" />
           <div className="overlay"></div>
           <div className="carousel-text">
-            <p>Start your mining Journey with Crypto Miners</p>
+            <p>Start your mining Journey with us </p>
 
             <h2>HOSTING CONTAINERS</h2>
           </div>
