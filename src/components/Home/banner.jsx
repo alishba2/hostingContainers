@@ -95,8 +95,9 @@ const Banner = () => {
           <img src={img1} alt="Slide 2" className="carousel-image" />
           <div className="overlay"></div>
           <div className="carousel-text">
-            {/* <h2>Heading 2</h2> */}
-            <p>We advise you on your investment so that you can start mining in a stable and safe way.</p>
+            <p>Start your mining Journey with us </p>
+
+            <h2>HOSTING CONTAINERS</h2>
           </div>
         </div>
         {/* <div>

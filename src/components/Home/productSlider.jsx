@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-
 import { getAllProducts } from "../../firebase/firebase";
 
 const ProductSlider = () => {
@@ -17,7 +16,6 @@ const ProductSlider = () => {
     getProducts();
   }, []);
 
-  // Helper function to truncate product names longer than 15 characters
   const truncateName = (name, maxLength = 15) => {
     return name.length > maxLength ? name.slice(0, maxLength) + "..." : name;
   };
@@ -42,31 +40,31 @@ const ProductSlider = () => {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 1, // Show only 1 slide on mobile
+          slidesToScroll: 1, // Scroll one at a time
+          infinite: true, // Keep it infinite
         },
       },
     ],
   };
 
   return (
-    <>
-      <div className="slider-container">
-        <Slider {...settings}>
-          {products.map((product) => (
-            <div key={product.id} className="product-card">
-              <img src={product.images[0]} alt={product.name} />
-              <h3>{truncateName(product.name)}</h3> {/* Apply truncation here */}
-              <div className="product-info">
-                <p>${product.price}</p>
-                <p className={`power ${product.inStock ? "" : "out-of-stock"}`}>
-                  {product.voltage}
-                </p>
-              </div>
+    <div className="slider-container">
+      <Slider {...settings}>
+        {products.map((product) => (
+          <div key={product.id} className="product-card">
+            <img src={product.images[0]} alt={product.name} />
+            <h3>{truncateName(product.name)}</h3>
+            <div className="product-info">
+              <p>${product.price}</p>
+              <p className={`power ${product.inStock ? "" : "out-of-stock"}`}>
+                {product.voltage}
+              </p>
             </div>
-          ))}
-        </Slider>
-      </div>
-    </>
+          </div>
+        ))}
+      </Slider>
+    </div>
   );
 };
 
