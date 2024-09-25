@@ -11,6 +11,10 @@ import {
 
 export default function Benefits() {
   const { t } = useTranslation();
+  const handleNavigation2 = (category) => {
+    navigate("/products", { state: { category } });
+  };
+
 
   return (
     <div className="service-container">
@@ -25,7 +29,7 @@ export default function Benefits() {
               {/* <FaPaintBrush /> */}
             </div>
             <h3>{t('benefit.cryptocurrencyMiners')}</h3>
-            <button className="seeMore">
+            <button onClick={()=>{handleNavigation2('Miners')}} className="seeMore">
               {t('benefit.seeMore')}
             </button>
           </div>
@@ -35,7 +39,7 @@ export default function Benefits() {
               {/* <FaCode /> */}
             </div>
             <h3>{t('benefit.miningContainers')}</h3>
-            <button className="seeMore">
+            <button  onClick={()=>{handleNavigation2('Mining Containers')}}  className="seeMore">
               {t('benefit.seeMore')}
             </button>
           </div>
@@ -45,7 +49,7 @@ export default function Benefits() {
               {/* <FaLaptopCode /> */}
             </div>
             <h3>{t('benefit.miningChipsHardware')}</h3>
-            <button className="seeMore">
+            <button  onClick={()=>{handleNavigation2('Others')}} className="seeMore">
               {t('benefit.seeMore')}
             </button>
           </div>
