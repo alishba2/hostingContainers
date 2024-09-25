@@ -14,6 +14,7 @@ import SingleProduct from "./pages/singleProduct";
 import Atm from "./pages/atm";
 import { AdminProvider } from "./Context/appContext";
 import MiningSolutions from "./components/Home/miningSolution";
+import BlogDetail from "./pages/blogDetail";
 
 function App() {
   return (
@@ -31,6 +32,8 @@ function App() {
           <Route path="/blogs" element={<ShowBlogs />} />
           <Route path="/product/:id" element={<SingleProduct />} />
           <Route path="/atm" element={<Atm />} />
+          <Route path="/blog/:id" element={<BlogDetail />} />
+
 
         </Routes>
         <Footer />
