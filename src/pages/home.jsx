@@ -15,7 +15,7 @@ const Home = () => {
   return (
     <>
       <Banner />
-      {/* <MiningSolutions/> */}
+      <MiningSolutions />
       <Benefits />
       <ProductSlider />
       <Reserve />
