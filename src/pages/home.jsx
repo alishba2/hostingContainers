@@ -9,11 +9,13 @@ import Hostingservices from "../components/Home/hostingservices";
 import Workwithus from "../components/Home/workwithus";
 import Demosection from "../components/Home/demosection";
 import DubaiVenueLocator from "./map";
+import MiningSolutions from "../components/Home/miningSolution";
 import AtmSection from "../components/Home/atmsection";
 const Home = () => {
   return (
     <>
       <Banner />
+      <MiningSolutions/>
       <Benefits />
       <ProductSlider />
       <Reserve />

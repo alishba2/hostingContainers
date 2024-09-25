@@ -13,6 +13,7 @@ import ShowBlogs from "./pages/showBlogs";
 import SingleProduct from "./pages/singleProduct";
 import Atm from "./pages/atm";
 import { AdminProvider } from "./Context/appContext";
+import MiningSolutions from "./components/Home/miningSolution";
 
 function App() {
   return (
