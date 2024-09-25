@@ -41,9 +41,9 @@ export default function ShowBlogs() {
     return (
         <div className="container mt-5 show-blogs">
             {/* Introductory text */}
-            {/* <div className="intro-text">
+            <div className="intro-text">
                 <h2 className="text-center mb-4">Our Latest Blogs</h2>
-            </div> */}
+            </div>
 
             {!selectedBlog ? (
                 <div className="row mt-5">
@@ -60,7 +60,16 @@ export default function ShowBlogs() {
                                 />
                                 <div className="card-body">
                                     <h5 className="card-title">{blog.blogName}</h5>
+                                    <p className="card-text">
+                                        {blog.blogDescription
+                                            .split(' ')                // Split the description into an array of words
+                                            .slice(0, 15)              // Get the first 15 words
+                                            .join(' ')                 // Join them back into a string
+                                        }
+                                        {blog.blogDescription.split(' ').length > 15 && '...'}
+                                    </p>
                                 </div>
+
                                 {/* Overlay for hover effect */}
                                 <div className="overlay">
                                     <div className="overlay-text">Read More</div>

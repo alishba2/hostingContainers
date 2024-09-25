@@ -2,16 +2,14 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import { saveContactForm } from "../../firebase/firebase";
+
 const Contactus = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
   // State to manage form inputs
   const [formData, setFormData] = useState({
-    fname: "",
-    lname: "",
-    company: "",
-    title: "",
+    name: "", // Changed to a single 'name' field
     email: "",
     phone: "",
     message: "",
@@ -34,10 +32,7 @@ const Contactus = () => {
       await saveContactForm(formData);
       // Optionally reset the form or provide feedback to the user
       setFormData({
-        fname: "",
-        lname: "",
-        company: "",
-        title: "",
+        name: "", // Resetting name field
         email: "",
         phone: "",
         message: "",
@@ -53,42 +48,17 @@ const Contactus = () => {
       <div className="requestDemo-flex-box-right content">
         <h2 className="text-white text-center mb-3">{t('contact_us')}</h2>
         <form onSubmit={handleSubmit}>
-          <div className="requestDemo-twoInputbox">
-            <input
-              type="text"
-              name="fname"
-              placeholder={t('first_name')}
-              value={formData.fname}
-              onChange={handleChange}
-            />
-            <input
-              type="text"
-              name="lname"
-              placeholder={t('last_name')}
-              value={formData.lname}
-              onChange={handleChange}
-            />
-          </div>
-          <div className="requestDemo-twoInputbox">
-            <input
-              type="text"
-              name="company"
-              placeholder={t('company')}
-              value={formData.company}
-              onChange={handleChange}
-            />
-            <input
-              type="text"
-              name="title"
-              placeholder={t('job_title')}
-              value={formData.title}
-              onChange={handleChange}
-            />
-          </div>
+          <input
+            type="text"
+            name="name"
+            placeholder="Name*" // Changed placeholder
+            value={formData.name}
+            onChange={handleChange}
+          />
           <input
             type="email"
             name="email"
-            placeholder={t('work_email')}
+            placeholder="Email*"
             value={formData.email}
             onChange={handleChange}
           />

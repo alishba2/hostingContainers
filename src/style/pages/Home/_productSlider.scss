@@ -9,7 +9,7 @@
   }
 
   .product-card {
-    background-color: #1c1c1c;
+    background-color: rgb(216, 214, 214);
     padding: 15px;
     border-radius: 8px;
     text-align: center;
@@ -20,15 +20,22 @@
     max-width: 200px;
     margin: 0 auto;
     height: 300px;
-    /* Set a fixed height for the card */
+    /* Increased height for the card */
+    display: flex;
+    /* Use flexbox for better layout control */
+    flex-direction: column;
+    /* Arrange items in a column */
+    justify-content: space-between;
+    /* Distribute space evenly */
 
     &:hover {
       transform: translateY(-5px);
     }
 
     img {
-      max-width: 100%;
-      height: 150px;
+      width: 100%;
+      /* Ensure the image fills the card width */
+      height: 170px;
       /* Set a fixed height for the image */
       object-fit: cover;
       /* Ensure the image fills the container */
@@ -39,7 +46,7 @@
     h3 {
       font-size: 0.9rem;
       /* Adjust font size */
-      color: #fff;
+      color: black;
       margin-bottom: 8px;
       line-height: 1.2;
       /* Reduce line height */
@@ -57,7 +64,7 @@
 
       p {
         font-size: 1rem;
-        color: #ddd;
+        color: black;
         margin: 0;
 
         &.out-of-stock {
@@ -95,12 +102,6 @@
   }
 
   @media (max-width: 768px) {
-    // .product-card {
-    //   max-width: 150px;
-    //   height: 250px;
-    //   /* Adjust height for smaller screens */
-    // }
-
     img {
       height: 120px;
       /* Adjust image height for smaller screens */
@@ -108,12 +109,6 @@
   }
 
   @media (max-width: 576px) {
-    // .product-card {
-    //   max-width: 100%;
-    //   height: 230px;
-    //   /* Adjust height for smaller screens */
-    // }
-
     img {
       height: 100px;
       /* Adjust image height for smaller screens */

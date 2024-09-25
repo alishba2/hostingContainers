@@ -11,18 +11,23 @@ import Demosection from "../components/Home/demosection";
 import DubaiVenueLocator from "./map";
 import MiningSolutions from "../components/Home/miningSolution";
 import AtmSection from "../components/Home/atmsection";
+import ShowBlogs from "../../src/pages/showBlogs";
+
 const Home = () => {
   return (
     <>
       <Banner />
-      <MiningSolutions />
+      {/* <MiningSolutions /> */}
+
       <Benefits />
       <ProductSlider />
-      <Reserve />
+
+      {/* <Reserve /> */}
       <Hostingservices />
-      <AtmSection />
+      {/* <AtmSection /> */}
       <Demosection />
-      <Whychooseus />
+      {/* <Whychooseus /> */}
+      <ShowBlogs />
       {/* <DubaiVenueLocator /> */}
       {/* <Workwithus /> */}
       <Contactus />
