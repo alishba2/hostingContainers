@@ -1,5 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { NavLink, useNavigate, useLocation, useMatch } from "react-router-dom";
+
 import {
   FaCode,
   FaPencilAlt,
@@ -10,6 +12,7 @@ import {
 } from "react-icons/fa";
 
 export default function Benefits() {
+  const navigate = useNavigate();
   const { t } = useTranslation();
   const handleNavigation2 = (category) => {
     navigate("/products", { state: { category } });
