@@ -15,7 +15,7 @@ export default function Benefits() {
   return (
     <div className="service-container">
       <div className="container">
-        <h2>{t('benefits.title')}</h2>
+        <h2>Categories</h2>
 
         <div className="line"></div>
 

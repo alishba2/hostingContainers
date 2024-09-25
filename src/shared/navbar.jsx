@@ -223,11 +223,11 @@ const Navbar = () => {
                   {t("blogs")}
                 </NavLink>
               </li>
-              {/* <li>
+              <li>
                 <NavLink to="/atm" activeClassName="active">
                   {t("Atms")}
                 </NavLink>
-              </li> */}
+              </li>
             </ul>
           </div>
           <div className="v-center gap-2">
