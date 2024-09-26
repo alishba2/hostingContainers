@@ -9,63 +9,64 @@
   }
 
   .product-card {
-    // background-color: rgb(216, 214, 214);
-    // background: linear-gradient(106deg, #9b28a8 10.92%, #9208f3 88.71%);
-    background-color: #4b2e83;
-    // border: 2px solid purple;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid gray;
     padding: 15px;
     border-radius: 8px;
-    // text-align: center;
     transition: transform 0.2s ease-in-out;
     color: #fff !important;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 200px;
     margin: 0 auto;
-    // height: 300px;
-    /* Increased height for the card */
     display: flex;
-    /* Use flexbox for better layout control */
     flex-direction: column;
-    /* Arrange items in a column */
     justify-content: space-between;
-    /* Distribute space evenly */
 
     &:hover {
       transform: translateY(-5px);
     }
 
+    .btn {
+      background: transparent;
+      color: white;
+      border: 1px solid white;
+      border-radius: 10px;
+      padding: 4px 6px;
+      font-size: 14px;
+      margin-top: 5px;
+      width: 100%;
+      transition: background-color 0.3s ease;
+      /* Add transition for smooth hover effect */
+
+      &:hover {
+        background-color: #4C097D;
+        font-weight: bold;
+        /* Change background color on hover */
+      }
+    }
+
     img {
       width: 100%;
-      /* Ensure the image fills the card width */
       height: 170px;
-      /* Set a fixed height for the image */
       object-fit: cover;
-      /* Ensure the image fills the container */
       margin-bottom: 10px;
       border-radius: 5px;
     }
 
-
-
     h3 {
       font-size: 0.9rem;
-      /* Adjust font size */
       color: white;
       margin-bottom: 8px;
       line-height: 1.2;
-      /* Reduce line height */
       height: 2.4rem;
-      /* Limit height to avoid overflow */
       overflow: hidden;
-      /* Hide overflow if text is too long */
     }
 
     .product-info {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      /* Align the content vertically in the middle */
 
       p {
         font-size: 1rem;
@@ -74,12 +75,10 @@
 
         &.out-of-stock {
           color: #dc3545 !important;
-          /* Out-of-stock color */
         }
 
         &.power {
           color: #28a745;
-          /* In-stock color */
         }
       }
     }
@@ -89,7 +88,7 @@
   .slick-prev,
   .slick-next {
     color: #fff;
-    background-color: #4b2e83;
+    background-color: #4C097D;
     border-radius: 50%;
     padding: 5px;
   }
@@ -98,7 +97,7 @@
     bottom: -30px;
 
     li button:before {
-      color: #4b2e83;
+      color: #4C097D;
     }
 
     li.slick-active button:before {
@@ -109,19 +108,12 @@
   @media (max-width: 768px) {
     img {
       height: 120px;
-      /* Adjust image height for smaller screens */
     }
   }
 
   @media (max-width: 576px) {
     img {
       height: 100px;
-      /* Adjust image height for smaller screens */
     }
   }
-}
-
-.btn:hover {
-  background-color: white;
-  color: #4b2e83;
 }

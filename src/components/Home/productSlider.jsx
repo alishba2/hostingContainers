@@ -63,7 +63,7 @@ const ProductSlider = () => {
 
             </div>
 
-            <button className="btn" style={{ background: "transparent", color: "white", border: "1px solid white", borderRadius: "10px", padding: "4px 6px", fontSize: "14px", marginTop: "5px", width: "100%" }}>Contact Us</button>
+            <button className="btn" >Contact Us</button>
           </div>
         ))}
       </Slider>
