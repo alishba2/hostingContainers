@@ -48,6 +48,24 @@
   z-index: 2;
   max-width: 60%;
   text-align: start;
+
+  .contactBtn {
+    position: relative;
+    /* Position text above the overlay */
+    z-index: 2;
+    text-align: start;
+    padding: 5px 12px;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    border-radius: 20px;
+
+    &:hover {
+      background: white;
+      color: #4C097D;
+      font-weight: bold;
+    }
+  }
 }
 
 .carousel-text h2 {

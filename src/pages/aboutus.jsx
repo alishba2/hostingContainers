@@ -7,6 +7,7 @@ import {
   FaInstagram,
 } from "react-icons/fa"; // Social icons
 import "../../src/style/pages/_about.scss";
+import Contactus from "../components/Home/contactus";
 import videoSrc from "../assets/blockchainn2.mp4"; // Add your background video here
 import img1 from "../assets/ceo2.png";
 import img2 from "../assets/team102.jpeg"
@@ -59,6 +60,8 @@ export default function AboutUs() {
 
         </div>
       </div>
+
+      <Contactus />
     </div>
   );
 }

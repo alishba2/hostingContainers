@@ -3,6 +3,9 @@
     position: relative;
     width: 100%;
     overflow: hidden;
+    background-image: url("../../assets/images/trGlow.webp");
+    background-position: center;
+    background-size: 100% 100%;
     // padding: 0 20px;
     /* Padding for responsiveness */
 }
@@ -125,7 +128,7 @@
     }
 }
 
-$primary-color: #a890d3;
+$primary-color: #4C097D;
 $shadow-light: rgba(0, 0, 0, 0.1);
 $shadow-dark: rgba(0, 0, 0, 0.2);
 
@@ -138,6 +141,7 @@ $shadow-dark: rgba(0, 0, 0, 0.2);
 .team-section h2 {
     margin-bottom: 2rem;
     font-size: 2rem;
+    font-weight: bold;
     color: white;
 }
 
@@ -181,13 +185,16 @@ $shadow-dark: rgba(0, 0, 0, 0.2);
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: rgba(168, 144, 211, 0.8);
+        background-color: rgba(76, 9, 125, 0.9);
         /* Adjusted to 0.8 opacity */
         color: white;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: row;
+        padding: 30px;
+        font-size: 14px;
+        text-align: justify;
         gap: 15px;
         opacity: 0;
         /* This opacity will control the overall overlay visibility */
@@ -226,7 +233,7 @@ $shadow-dark: rgba(0, 0, 0, 0.2);
     }
 
     .team-overlay a {
-        color: #a890d3;
+        color: #4C097D;
         /* Primary color for the social links */
         font-size: 1.5rem;
         transition: color 0.3s ease;

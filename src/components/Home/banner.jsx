@@ -89,6 +89,8 @@ const Banner = () => {
             <p>Start your mining Journey with us </p>
 
             <h2>HOSTING CONTAINERS</h2>
+            <button className="contactBtn">Contact Us</button>
+
           </div>
         </div>
         <div className="carousel-slide">
