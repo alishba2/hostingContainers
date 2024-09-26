@@ -20,13 +20,38 @@ import img5 from "../assets/images/main2.jpg";
 export default function AboutUs() {
   const { t } = useTranslation();
 
-  const teamMembers = [
 
-    { name: "Jack Lei ", role: "Co - founder", image: img5, description: "Jack is the visionary behind Hash International Hosting LLC, established in 2017. With a deep understanding of blockchain technology and cryptocurrency mining, Jack spearheaded the company’s growth into a global leader in the industry. His innovative approach and dedication have driven Hash International Hosting LLC to expand across continents, providing cutting-edge mining solutions with a focus on reliability and performance." },
-    { name: "Luis Fernandez", role: "COO", image: img1, description: "Lius is the Chief Operating Officer at Hash International Hosting LLC, responsible for managing the day-to-day operations of the company. His operational acumen ensures that all mining projects are executed efficiently and that the company maintains its industry-leading uptime and reliability. Lius’s focus on operational excellence has been a cornerstone of the company’s success." },
-    { name: "Alberto Seoane", role: "CEO", image: img4, description: "Alberto, the Chief Executive Officer of Hash International Hosting LLC, leads the company with a focus on growth, innovation, and operational excellence. With a strong background in technology and business development, Alberto has guided the company to become a trusted name in the crypto mining industry, driving strategic initiatives across Africa, the US, Russia, Kazakhstan, and the UAE." },
-    { name: "Roberto Rodriguez", role: "Co - founder", image: img3, description: "Roberto, as the co-founder of Hash International Hosting LLC, brings extensive experience in crypto mining and infrastructure management. His expertise in operations and strategic planning has been pivotal in the company’s successful expansion into global markets. Roberto plays a key role in overseeing the deployment of containerized mining solutions and ensuring that the company’s offerings meet the highest standards." },
-    { name: "Maxwell Khushal", role: "Managing Director", image: img2, description: "Maxwell Khushal, the Managing Director of Hash International Hosting LLC, brings years of expertise in international business and crypto mining operations. Under his leadership, the company has optimized mining facilities across multiple continents, ensuring operational success and client satisfaction. Maxwell is known for his strategic vision and commitment to delivering high-quality services in the fast-paced world of cryptocurrency mining." },
+  const teamMembers = [
+    {
+      name: t("teamMembers.jackLei.name"),
+      role: t("teamMembers.jackLei.role"),
+      image: img5,
+      description: t("teamMembers.jackLei.description"),
+    },
+    {
+      name: t("teamMembers.luisFernandez.name"),
+      role: t("teamMembers.luisFernandez.role"),
+      image: img1,
+      description: t("teamMembers.luisFernandez.description"),
+    },
+    {
+      name: t("teamMembers.albertoSeoane.name"),
+      role: t("teamMembers.albertoSeoane.role"),
+      image: img4,
+      description: t("teamMembers.albertoSeoane.description"),
+    },
+    {
+      name: t("teamMembers.robertoRodriguez.name"),
+      role: t("teamMembers.robertoRodriguez.role"),
+      image: img3,
+      description: t("teamMembers.robertoRodriguez.description"),
+    },
+    {
+      name: t("teamMembers.maxwellKhushal.name"),
+      role: t("teamMembers.maxwellKhushal.role"),
+      image: img2,
+      description: t("teamMembers.maxwellKhushal.description"),
+    },
   ];
 
   return (

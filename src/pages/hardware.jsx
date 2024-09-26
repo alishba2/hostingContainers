@@ -3,6 +3,7 @@ import axios from 'axios';
 import "../style/pages/Home/_hardware.scss";
 // import leftGlow from "../../src/assets/images/Home/leftGlow.png";
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'; // Add this import for arrow icons
+import { useTranslation } from "react-i18next";
 
 const API_KEY = '07b8f8c3-1744-44f3-84ea-3f3812c98b88'; // Replace with your API key
 const API_SECRET = '13474ae0-0818-4a29-a86c-5cbf92d64e8d9be8b486-4a46-4e54-be8f-b0bc4f6eb94a'; // Replace with your API secret
@@ -15,6 +16,7 @@ const Hardware = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const pageSize = 10;
     const ELECTRICITY_COST_PER_KWH = 0.07; // Update according to location (e.g., Dubai)
+    const { t } = useTranslation();
 
     // Function to create a signed request for NiceHash API
     const createSignature = (method, path, time, nonce) => {
@@ -128,7 +130,7 @@ const Hardware = () => {
 
         <div style={{ justifyContent: 'center', alignItems: 'center', flexDirection: 'column', position: "relative" }}>
             <div className="hardware-table">
-                <h2>Daily Stats</h2>
+                <h2> {t('DailyStats')}</h2>
                 <table>
                     <thead>
                         <tr>
@@ -175,7 +177,7 @@ const Hardware = () => {
 
                 <div className='img'>
                     <div className='responsiveness'>
-                        <h2 style={{ textAlign: 'center' }}>Profitability Calculator</h2>
+                        <h2 style={{ textAlign: 'center' }}>  <h2> {t('profitablity')}</h2></h2>
 
                         {/* <img style={{top:"20%", left:"0px", zIndex:"-1", width:"100%"}} className='position-absolute' src={leftGlow} alt="" /> */}
                         <iframe style={{ margin: "0 auto", display: "flex" }} className='mx-auto' src="https://widget.nicehash.com/profcalc" width="400" height="420" scrolling="no" id="nhiframe"></iframe>

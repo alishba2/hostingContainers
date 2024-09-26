@@ -3,10 +3,12 @@ import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import { getBlogs } from '../firebase/firebase'; // Assuming this function fetches the blogs from Firestore
 import "../style/pages/Home/_showBlog.scss";
 import { Spinner } from 'react-bootstrap';
+import { useTranslation } from "react-i18next";
 
 export default function ShowBlogs() {
     const [blogs, setBlogs] = useState([]);
     const [loading, setLoading] = useState(true);
+    const { t } = useTranslation(); // Initialize translation hook
 
     // Fetch blogs when the component mounts
     useEffect(() => {
@@ -36,7 +38,7 @@ export default function ShowBlogs() {
         <div className="container mt-5 show-blogs">
             {/* Introductory text */}
             <div className="intro-text">
-                <h2 className="text-center mb-4">Our Latest Blogs</h2>
+                <h2 className="text-center mb-4">{t('latestBlogs')}</h2>
             </div>
 
             <div className="row mt-5">

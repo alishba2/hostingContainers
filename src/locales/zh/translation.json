@@ -21,10 +21,36 @@
     "demo": "演示",
     "aboutUs": "关于我们",
     "welcome": "欢迎来到我们的关于我们页面",
-    "missionStatement": "我们的使命声明",
-    "aboutUsText": "成立于2017年，Hash International Hosting LLC 已成长为加密货币挖矿行业的关键参与者，在非洲、美国、俄罗斯、哈萨克斯坦、阿联酋以及其他海湾国家拥有强大的影响力。我们的使命是提供创新和可靠的挖矿解决方案，使客户能够最大化其回报，同时减少运营复杂性。我们特别关注阿联酋，我们的站点设计旨在保持最佳的环境条件，确保矿工在最高效率下运行。我们拥有100多名专业人士，拥有丰富的挖矿和基础设施管理经验，推动我们在多个大洲的成功。",
-    "aboutUsHeading": "关于我们",
+    "missionStatement": "我们的使命",
+    "aboutUsText": "在 Hash International Hosting LLC，我们致力于为全球提供最佳的区块链和加密货币挖矿解决方案。",
     "ourTeam": "我们的团队",
+    "teamMembers": {
+        "jackLei": {
+            "name": "Jack Lei",
+            "role": "联合创始人",
+            "description": "Jack 是 Hash International Hosting LLC 的远见者，他于 2017 年成立了这家公司。凭借对区块链技术和加密货币挖矿的深刻理解，Jack 带领公司成长为行业全球领导者。"
+        },
+        "luisFernandez": {
+            "name": "Luis Fernandez",
+            "role": "首席运营官",
+            "description": "Luis 是 Hash International Hosting LLC 的首席运营官，负责管理公司的日常运营。"
+        },
+        "albertoSeoane": {
+            "name": "Alberto Seoane",
+            "role": "首席执行官",
+            "description": "Alberto 是 Hash International Hosting LLC 的首席执行官，他专注于公司的增长、创新和运营卓越。"
+        },
+        "robertoRodriguez": {
+            "name": "Roberto Rodriguez",
+            "role": "联合创始人",
+            "description": "Roberto 是 Hash International Hosting LLC 的联合创始人，带来了丰富的加密货币挖矿和基础设施管理经验。"
+        },
+        "maxwellKhushal": {
+            "name": "Maxwell Khushal",
+            "role": "总经理",
+            "description": "Maxwell Khushal 是 Hash International Hosting LLC 的总经理，拥有多年国际业务和加密货币挖矿运营的经验。"
+        }
+    },
     "whyChooseUs2": "为什么选择我们",
     "service1Title": "服务 1",
     "service1Description": "服务 1 的描述",
@@ -168,6 +194,10 @@
         "cryptocurrencyMiners": "加密货币矿工",
         "miningContainers": "挖矿容器",
         "miningChipsHardware": "挖矿芯片和硬件",
-        "seeMore": "查看更多"
-    }
+        "seeMore": "查看更多",
+        "categories": "类别  "
+    },
+    "DailyStats": "每日统计 ",
+    "profitablity": "盈利计算器",
+    "latestBlogs": "我们的最新博客 "
 }
