@@ -2,6 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { NavLink, useNavigate, useLocation, useMatch } from "react-router-dom";
 
+// import backGlow from "../../assets/images/Home/trGlow.webp";
 import {
   FaCode,
   FaPencilAlt,
@@ -20,7 +21,8 @@ export default function Benefits() {
 
 
   return (
-    <div className="service-container">
+    <div className="service-container position-relative">
+      {/* <img style={{width:"100%", overflow:"hidden"}} className=" object-fit-cover position-absolute top-0  " src={backGlow} alt="" /> */}
       <div className="container">
         <h2>Categories</h2>
 
@@ -32,7 +34,7 @@ export default function Benefits() {
               {/* <FaPaintBrush /> */}
             </div>
             <h3>{t('benefit.cryptocurrencyMiners')}</h3>
-            <button onClick={()=>{handleNavigation2('Miners')}} className="seeMore">
+            <button onClick={() => { handleNavigation2('Miners') }} className="seeMore">
               {t('benefit.seeMore')}
             </button>
           </div>
@@ -42,7 +44,7 @@ export default function Benefits() {
               {/* <FaCode /> */}
             </div>
             <h3>{t('benefit.miningContainers')}</h3>
-            <button  onClick={()=>{handleNavigation2('Mining Containers')}}  className="seeMore">
+            <button onClick={() => { handleNavigation2('Mining Containers') }} className="seeMore">
               {t('benefit.seeMore')}
             </button>
           </div>
@@ -52,7 +54,7 @@ export default function Benefits() {
               {/* <FaLaptopCode /> */}
             </div>
             <h3>{t('benefit.miningChipsHardware')}</h3>
-            <button  onClick={()=>{handleNavigation2('Others')}} className="seeMore">
+            <button onClick={() => { handleNavigation2('Others') }} className="seeMore">
               {t('benefit.seeMore')}
             </button>
           </div>

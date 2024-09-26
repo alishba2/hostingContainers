@@ -1,9 +1,14 @@
 .hardware-table {
-    background-color: #000;
+    background-image: url("../../../assets/images/testiGlow.webp");
+    background-position: center;
+    background-size: 100% 100%;
     color: #fff;
     padding: 20px;
     margin: 20px;
     border-radius: 8px;
+    background-image: url("../../../assets/images/trGlow.webp");
+    background-position: center;
+    background-size: 100% 100%;
 
     h2 {
         text-align: center;
@@ -14,25 +19,36 @@
         width: 100%;
         border-collapse: collapse;
 
+        // Remove borders from the table
+        border: none;
+
+        // Responsive styles for table
         th,
         td {
-            border: 1px solid #fff;
-            padding: 10px;
+            // Remove the border and set a light gray color for rows
+            border: none;
+            padding: 15px; // Increased padding for row height
             text-align: left;
             font-size: 16px; // Base font size for desktop
+            background-color: black; // Slightly transparent white for row background
         }
 
         th {
-            background-color: #444;
+            // background-color: #444;
+            border-bottom: 1px solid white;
         }
 
-        tr:nth-child(even) {
-            background-color: #222;
+        tr {
+            border-bottom: 1px solid #444 !important;
         }
 
-        tr:hover {
-            background-color: #333;
-        }
+        // tr:nth-child(even) {
+        //     background-color: rgba(255, 255, 255, 0.05); // Light gray for even rows
+        // }
+
+        // tr:hover {
+        //     background-color: #333; // Darker background on hover
+        // }
     }
 
     .pagination {
@@ -71,22 +87,17 @@
         margin: 10px;
 
         h2 {
-            font-size: 1.5rem; // Adjust header font size for smaller screens
+            font-size: 32px;
         }
 
         table {
             font-size: 14px; // Smaller font size for table text
+            overflow-x: scroll;
 
             th,
             td {
-                padding: 8px; // Reduce padding for smaller screens
+                padding: 10px; // Adjust padding for smaller screens
             }
-        }
-
-        // Hide certain columns on mobile
-        th:not(:first-child):nth-last-child(-n+3),
-        td:not(:first-child):nth-last-child(-n+3) {
-            display: none; // Hide all columns except the first (Name) and the last (Profitability)
         }
     }
 
@@ -94,8 +105,12 @@
         padding: 10px;
         margin: 5px;
 
+        .d-none-mbl {
+            display: none;
+        }
+
         h2 {
-            font-size: 1.2rem; // Further adjust header font size
+            font-size: 32px;
         }
 
         table {
@@ -103,7 +118,7 @@
 
             th,
             td {
-                padding: 5px; // Further reduce padding
+                padding: 8px; // Further reduce padding
             }
         }
 
@@ -115,5 +130,84 @@
                 width: 100%; // Make buttons full width
             }
         }
+    }
+
+    .responsiveness {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%; // Full width of the parent
+    }
+
+    .responsiveness iframe {
+        width: 80%; // Default width for larger screens
+        max-width: 800px; // Optional: max width to prevent it from getting too large
+        height: 420px; // Keep the height as you specified
+        margin: 0 auto; // Center the iframe
+    }
+
+    // Media query for smaller devices
+    @media (max-width: 768px) {
+        .responsiveness iframe {
+            width: 95%; // Increase width on small devices
+            height: 300px; // Optional: Adjust height if needed
+        }
+    }
+
+}
+
+// .img {
+//     background-image: url("../../../assets/images/trGlow.webp");
+//     background-position: center;
+//     background-size: 100% 100%;
+//     transform: scaleX(-1);
+// }
+
+.responsiveness {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; // Full width of the parent
+
+    /* Flip the image horizontally */
+
+}
+
+.responsiveness::before {
+    content: '';
+    /* Necessary for pseudo-element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("../../../assets/images/trGlow.webp");
+    background-position: center;
+    background-size: cover;
+    /* Cover the entire element */
+    transform: scaleX(-1);
+    /* Flip the image horizontally */
+    z-index: -1;
+    /* Send it behind the content */
+    opacity: 0.7;
+    /* Optional: Adjust opacity if needed */
+}
+
+.responsiveness iframe {
+    width: 90%; // Default width for larger screens
+    max-width: 800px; // Optional: max width to prevent it from getting too large
+    height: 420px; // Keep the height as you specified
+    margin: 0 auto; // Center the iframe
+}
+
+// Media query for smaller devices
+@media (max-width: 768px) {
+    .responsiveness iframe {
+        width: 95%; // Increase width on small devices
+        height: 430px; // Optional: Adjust height if needed
+    }
+
+    .responsiveness h2 {
+        font-size: 30px;
     }
 }

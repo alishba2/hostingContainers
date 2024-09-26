@@ -9,17 +9,20 @@
   }
 
   .product-card {
-    background-color: rgb(216, 214, 214);
+    // background-color: rgb(216, 214, 214);
+    // background: linear-gradient(106deg, #9b28a8 10.92%, #9208f3 88.71%);
+    background-color: #4b2e83;
+    // border: 2px solid purple;
     padding: 15px;
     border-radius: 8px;
-    text-align: center;
+    // text-align: center;
     transition: transform 0.2s ease-in-out;
-    color: #fff;
+    color: #fff !important;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 200px;
     margin: 0 auto;
-    height: 300px;
+    // height: 300px;
     /* Increased height for the card */
     display: flex;
     /* Use flexbox for better layout control */
@@ -46,7 +49,7 @@
     h3 {
       font-size: 0.9rem;
       /* Adjust font size */
-      color: black;
+      color: white;
       margin-bottom: 8px;
       line-height: 1.2;
       /* Reduce line height */
@@ -64,7 +67,7 @@
 
       p {
         font-size: 1rem;
-        color: black;
+        color: white;
         margin: 0;
 
         &.out-of-stock {

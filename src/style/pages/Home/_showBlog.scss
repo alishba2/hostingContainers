@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap');
 
 .show-blogs {
+    @media screen and (max-width: 480px) {
+        h2 {
+            font-size: 32px;
+        }
+    }
+
     .intro-text {
         max-width: 700px;
         margin: 0 auto;
@@ -12,8 +18,8 @@
 
         h2 {
             margin-bottom: 1rem;
-            font-weight: bold;
-            font-family: "Gowun Batang", serif !important;
+            // font-weight: bold;
+            // font-family: "Gowun Batang", serif !important;
 
         }
     }

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import "../style/pages/Home/_hardware.scss";
+// import leftGlow from "../../src/assets/images/Home/leftGlow.png";
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'; // Add this import for arrow icons
 
 const API_KEY = '07b8f8c3-1744-44f3-84ea-3f3812c98b88'; // Replace with your API key
 const API_SECRET = '13474ae0-0818-4a29-a86c-5cbf92d64e8d9be8b486-4a46-4e54-be8f-b0bc4f6eb94a'; // Replace with your API secret
@@ -60,7 +62,7 @@ const Hardware = () => {
                 const signature = createSignature(method, path, currentTime, nonce);
 
                 const response = await axios.get(`https://api2.nicehash.com${path}`, {
-             
+
                     headers: {
                         'X-Time': currentTime,
                         'X-Nonce': nonce,
@@ -123,53 +125,71 @@ const Hardware = () => {
     const currentData = miners.slice((currentPage - 1) * pageSize, currentPage * pageSize);
 
     return (
-       
-        <div style={{display:'flex', justifyContent:'center', alignItems:'center', flexDirection:'column'}}>
-             <div className="hardware-table">
-            <h2>Miner Profitability in €</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Algorithm</th>
-                        <th>Hash Rate (H/s)</th>
-                        <th>Power (W)</th>
-                        <th>Profitability (€ / day)</th>
-                        <th>Type</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {currentData.map((miner) => (
-                        <tr key={miner.id}>
-                            <td>{miner.name || 'N/A'}</td>
-                            <td>{Object.keys(miner.algorithms)[0] || 'N/A'}</td>
-                            <td>{miner.algorithms ? Object.values(miner.algorithms)[0]?.speed : 'N/A'}</td>
-                            <td>{miner.algorithms ? Object.values(miner.algorithms)[0]?.power : 'N/A'}</td>
-                            <td>{calculateProfitability(miner).toFixed(4) || 'N/A'}</td>
-                            <td>{miner.type || 'N/A'}</td>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
-            <div className="pagination">
-                <button
-                    onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
-                    disabled={currentPage === 1}
-                >
-                    Previous
-                </button>
-                <span>Page {currentPage}</span>
-                <button
-                    onClick={() => setCurrentPage((prev) => Math.min(prev + 1, Math.ceil(miners.length / pageSize)))}
-                    disabled={currentPage === Math.ceil(miners.length / pageSize)}
-                >
-                    Next
-                </button>
-            </div>
-        </div>
 
-            <h3 style={{textAlign:'center'}}>Profitability Calculator</h3>
-        <iframe src="https://widget.nicehash.com/profcalc" width="400" height="420" scrolling="no" id="nhiframe"></iframe>
+        <div style={{ justifyContent: 'center', alignItems: 'center', flexDirection: 'column', position: "relative" }}>
+            <div className="hardware-table">
+                <h2>Daily Stats</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th className='d-none-mbl'>Algorithm</th>
+                            <th className='d-none-mbl'>Hash Rate (H/s)</th>
+                            <th className='d-none-mbl'>Power (W)</th>
+                            <th>Profitability (€ / day)</th>
+                            <th className='d-none-mbl'>Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {currentData.map((miner) => (
+                            <tr key={miner.id}>
+                                <td>{miner.name || 'N/A'}</td>
+                                <td className='d-none-mbl'>{Object.keys(miner.algorithms)[0] || 'N/A'}</td>
+                                <td className='d-none-mbl'>{miner.algorithms ? Object.values(miner.algorithms)[0]?.speed : 'N/A'}</td>
+                                <td className='d-none-mbl'>{miner.algorithms ? Object.values(miner.algorithms)[0]?.power : 'N/A'}</td>
+                                <td>{calculateProfitability(miner).toFixed(4) || 'N/A'}</td>
+                                <td className='d-none-mbl'>{miner.type || 'N/A'}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+                <div className="pagination">
+                    <button
+                        onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+                        disabled={currentPage === 1}
+                        className="arrow-button"
+                    >
+                        <FaArrowLeft />
+                    </button>
+                    <span>Page {currentPage}</span>
+                    <button
+                        onClick={() => setCurrentPage((prev) => Math.min(prev + 1, Math.ceil(miners.length / pageSize)))}
+                        disabled={currentPage === Math.ceil(miners.length / pageSize)}
+                        className="arrow-button"
+                    >
+                        <FaArrowRight />
+                    </button>
+                </div>
+            </div>
+            <div>
+
+                <div className='img'>
+                    <div className='responsiveness'>
+                        {/* <h2 style={{ textAlign: 'center' }}>Profitability Calculator</h2> */}
+
+                        {/* <img style={{top:"20%", left:"0px", zIndex:"-1", width:"100%"}} className='position-absolute' src={leftGlow} alt="" /> */}
+                        <iframe style={{ margin: "0 auto", display: "flex" }} className='mx-auto' src="https://widget.nicehash.com/profcalc" width="400" height="420" scrolling="no" id="nhiframe"></iframe>
+
+
+
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
 
         </div>
     );
