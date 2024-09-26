@@ -1,3 +1,20 @@
+/* Key Functions Section */
+.key-functions-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Semi-transparent black for contrast */
+    border-radius: 10px;
+    margin-top: 50px;
+    color: white;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+}
+
 /* Purple-black gradient background */
 .app-container {
     background: radial-gradient(#7b1788, #000000);
@@ -5,7 +22,10 @@
     color: white;
     position: relative;
     padding: 50px 20px;
-    /* Added padding for small screens */
+
+    @media (max-width: 576px) {
+        padding: 30px 15px;
+    }
 }
 
 /* Logo and company name */
@@ -13,12 +33,24 @@
     font-size: 3.5rem;
     font-weight: bold;
     margin: 0;
+
+    @media (max-width: 768px) {
+        font-size: 2.5rem;
+    }
+
+    @media (max-width: 576px) {
+        font-size: 2rem;
+    }
 }
 
 .company-name {
     font-size: 1.8rem;
     font-weight: normal;
     margin: 10px 0;
+
+    @media (max-width: 768px) {
+        font-size: 1.2rem;
+    }
 }
 
 /* Description text styling */
@@ -31,6 +63,10 @@
     display: inline-block;
     max-width: 80%;
     text-align: center;
+
+    @media (max-width: 576px) {
+        margin-top: 10px;
+    }
 }
 
 /* Executive Summary Styling */
@@ -39,10 +75,14 @@
     font-weight: bold;
     margin-bottom: 20px;
     text-align: center;
-}
 
-.text-container {
-    padding: 20px;
+    @media (max-width: 768px) {
+        font-size: 1.8rem;
+    }
+
+    @media (max-width: 576px) {
+        font-size: 1.6rem;
+    }
 }
 
 /* Image Section Styling */
@@ -56,6 +96,16 @@
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     transform: rotate(5deg);
+
+    @media (max-width: 768px) {
+        max-width: 80%;
+        transform: none;
+    }
+
+    @media (max-width: 576px) {
+        max-width: 100%;
+        margin: 0 auto;
+    }
 }
 
 /* Market Opportunity Section Styling */
@@ -64,148 +114,258 @@
     flex-direction: column;
     justify-content: center;
     padding: 20px;
+
+    @media (max-width: 768px) {
+        padding: 10px;
+    }
+
+    @media (max-width: 576px) {
+        padding: 5px;
+    }
 }
 
 .market-title {
     font-size: 2.5rem;
     margin-bottom: 20px;
     background-color: #007bff;
-    /* Blue background */
     padding: 15px;
-    /* Padding for the title */
     border-radius: 8px;
-    /* Rounded corners */
     color: white;
-    /* White text color */
+
+    @media (max-width: 768px) {
+        font-size: 2rem;
+    }
+
+    @media (max-width: 576px) {
+        font-size: 1.8rem;
+    }
 }
 
 .market-description {
     font-size: 1.2rem;
     margin-bottom: 20px;
-}
 
-.target-marketing p {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-}
-
-.target-list {
-    list-style-type: decimal;
-    /* Ordered list */
-    padding-left: 20px;
-    /* Indent the list */
-    margin-top: 10px;
-    /* Spacing above the list */
-}
-
-.target-list li {
-    background-color: #007bff;
-    /* Blue background for list items */
-    color: white;
-    /* White text color */
-    margin-bottom: 10px;
-    /* Space between items */
-    padding: 10px;
-    /* Padding inside list items */
-    border-radius: 8px;
-    /* Rounded corners */
-}
-
-/* Image Section: Market Opportunity */
-.image-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.image-container {
-    margin-bottom: 20px;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .company-logo {
-        font-size: 2.5rem;
-    }
-
-    .company-name {
-        font-size: 1.2rem;
-    }
-
-    .summary-title {
-        font-size: 1.8rem;
-    }
-
-    .market-title {
-        font-size: 2rem;
-
-    }
-
-    .market-description {
+    @media (max-width: 768px) {
         font-size: 1rem;
     }
 
-    .target-list {
-        font-size: 1rem;
+    @media (max-width: 576px) {
+        font-size: 0.9rem;
     }
+}
 
-    .image-section {
+/* Fourth Section */
+.fourth-section {
+    margin-top: 50px;
+
+    @media (max-width: 576px) {
         margin-top: 20px;
     }
+}
 
-    .atm-image {
+.feature-text {
+    padding: 20px;
+
+    @media (max-width: 768px) {
+        padding: 10px;
+    }
+
+    @media (max-width: 576px) {
+        padding: 5px;
+    }
+}
+
+.feature-title {
+    font-size: 2.5rem;
+    background-color: #ff5a5f;
+    padding: 15px;
+    border-radius: 8px;
+    color: white;
+    margin-bottom: 20px;
+
+    @media (max-width: 768px) {
+        font-size: 2rem;
+    }
+
+    @media (max-width: 576px) {
+        font-size: 1.8rem;
+        margin-top: 10px;
+    }
+}
+
+.feature-description,
+.feature-list {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+
+    @media (max-width: 768px) {
+        font-size: 1rem;
+    }
+
+    @media (max-width: 576px) {
+        font-size: 0.9rem;
+    }
+}
+
+.feature-list li {
+    margin-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Technology & Hardware Section Styling */
+.technology-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+}
+
+.feature-title {
+    background-color: #007bff;
+    margin-right: 20px;
+    text-align: left;
+
+    @media (max-width: 768px) {
+        margin-right: 0;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+}
+
+.feature-image {
+    max-width: 40%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+
+    @media (max-width: 768px) {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    @media (max-width: 576px) {
+        max-width: 90%;
+    }
+}
+
+
+.content-section {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 20px;
+
+    @media (max-width: 768px) {
+        font-size: 2rem;
+    }
+
+    @media (max-width: 576px) {
+        font-size: 1.8rem;
+    }
+}
+
+.function-item h3 {
+    font-size: 1.8rem;
+    background-color: #3b1265;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+
+    @media (max-width: 768px) {
+        font-size: 1.5rem;
+    }
+
+    @media (max-width: 576px) {
+        font-size: 1.2rem;
+    }
+}
+
+.function-item ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.function-item ul li {
+    margin: 10px 0;
+    display: flex;
+    align-items: flex-start;
+}
+
+.function-item ul li::before {
+    content: "•";
+    color: #4ed5ff;
+    font-size: 24px;
+    padding-right: 10px;
+}
+
+.image-section img {
+    max-width: 350px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    transform: rotate(5deg);
+
+    @media (max-width: 768px) {
         max-width: 80%;
-        margin-bottom: 15px;
         transform: none;
-        /* Remove tilt on smaller screens */
     }
 
-    /* Adjust padding and margins for smaller screens */
-    .market-text {
-        padding: 10px;
+    @media (max-width: 576px) {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .key-functions-container {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
-    .target-marketing {
-        padding: 10px;
+    .content-section {
+        padding-right: 0;
     }
 }
 
 @media (max-width: 576px) {
-    .company-logo {
-        font-size: 2rem;
+    .key-functions-container {
+        padding: 10px;
     }
 
-    .summary-title {
+    .title {
         font-size: 1.6rem;
+        text-align: center;
     }
 
-    .market-title {
-        font-size: 1.8rem;
+    .function-item h3 {
+        font-size: 1.4rem;
     }
 
-    .market-description {
+    .function-item ul li {
         font-size: 0.9rem;
-    }
-
-    .target-list {
-        font-size: 0.9rem;
-    }
-
-    .atm-image {
-        max-width: 100%;
-        margin: 0 auto 15px;
-        transform: none;
-        /* Remove tilt on smaller screens */
-    }
-
-    /* Further adjustments for very small screens */
-    .market-text {
-        padding: 5px;
-    }
-
-    .description {
-        max-width: 100%;
-        /* Allow full width on small screens */
     }
 }
+
+
+// creens.
+// company-logo, company-name: Font size adjustments for smaller screen sizes.
+// description: Reduced the margin-top for better layout on smaller screens.
+// atm-image: Made the image rotate slightly and adjusted the size for responsiveness. The transform effect is removed on smaller screens.
+// market-title and feature-title: Updated background colors and added responsive font size adjustments. Ensured titles center-align on small screens.
+// Responsive Updates: The layout adjusts to stack elements vertically on smaller screens, and the image is centered and resized accordingly.
+// app-container: Adjusted padding for small s

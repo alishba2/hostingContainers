@@ -1,10 +1,12 @@
 .requestDemo-main-container {
   width: 100%;
   margin: auto;
-  background: linear-gradient(to right, black, #533b80);
-
+  background-image: url("../../../assets/images/trGlow.webp");
   padding: 40px 150px;
   margin-top: 100px;
+  background-position: center;
+  background-size: 100% 100%;
+
   // background-image: url("/assets/contactus.jpg");
   // background-size: cover;
   // background-position: center;
@@ -27,6 +29,7 @@
   // }
 
   h2 {
+    font-weight: bold;
     // text-shadow: 4px 4px 4px #4b2e83, 4px 4px 4px #4b2e83;
   }
 
@@ -63,7 +66,7 @@
   .send-request-btn {
     width: 100%;
     border-radius: 24px;
-    background: var(--primary-light, #4b2e83);
+    background: var(--primary-light, #4C097D);
     padding: 12px 20px;
     margin-top: 20px;
     color: var(--white, #fff);

@@ -60,7 +60,10 @@ const ProductSlider = () => {
               <p className={`power ${product.inStock ? "" : "out-of-stock"}`}>
                 {product.voltage}
               </p>
+
             </div>
+
+            <button className="btn" >Contact Us</button>
           </div>
         ))}
       </Slider>

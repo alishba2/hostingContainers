@@ -11,8 +11,11 @@
     "antd": "^5.20.4",
     "axios": "^1.7.7",
     "coinbase-commerce-node": "^1.0.4",
+    "cors": "^2.8.5",
     "crypto": "^1.0.1",
+    "express": "^4.21.0",
     "firebase": "^10.13.1",
+    "http-proxy-middleware": "^3.0.2",
     "i18next": "^23.14.0",
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.4",
@@ -41,6 +44,7 @@
       "react-app/jest"
     ]
   },
+  "proxy": "http://api.hashrate.no",
   "browserslist": {
     "production": [
       ">0.2%",
