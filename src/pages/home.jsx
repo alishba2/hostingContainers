@@ -13,6 +13,7 @@ import MiningSolutions from "../components/Home/miningSolution";
 import AtmSection from "../components/Home/atmsection";
 import ShowBlogs from "../../src/pages/showBlogs";
 
+import Hardware from "./hardware";
 const Home = () => {
   return (
     <>
@@ -22,8 +23,11 @@ const Home = () => {
       <Benefits />
       <ProductSlider />
 
+      <Hardware />
+
       {/* <Reserve /> */}
       <Hostingservices />
+
       {/* <AtmSection /> */}
       <Demosection />
       {/* <Whychooseus /> */}
