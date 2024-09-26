@@ -25,7 +25,7 @@
         margin-bottom: 5em;
 
         .plan {
-            background: var(--primary-dark, #4b2e83);
+            background: var(--primary-dark, #4C097D);
             color: white;
             padding: 20px;
             border-radius: 10px;
@@ -79,7 +79,7 @@
 
         // Highlight for the Premium card
         .plan-highlight {
-            background: var(--primary-dark, #4b2e83);
+            background: var(--primary-dark, #4C097D);
             border-color: #a890d3;
             box-shadow: 0 0 15px var(--primary-dark, #a890d3); // Shadow color set to the background color
             transform: scale(1.05);
@@ -113,7 +113,7 @@
             background-color: white;
             border: 1px solid white;
             box-shadow: 0 5px 15px #9f78e9;
-            color: #4b2e83;
+            color: #4C097D;
         }
     }
 }
