@@ -5,7 +5,7 @@
   z-index: 1000 !important;
   //border: 2px solid green;
   background-color: black;
-  border-bottom: 1px solid #a890d3;
+  border-bottom: 1px solid #4C097D;
 }
 
 .navbarbtn-container {
@@ -104,7 +104,7 @@
         transition: all 0.3s ease;
 
         &:hover {
-          color: var(--primary-light-1, #a890d3);
+          color: var(--primary-light-1, #4C097D);
         }
 
         // height: 30px;
@@ -118,12 +118,12 @@
           }
 
           &:hover {
-            color: #a890d3 !important;
+            color: #4C097D !important;
           }
 
           &:hover {
             .icon-rotate {
-              color: #a890d3 !important;
+              color: #4C097D !important;
               transform: rotate(180deg);
               transition: all 0.3s ease-in-out;
             }
@@ -135,7 +135,7 @@
           }
 
           &.active {
-            color: #a890d3 !important;
+            color: #4C097D !important;
             // &:after {
             //   width: 100%;
             //   content: "";
@@ -148,7 +148,7 @@
             //   border-radius: 5px;
             //   background: var(
             //     --3-color-grad,
-            //     linear-gradient(90deg, #4b2e83 0%, #a890d3 52%, #4b2e83 100%)
+            //     linear-gradient(90deg, #4b2e83 0%, #4C097D 52%, #4b2e83 100%)
             //   );
             //   opacity: 0.8;
             //   transition: width 0.8s ease 0s, opacity 0.3s ease 0s;
@@ -290,10 +290,10 @@
 }
 
 .activeClass {
-  color: #a890d3 !important;
+  color: #4C097D !important;
 
   .icon-rotate {
-    color: #a890d3 !important;
+    color: #4C097D !important;
     transform: rotate(180deg);
     transition: all 0.3s ease-in-out;
   }
@@ -310,7 +310,7 @@
   //   border-radius: 5px;
   //   background: var(
   //     --3-color-grad,
-  //     linear-gradient(90deg, #4b2e83 0%, #a890d3 52%, #4b2e83 100%)
+  //     linear-gradient(90deg, #4b2e83 0%, #4C097D 52%, #4b2e83 100%)
   //   );
   //   opacity: 0.8;
   //   transition: width 0.8s ease 0s, opacity 0.3s ease 0s;

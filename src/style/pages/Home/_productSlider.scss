@@ -46,6 +46,8 @@
       border-radius: 5px;
     }
 
+
+
     h3 {
       font-size: 0.9rem;
       /* Adjust font size */
@@ -117,4 +119,9 @@
       /* Adjust image height for smaller screens */
     }
   }
+}
+
+.btn:hover {
+  background-color: white;
+  color: #4b2e83;
 }

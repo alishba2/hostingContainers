@@ -13,6 +13,7 @@
     h2 {
         text-align: center;
         margin-bottom: 20px;
+        font-weight: bold;
     }
 
     table {
@@ -193,11 +194,21 @@
     /* Optional: Adjust opacity if needed */
 }
 
+.responsiveness {
+    h2 {
+        font-weight: bold;
+        margin: 30px 0px;
+    }
+}
+
 .responsiveness iframe {
-    width: 90%; // Default width for larger screens
-    max-width: 800px; // Optional: max width to prevent it from getting too large
-    height: 420px; // Keep the height as you specified
+    width: 95%; // Default width for larger screens
+    max-width: 1200px; // Optional: max width to prevent it from getting too large
+    height: 400px; // Keep the height as you specified
     margin: 0 auto; // Center the iframe
+
+
+
 }
 
 // Media query for smaller devices

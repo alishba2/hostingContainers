@@ -175,7 +175,7 @@ const Hardware = () => {
 
                 <div className='img'>
                     <div className='responsiveness'>
-                        {/* <h2 style={{ textAlign: 'center' }}>Profitability Calculator</h2> */}
+                        <h2 style={{ textAlign: 'center' }}>Profitability Calculator</h2>
 
                         {/* <img style={{top:"20%", left:"0px", zIndex:"-1", width:"100%"}} className='position-absolute' src={leftGlow} alt="" /> */}
                         <iframe style={{ margin: "0 auto", display: "flex" }} className='mx-auto' src="https://widget.nicehash.com/profcalc" width="400" height="420" scrolling="no" id="nhiframe"></iframe>

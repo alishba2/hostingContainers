@@ -1,11 +1,11 @@
 import React from "react";
 import Slider from "react-slick"; // Import the react-slick component
 import img1 from "../../assets/bannerImg3.jpg";
-import img2 from "../../assets/containerImgday (4).jpeg";
-import img3 from "../../assets/containerImgday11.jpeg";
-import img4 from "../../assets/bitcoin.jpg";
-import img5 from "../../assets/mining3.jpg";
-import img6 from "../../assets/mining.jpg";
+import img2 from "../../assets/containerImgday12.jpeg";
+import img3 from "../../assets/crtpto3.jpg";
+import img4 from "../../assets/miningChips.jpg";
+import img5 from "../../assets/atm3.jpeg";
+import img6 from "../../assets/containerImgday11.jpeg";
 import { useTranslation } from "react-i18next";
 
 const Hostingservices = () => {
