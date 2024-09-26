@@ -5,9 +5,11 @@ import img1 from "../../assets/containerday.jpeg";
 import img2 from "../../assets/mingingcontainer.jpg";
 import img3 from "../../assets/containerImgday12.jpeg"
 import axios from "axios";
+import { useTranslation } from "react-i18next";
 
 const Banner = () => {
   const [exchangeRates, setExchangeRates] = useState([]);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const fetchAllCryptoRates = async () => {
@@ -63,7 +65,7 @@ const Banner = () => {
                 </span>
               ))
             ) : (
-              <span>Loading exchange rates...</span>
+              <span>...</span>
             )}
           </marquee>
         </div>
@@ -86,18 +88,20 @@ const Banner = () => {
           <img src={img3} alt="Slide 1" className="carousel-image" />
           <div className="overlay"></div>
           <div className="carousel-text">
-            <p>Start your mining Journey with us </p>
+            <p> {t('banner.header')} </p>
 
-            <h2>HOSTING CONTAINERS</h2>
+            <h2>{t('banner.title')}</h2>
+            <button className="contactBtn">{t('contact_us')}</button>
+
           </div>
         </div>
         <div className="carousel-slide">
           <img src={img1} alt="Slide 2" className="carousel-image" />
           <div className="overlay"></div>
           <div className="carousel-text">
-            <p>Start your mining Journey with us </p>
+            <p>{t('banner.header')} </p>
 
-            <h2>HOSTING CONTAINERS</h2>
+            <h2>{t('banner.title')}</h2>
           </div>
         </div>
         {/* <div>

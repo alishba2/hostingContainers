@@ -3,9 +3,11 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { getAllProducts } from "../../firebase/firebase";
+import { useTranslation } from "react-i18next";
 
 const ProductSlider = () => {
   const [products, setProduct] = useState([]);
+  const { t } = useTranslation();
 
   let getProducts = async () => {
     let res = await getAllProducts();
@@ -63,7 +65,7 @@ const ProductSlider = () => {
 
             </div>
 
-            <button className="btn" >Contact Us</button>
+            <button className="btn" >{t('contact_us')}</button>
           </div>
         ))}
       </Slider>

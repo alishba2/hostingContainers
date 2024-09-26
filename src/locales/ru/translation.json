@@ -25,6 +25,33 @@
     "aboutUsText": "Fundada en 2017, Hash International Hosting LLC se ha convertido en un actor clave en la industria de la minería de criptomonedas, con una fuerte presencia en África, Estados Unidos, Rusia, Kazajistán, los EAU y otros países del Golfo. Nuestra misión es proporcionar soluciones de minería innovadoras y confiables que empoderen a nuestros clientes para maximizar sus retornos mientras minimizan las complejidades operativas. Con un enfoque especial en los EAU, nuestros sitios están diseñados para mantener condiciones ambientales óptimas, garantizando que los mineros operen a máxima eficiencia. Nuestro equipo de más de 100 profesionales, con amplia experiencia en minería y gestión de infraestructura, impulsa nuestro éxito en varios continentes.",
     "aboutUsHeading": "О нас",
     "ourTeam": "Наша команда",
+    "teamMembers": {
+        "jackLei": {
+            "name": "Джек Лей",
+            "role": "Соучредитель",
+            "description": "Джек — это визионер и основатель Hash International Hosting LLC, основанной в 2017 году. С глубоким пониманием блокчейн-технологий и майнинга криптовалют, Джек возглавил рост компании, которая стала мировым лидером в этой индустрии."
+        },
+        "luisFernandez": {
+            "name": "Луис Фернандес",
+            "role": "Операционный директор (COO)",
+            "description": "Луис — операционный директор Hash International Hosting LLC, отвечающий за повседневные операции компании. Его управленческий талант обеспечивает эффективную реализацию всех майнинговых проектов и поддерживает лидерство компании в вопросах надежности и бесперебойной работы."
+        },
+        "albertoSeoane": {
+            "name": "Альберто Сеоане",
+            "role": "Генеральный директор (CEO)",
+            "description": "Альберто, генеральный директор Hash International Hosting LLC, руководит компанией, сосредотачивая внимание на росте, инновациях и операционном превосходстве. С его профессиональным опытом в сфере технологий и развития бизнеса, Альберто направляет стратегические инициативы компании на различные континенты, включая Африку, США, Россию, Казахстан и ОАЭ."
+        },
+        "robertoRodriguez": {
+            "name": "Роберто Родригес",
+            "role": "Соучредитель",
+            "description": "Роберто, будучи соучредителем Hash International Hosting LLC, обладает обширным опытом в сфере майнинга криптовалют и управления инфраструктурой. Его компетенции в стратегическом планировании и операциях способствовали успешному расширению компании на международных рынках."
+        },
+        "maxwellKhushal": {
+            "name": "Максвелл Кушал",
+            "role": "Управляющий директор",
+            "description": "Максвелл Кушал, управляющий директор Hash International Hosting LLC, приносит многолетний опыт в международном бизнесе и операциях майнинга криптовалют. Под его руководством компания оптимизировала свои майнинговые мощности на нескольких континентах, обеспечивая успех и удовлетворение клиентов."
+        }
+    },
     "whyChooseUs2": "Почему выбирают нас",
     "service1Title": "Услуга 1",
     "service1Description": "Описание услуги 1",
@@ -168,6 +195,10 @@
         "cryptocurrencyMiners": "Криптовалютные майнеры",
         "miningContainers": "Контейнеры для майнинга",
         "miningChipsHardware": "Чипы и оборудование для майнинга",
-        "seeMore": "Узнать больше"
-    }
+        "seeMore": "Узнать больше",
+        "categories": "Категории "
+    },
+    "DailyStats": "Ежедневная статистика ",
+    "profitablity": "Калькулятор прибыльности",
+    "latestBlogs": "Наши последние блоги"
 }

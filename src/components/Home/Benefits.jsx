@@ -24,7 +24,7 @@ export default function Benefits() {
     <div className="service-container position-relative">
       {/* <img style={{width:"100%", overflow:"hidden"}} className=" object-fit-cover position-absolute top-0  " src={backGlow} alt="" /> */}
       <div className="container">
-        <h2>Categories</h2>
+        <h2>{t('benefit.categories')}</h2>
 
         <div className="line"></div>
 

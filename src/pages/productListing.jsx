@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { getAllProducts } from "../firebase/firebase"; // Assume this fetches products from Firebase
+import { useTranslation } from "react-i18next";
 
 export default function ProductListing() {
     const location = useLocation();
     const navigate = useNavigate(); // Initialize useNavigate
+    const { t } = useTranslation(); // Initialize translation hook
 
     const [category, setCategory] = useState(null);
     const [isLoading, setIsLoading] = useState(true); // State to manage loading spinner
@@ -141,6 +143,8 @@ export default function ProductListing() {
                                         <p>${product.price}</p>
                                         <p className="power">{product.powerSupply}</p> {/* Added power rating */}
                                     </div>
+                                    <button className="btn" >{t('contact_us')}</button>
+
                                 </div>
                             )) : (
                                 <p>No products available for this category.</p>
