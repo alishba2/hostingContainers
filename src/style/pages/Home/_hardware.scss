@@ -14,7 +14,6 @@
         width: 100%;
         border-collapse: collapse;
 
-        // Responsive styles for table
         th,
         td {
             border: 1px solid #fff;
@@ -82,6 +81,12 @@
             td {
                 padding: 8px; // Reduce padding for smaller screens
             }
+        }
+
+        // Hide certain columns on mobile
+        th:not(:first-child):nth-last-child(-n+3),
+        td:not(:first-child):nth-last-child(-n+3) {
+            display: none; // Hide all columns except the first (Name) and the last (Profitability)
         }
     }
 
