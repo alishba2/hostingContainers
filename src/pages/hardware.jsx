@@ -123,50 +123,51 @@ const Hardware = () => {
     const currentData = miners.slice((currentPage - 1) * pageSize, currentPage * pageSize);
 
     return (
-        // <div className="hardware-table">
-        //     <h2>Miner Profitability in €</h2>
-        //     <table>
-        //         <thead>
-        //             <tr>
-        //                 <th>Name</th>
-        //                 <th>Algorithm</th>
-        //                 <th>Hash Rate (H/s)</th>
-        //                 <th>Power (W)</th>
-        //                 <th>Profitability (€ / day)</th>
-        //                 <th>Type</th>
-        //             </tr>
-        //         </thead>
-        //         <tbody>
-        //             {currentData.map((miner) => (
-        //                 <tr key={miner.id}>
-        //                     <td>{miner.name || 'N/A'}</td>
-        //                     <td>{Object.keys(miner.algorithms)[0] || 'N/A'}</td>
-        //                     <td>{miner.algorithms ? Object.values(miner.algorithms)[0]?.speed : 'N/A'}</td>
-        //                     <td>{miner.algorithms ? Object.values(miner.algorithms)[0]?.power : 'N/A'}</td>
-        //                     <td>{calculateProfitability(miner).toFixed(4) || 'N/A'}</td>
-        //                     <td>{miner.type || 'N/A'}</td>
-        //                 </tr>
-        //             ))}
-        //         </tbody>
-        //     </table>
-        //     <div className="pagination">
-        //         <button
-        //             onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
-        //             disabled={currentPage === 1}
-        //         >
-        //             Previous
-        //         </button>
-        //         <span>Page {currentPage}</span>
-        //         <button
-        //             onClick={() => setCurrentPage((prev) => Math.min(prev + 1, Math.ceil(miners.length / pageSize)))}
-        //             disabled={currentPage === Math.ceil(miners.length / pageSize)}
-        //         >
-        //             Next
-        //         </button>
-        //     </div>
-        // </div>
-
+       
         <div style={{display:'flex', justifyContent:'center', alignItems:'center', flexDirection:'column'}}>
+             <div className="hardware-table">
+            <h2>Miner Profitability in €</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Algorithm</th>
+                        <th>Hash Rate (H/s)</th>
+                        <th>Power (W)</th>
+                        <th>Profitability (€ / day)</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {currentData.map((miner) => (
+                        <tr key={miner.id}>
+                            <td>{miner.name || 'N/A'}</td>
+                            <td>{Object.keys(miner.algorithms)[0] || 'N/A'}</td>
+                            <td>{miner.algorithms ? Object.values(miner.algorithms)[0]?.speed : 'N/A'}</td>
+                            <td>{miner.algorithms ? Object.values(miner.algorithms)[0]?.power : 'N/A'}</td>
+                            <td>{calculateProfitability(miner).toFixed(4) || 'N/A'}</td>
+                            <td>{miner.type || 'N/A'}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+            <div className="pagination">
+                <button
+                    onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+                    disabled={currentPage === 1}
+                >
+                    Previous
+                </button>
+                <span>Page {currentPage}</span>
+                <button
+                    onClick={() => setCurrentPage((prev) => Math.min(prev + 1, Math.ceil(miners.length / pageSize)))}
+                    disabled={currentPage === Math.ceil(miners.length / pageSize)}
+                >
+                    Next
+                </button>
+            </div>
+        </div>
+
             <h3 style={{textAlign:'center'}}>Profitability Calculator</h3>
         <iframe src="https://widget.nicehash.com/profcalc" width="400" height="420" scrolling="no" id="nhiframe"></iframe>
 
