@@ -168,7 +168,7 @@ const Hardware = () => {
 
         <div style={{display:'flex', justifyContent:'center', alignItems:'center', flexDirection:'column'}}>
             <h3>Profitability Calculator</h3>
-        <iframe src="https://widget.nicehash.com/profcalc" width="400" height="350" scrolling="no" id="nhiframe"></iframe>
+        <iframe src="https://widget.nicehash.com/profcalc" width="400" height="420" scrolling="no" id="nhiframe"></iframe>
 
         </div>
     );
