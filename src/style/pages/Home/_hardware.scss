@@ -19,6 +19,7 @@
     table {
         width: 100%;
         border-collapse: collapse;
+        background-color: transparent;
 
         // opa
         // Remove borders from the table
@@ -32,7 +33,7 @@
             padding: 15px; // Increased padding for row height
             text-align: left;
             font-size: 16px; // Base font size for desktop
-            background-color: black; // Slightly transparent white for row background
+            background-color:transparent; // Slightly transparent white for row background
         }
 
         th {
