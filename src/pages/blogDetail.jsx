@@ -5,6 +5,8 @@ import { getBlogs } from '../firebase/firebase'; // Function to fetch all blogs
 import { FaArrowLeft } from 'react-icons/fa'; // Importing the arrow icon
 import "../style/pages/Home/_showBlog.scss";
 import "../style/pages/Home/_blogDetail.scss";
+import { Spinner } from 'react-bootstrap';
+
 
 export default function BlogDetail() {
     const { id } = useParams(); // Get the blog ID from the URL
@@ -34,7 +36,9 @@ export default function BlogDetail() {
     // };
 
     if (loading) {
-        return <div>Loading...</div>;
+        return <div className="text-center mt-5">
+            <Spinner animation="border" role="status" variant="light" />
+        </div>;
     }
 
     if (!blog) {
