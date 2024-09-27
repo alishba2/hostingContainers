@@ -4,6 +4,7 @@ import { useHistory, useParams } from 'react-router-dom';
 import { getBlogs } from '../firebase/firebase'; // Function to fetch all blogs
 import { FaArrowLeft } from 'react-icons/fa'; // Importing the arrow icon
 import "../style/pages/Home/_showBlog.scss";
+import "../style/pages/Home/_blogDetail.scss";
 
 export default function BlogDetail() {
     const { id } = useParams(); // Get the blog ID from the URL
