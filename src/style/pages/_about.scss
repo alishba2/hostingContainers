@@ -291,16 +291,17 @@ $shadow-dark: rgba(0, 0, 0, 0.2);
 
     .missionStatement {
         max-width: 30%; // Allow ore width on smaller screens
-        padding: 15px; // Adjust padding
+        padding: 10px; // Adjust padding
     }
 
     .missionStatement h3 {
-        font-size: 1.5rem; // Reduce mission heading size
+        font-size: 0.7rem; // Reduce mission heading size
+        line-height: 35px;
     }
 
     .missionStatement p {
         // font-size: 0.9rem; // Adjust font size for text
-        font-size: 12px !important;
+        font-size: 10px !important;
     }
 }
 

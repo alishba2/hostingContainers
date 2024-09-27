@@ -19,11 +19,15 @@ const Home = () => {
     <>
       <Banner />
       {/* <MiningSolutions /> */}
+      {/* <h2>Miners</h2> */}
+      <ProductSlider category="Mining Containers" />
 
       <Benefits />
-      <ProductSlider />
+      <ProductSlider category="Miners" />
+
 
       <Hardware />
+
 
       {/* <Reserve /> */}
       <Hostingservices />

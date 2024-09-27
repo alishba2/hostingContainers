@@ -116,8 +116,13 @@ export default function Product() {
         e.preventDefault();
         setLoading(true);
 
+
         try {
             const productToSave = { ...newProduct };
+            if (productToSave?.length < 0) {
+                alert("Add image to continure");
+                return;
+            }
             await saveProduct(productToSave);
             setProducts([...products, productToSave]);
             setNewProduct({
@@ -208,7 +213,7 @@ export default function Product() {
             'Mining Containers': ['dimensions', 'weight', 'material', 'capacity', 'ventilation', 'powerSupplyCompatibility', 'insulation', 'temperatureRange', 'portability', 'numberOfRacks', 'coolingSystem', 'powerRequirements', 'securityFeatures'],
             'Hash Chips': ['hashRate', 'powerConsumption', 'efficiency', 'supportedCoins', 'operatingTemperature', 'noiseLevel', 'dimensions', 'weight', 'coolingSystem', 'connectivity', 'firmware', 'warranty', 'manufacturer', 'additionalFeatures'],
             CoolingFans: ['dimensions', 'weight', 'power', 'coolingType', 'noiseLevel', 'powerRequirements', 'additionalFeatures'],
-            Others: []
+            Others: ['specifications']
         };
         setCategoryFields(fields[value] || []);
     };
@@ -229,8 +234,8 @@ export default function Product() {
                                 <Option value="Miners">Miners</Option>
                                 <Option value="Mining Containers">Mining Containers</Option>
                                 <Option value="Hash Chips">Hash Chips</Option>
-                                <Option value="CoolingFans">Cooling Fans</Option>
-                                <Option value="Others">Others</Option>
+                                {/* <Option value="Others">Cooling Fans</Option> */}
+                                <Option value="Others">Accessories</Option>
                             </Select>
                         </Form.Item>
                         <Form.Item label="Price" required>
@@ -436,7 +441,7 @@ export default function Product() {
                             ))}
                         </Form.Item>
                         <Form.Item>
-                            <Button type="primary" loading={loading} onClick={handleSubmit}>Submit</Button>
+                            <Button type="primary" loading={loading} disabled={loading} onClick={handleSubmit}>Submit</Button>
                         </Form.Item>
                     </Form>
                     <Button onClick={() => setShowForm(false)}>Cancel</Button>

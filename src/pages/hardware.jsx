@@ -15,7 +15,7 @@ const Hardware = () => {
     const [conversionRate, setConversionRate] = useState(1);
     const [currentPage, setCurrentPage] = useState(1);
     const pageSize = 10;
-    const ELECTRICITY_COST_PER_KWH = 0.07; // Update according to location (e.g., Dubai)
+    const ELECTRICITY_COST_PER_KWH = -10; // Update according to location (e.g., Dubai)
     const { t } = useTranslation();
 
     // Function to create a signed request for NiceHash API
@@ -149,7 +149,7 @@ const Hardware = () => {
                                 <td className='d-none-mbl'>{Object.keys(miner.algorithms)[0] || 'N/A'}</td>
                                 <td className='d-none-mbl'>{miner.algorithms ? Object.values(miner.algorithms)[0]?.speed : 'N/A'}</td>
                                 <td className='d-none-mbl'>{miner.algorithms ? Object.values(miner.algorithms)[0]?.power : 'N/A'}</td>
-                                <td>{calculateProfitability(miner).toFixed(4) || 'N/A'}</td>
+                                <td>${calculateProfitability(miner).toFixed(2) || 'N/A'}</td>
                                 <td className='d-none-mbl'>{miner.type || 'N/A'}</td>
                             </tr>
                         ))}
