@@ -1,0 +1,158 @@
+{
+    "logo_alt": "Logo do Site",
+    "home": "Início",
+    "products": "Produtos",
+    "Miners": "Mineradores",
+    "how_it_works": "Como Funciona",
+    "why_choose_us": "Por Que Nos Escolher",
+    "integration": "Integração",
+    "hosting": "Hospedagem",
+    "about_us": "Sobre Nós",
+    "blogs": "Blogs",
+    "gallery": "Galeria",
+    "sign_in": "Entrar",
+    "solutions": "Soluções",
+    "dry_cleaning": "Lavagem a Seco",
+    "life_insurance": "Seguro de Vida",
+    "auto_mobile": "Automóveis",
+    "education": "Educação",
+    "transportation": "Transporte",
+    "pricing": "Preços",
+    "demo": "Demonstração",
+    "aboutUs": "Sobre Nós",
+    "welcome": "Bem-vindo à nossa página Sobre Nós",
+    "missionStatement": "Nossa Missão",
+    "aboutUsText": "Fundada em 2017, a Hash International Hosting LLC tornou-se um jogador chave na indústria de mineração de criptomoedas, com forte presença na África, EUA, Rússia, Cazaquistão, Emirados Árabes Unidos e outros países do Golfo. Nossa missão é fornecer soluções inovadoras e confiáveis de mineração que permitem aos nossos clientes maximizar seus retornos enquanto minimizam as complexidades operacionais. Com um foco especial nos Emirados Árabes Unidos, nossos sites são projetados para manter condições ambientais ideais, garantindo que os mineradores operem com eficiência máxima. Nossa equipe de mais de 100 profissionais, com ampla experiência em mineração e gestão de infraestrutura, impulsiona nosso sucesso em vários continentes.",
+    "aboutUsHeading": "Sobre Nós",
+    "ourTeam": "Nossa Equipe",
+    "teamMembers": {
+        "jackLei": {
+            "name": "Jack Lei",
+            "role": "Co-fundador",
+            "description": "Jack é o visionário por trás da Hash International Hosting LLC, estabelecida em 2017. Com uma compreensão profunda da tecnologia blockchain e da mineração de criptomoedas, Jack liderou o crescimento da empresa para se tornar uma líder global na indústria. Sua abordagem inovadora e dedicação impulsionaram a expansão da Hash International Hosting LLC em vários continentes, fornecendo soluções de mineração de ponta com foco em confiabilidade e desempenho."
+        },
+        "luisFernandez": {
+            "name": "Luis Fernandez",
+            "role": "COO",
+            "description": "Luis é o Diretor de Operações da Hash International Hosting LLC, responsável por gerenciar as operações diárias da empresa. Sua habilidade operacional garante que todos os projetos de mineração sejam executados de maneira eficiente e que a empresa mantenha seu tempo de atividade e confiabilidade líderes no setor. O foco de Luis na excelência operacional tem sido um pilar do sucesso da empresa."
+        },
+        "albertoSeoane": {
+            "name": "Alberto Seoane",
+            "role": "CEO",
+            "description": "Alberto, o Diretor Executivo da Hash International Hosting LLC, lidera a empresa com foco em crescimento, inovação e excelência operacional. Com forte experiência em tecnologia e desenvolvimento de negócios, Alberto guiou a empresa para se tornar um nome confiável na indústria de mineração de criptomoedas, impulsionando iniciativas estratégicas na África, EUA, Rússia, Cazaquistão e Emirados Árabes Unidos."
+        },
+        "robertoRodriguez": {
+            "name": "Roberto Rodriguez",
+            "role": "Co-fundador",
+            "description": "Roberto, como co-fundador da Hash International Hosting LLC, traz vasta experiência em mineração de criptomoedas e gestão de infraestrutura. Sua expertise em operações e planejamento estratégico foi fundamental para a expansão bem-sucedida da empresa em mercados globais."
+        },
+        "maxwellKhushal": {
+            "name": "Maxwell Khushal",
+            "role": "Diretor Administrativo",
+            "description": "Maxwell Khushal, o Diretor Administrativo da Hash International Hosting LLC, traz anos de experiência em negócios internacionais e operações de mineração de criptomoedas. Sob sua liderança, a empresa otimizou instalações de mineração em vários continentes, garantindo sucesso operacional e satisfação dos clientes."
+        }
+    },
+    "whyChooseUs2": "Por Que Nos Escolher",
+    "service1Title": "Serviço 1",
+    "service1Description": "Descrição do Serviço 1",
+    "service2Title": "Serviço 2",
+    "service2Description": "Descrição do Serviço 2",
+    "service3Title": "Serviço 3",
+    "service3Description": "Descrição do Serviço 3",
+    "service4Title": "Serviço 4",
+    "service4Description": "Descrição do Serviço 4",
+    "contactUs": "Contate-nos",
+    "email": "hostingContainer@email.com",
+    "phone": "+971552115205",
+    "address": "Dubai, Emirados Árabes Unidos",
+    "quickLinks": "Links Rápidos",
+    "blog": "Blog",
+    "faq": "FAQ",
+    "privacyPolicy": "Política de Privacidade",
+    "socialMedia": "Mídias Sociais",
+    "copyright": "© 2024 Hosting Containers - Mineração de Bitcoin Dubai | Todos os direitos reservados.",
+    "hosting1": {
+        "title": "Escolha Seu Plano de Hospedagem",
+        "description": "Desbloqueie soluções de hospedagem de mineração de criptomoedas otimizadas.",
+        "getStarted": "Começar Agora",
+        "standard": {
+            "title": "Padrão",
+            "powerRate": "Taxa de energia",
+            "cooling": "Refrigeração",
+            "coolingValue": "Sistema de Ar",
+            "location": "Localização",
+            "locationValue": "Dubai",
+            "energy": "Energia",
+            "energyValue": "Misto",
+            "hashShare": "Hash-Share",
+            "hashShareValue": "Lorem Ipsum",
+            "lifespan": "Vida Útil Estimada",
+            "lifespanValue": "5 Anos",
+            "contractDuration": "Duração do Contrato",
+            "contractDurationValue": "3 Anos"
+        },
+        "premium": {
+            "title": "Premium",
+            "powerRate": "Taxa de energia",
+            "cooling": "Refrigeração",
+            "coolingValue": "Sistema de Ar",
+            "location": "Localização",
+            "locationValue": "Dubai",
+            "energy": "Energia",
+            "energyValue": "Misto",
+            "hashShare": "Hash-Share",
+            "hashShareValue": "Lorem Ipsum",
+            "lifespan": "Vida Útil Estimada",
+            "lifespanValue": "5 Anos",
+            "contractDuration": "Duração do Contrato",
+            "contractDurationValue": "3 Anos"
+        },
+        "hydro": {
+            "title": "Hidro",
+            "powerRate": "Taxa de energia",
+            "cooling": "Refrigeração",
+            "coolingValue": "Sistema de Ar",
+            "location": "Localização",
+            "locationValue": "Dubai",
+            "energy": "Energia",
+            "energyValue": "Misto",
+            "hashShare": "Hash-Share",
+            "hashShareValue": "Lorem Ipsum",
+            "lifespan": "Vida Útil Estimada",
+            "lifespanValue": "5 Anos",
+            "contractDuration": "Duração do Contrato",
+            "contractDurationValue": "3 Anos"
+        }
+    },
+    "track_orders": "Rastrear Pedidos",
+    "logout": "Sair",
+    "mining-chips": "Chips de Mineração",
+    "mining-containers": "Containers de Mineração",
+    "banner": {
+        "header": "Comece sua jornada de mineração conosco",
+        "title": "CONTAINERS DE HOSPEDAGEM",
+        "description": "Bem-vindo à Hash International Hosting LLC, líder em soluções de mineração e hospedagem de criptomoedas desde 2017. Com operações em vários países, incluindo os Emirados Árabes Unidos, mantemos condições ideais de mineração e oferecemos serviços de classe mundial apoiados por uma equipe dedicada de 180 profissionais. Estamos comprometidos em entregar o melhor desempenho e confiabilidade na indústria de criptomoedas.",
+        "button": "Começar Agora",
+        "loading": "Carregando..."
+    },
+    "benefits": {
+        "title": "Otimização do Seu Potencial de Mineração de Criptomoedas",
+        "description": "Desbloqueie todo o poder da mineração de criptomoedas com nossas soluções personalizadas, projetadas para atender às demandas de mineradores iniciantes e experientes.",
+        "miners": {
+            "title": "Mineradores de Criptomoedas",
+            "description": "Quer minerar criptomoedas mas falta infraestrutura? Explore nossos mineradores de ponta, oferecendo desempenho incomparável para suas operações de mineração."
+        },
+        "containers": {
+            "title": "Containers de Mineração",
+            "description": "Portáteis, escaláveis e eficientes — nossos containers de mineração permitem expandir operações sem necessidade de espaço adicional."
+        },
+        "hardware": {
+            "title": "Chips e Hardware de Mineração",
+            "description": "Equipe suas rigs com os mais recentes chips e hardware de mineração, garantido para oferecer eficiência e segurança líderes no setor."
+        }
+    },
+    "map": {
+        "title": "Onde Estamos",
+        "description": "Nosso data center de última geração está localizado em Dubai, oferecendo um ambiente de mineração otimizado e seguro."
+    }
+}

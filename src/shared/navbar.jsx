@@ -31,6 +31,8 @@ const Navbar = () => {
   useEffect(() => {
     const checkUserStatus = async () => {
       if (await isLoggedIn()) {
+
+
         const data = await getCurrentUserData();
         checkIfAdmin(data?.isAdmin);
         console.log(data, "data in navaar");

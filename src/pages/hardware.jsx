@@ -15,7 +15,7 @@ const Hardware = () => {
     const [conversionRate, setConversionRate] = useState(1);
     const [currentPage, setCurrentPage] = useState(1);
     const pageSize = 10;
-    const ELECTRICITY_COST_PER_KWH = 0.07; // Update according to location (e.g., Dubai)
+    const ELECTRICITY_COST_PER_KWH = -10; // Update according to location (e.g., Dubai)
     const { t } = useTranslation();
 
     // Function to create a signed request for NiceHash API

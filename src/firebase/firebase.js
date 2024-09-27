@@ -6,13 +6,13 @@ import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { deleteDoc } from "firebase/firestore";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyAF24JRzJyPEdPjzq7ttcREm31SSzD9c7Q",
-    authDomain: "hostingcontainers.firebaseapp.com",
-    projectId: "hostingcontainers",
-    storageBucket: "hostingcontainers.appspot.com",
-    messagingSenderId: "819755646541",
-    appId: "1:819755646541:web:dafc61512eb0fb284ae604",
-    measurementId: "G-SV4V2ZD7EL"
+    apiKey: "AIzaSyDbUPUQcn-Q7mRD0nKjQ4p7j2qwZSWilUo",
+    authDomain: "crypto-598ab.firebaseapp.com",
+    projectId: "crypto-598ab",
+    storageBucket: "crypto-598ab.appspot.com",
+    messagingSenderId: "405849273477",
+    appId: "1:405849273477:web:b149735dc01b9fe77e65ec",
+    measurementId: "G-PVZFVY0QJ9"
 };
 
 // Initialize Firebase
