@@ -149,7 +149,7 @@ const Hardware = () => {
                                 <td className='d-none-mbl'>{Object.keys(miner.algorithms)[0] || 'N/A'}</td>
                                 <td className='d-none-mbl'>{miner.algorithms ? Object.values(miner.algorithms)[0]?.speed : 'N/A'}</td>
                                 <td className='d-none-mbl'>{miner.algorithms ? Object.values(miner.algorithms)[0]?.power : 'N/A'}</td>
-                                <td>{calculateProfitability(miner).toFixed(4) || 'N/A'}</td>
+                                <td>${calculateProfitability(miner).toFixed(2) || 'N/A'}</td>
                                 <td className='d-none-mbl'>{miner.type || 'N/A'}</td>
                             </tr>
                         ))}

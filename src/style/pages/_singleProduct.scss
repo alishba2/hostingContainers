@@ -7,6 +7,24 @@
     height: 500px; // Set the height to 700px
 }
 
+.slider {
+    .heading {
+        margin: 0px 59px;
+        font-size: 32px;
+        font-weight: bold;
+
+    }
+}
+
+@media (max-width: 480px) {
+    .slider {
+        .heading {
+            text-align: center;
+
+        }
+    }
+}
+
 .single-product-container {
     padding: 20px;
 
@@ -18,7 +36,7 @@
     .image-gallery {
         .main-image {
             width: 100%;
-            max-height: 400px;
+            // max-height: 400px;
             object-fit: cover;
             border: 1px solid #f0f0f0;
             border-radius: 4px;
@@ -50,53 +68,86 @@
     .product-info {
         margin-top: 20px;
         padding: 20px;
-        background: transparent;
+        background-color: black;
+        // background-color: rgba(255, 255, 255); // Adds a semi-transparent background
         color: white !important;
-        border-radius: 4px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); // Enhances shadow for depth
+        display: flex;
+        flex-direction: column;
 
         .ant-card-head {
-            font-size: 25px;
+            font-size: 28px;
             color: white !important;
-
-        }
-
-        .ant-typography.price.css-dev-only-do-not-override-vn1oyg {
-            font-size: 25px;
-            color: white !important;
-
-        }
-
-        .ant-typography.css-dev-only-do-not-override-vn1oyg {
-            font-size: 17px;
-            color: white !important;
+            font-weight: bold;
+            margin-left: 8px;
         }
 
         .price {
-            font-size: 30px;
-            font-family: "Gowun Batang", serif !important;
-            color: white !important;
+            margin-top: 10px;
+            font-size: 20px;
+            // font-weight: 600;
+            color: #a890d3; // Highlight the price with a different color
+            margin-bottom: -10px;
             display: block;
+            margin-left: 14px;
+
+            .label {
+                font-weight: 500;
+                color: #ffffff; // Label for price stays white
+                margin-right: 15px;
+            }
+        }
+
+        .para {
+            margin-top: 15px;
+            margin-left: 14px;
+            font-size: 16px;
+            color: #818181;
         }
 
         .description {
             margin-top: 10px;
-            font-size: 17px;
+            font-size: 20px;
             color: white !important;
+            // display: block;
+            // justify-content: start;
+
+            .label {
+                font-weight: 500;
+                color: #ffffff;
+                // margin-right: 8px; // Adds space between the label and content
+                margin-right: 15px;
+
+            }
+
+            // Display the specifications or power details
+            .spec-details {
+                margin-top: 10px;
+                color: #cfcfcf; // Softer color for specifications
+                line-height: 1.6;
+            }
         }
 
         .buy-now-button {
+            margin-left: 14px;
+            display: block;
             margin-top: 20px;
-            background-color: #1890ff; // Ant Design primary color
-            border-color: #1890ff;
-            font-size: 18px;
+            text-align: center;
+            padding: 12px 22px;
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+            border-radius: 25px;
 
             &:hover {
-                background-color: #40a9ff; // Hover effect
-                border-color: #40a9ff;
+                background: white;
+                color: #4C097D;
+                font-weight: bold;
             }
         }
     }
+
 
     .specifications {
         margin-top: 40px;

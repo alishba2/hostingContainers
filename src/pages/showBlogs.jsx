@@ -37,9 +37,9 @@ export default function ShowBlogs() {
     return (
         <div className="container mt-5 show-blogs">
             {/* Introductory text */}
-            <div className="intro-text">
+            {blogs.length > 0 && <div className="intro-text">
                 <h2 className="text-center mb-4">{t('latestBlogs')}</h2>
-            </div>
+            </div>}
 
             <div className="row mt-5">
                 {blogs.map((blog) => (

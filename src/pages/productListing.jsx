@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { getAllProducts } from "../firebase/firebase"; // Assume this fetches products from Firebase
 import { useTranslation } from "react-i18next";
-
+import ProductSlider from "../components/Home/productSlider";
 export default function ProductListing() {
     const location = useLocation();
     const navigate = useNavigate(); // Initialize useNavigate
@@ -30,6 +30,7 @@ export default function ProductListing() {
             setIsLoading(true); // Start the loader before fetching
             try {
                 const allProducts = await getAllProducts(); // Assume this returns all products from Firebase
+                console.log(category, "categoryyy");
                 const filteredProducts = allProducts.filter(product => product.type === category);
                 setProducts(filteredProducts);
                 setIsLoading(false);
@@ -78,11 +79,11 @@ export default function ProductListing() {
                 </div>
             ) : (
                 <>
-                    <h1>{category}</h1> {/* Display selected category */}
-                    <p>
+                    <h1>{category == "Others" ? "Accessories" : category}</h1> {/* Display selected category */}
+                    {/* <p>
                         Find the best {category} to suit your needs. Use the search bar and filters
                         to explore our range of products.
-                    </p>
+                    </p> */}
 
                     <div className="product-listing-content">
                         {/* Search Bar */}
@@ -141,7 +142,15 @@ export default function ProductListing() {
                                     <h3 className="truncated-name">{product.name}</h3>
                                     <div className="product-name">
                                         <p>${product.price}</p>
-                                        <p className="power">{product.powerSupply}</p> {/* Added power rating */}
+                                        <p className={`power`}>
+                                            {(() => {
+                                                const text = product.specifications || product.power || product.powerSupply;
+                                                if (text) {
+                                                    return text.length > 20 ? text.slice(0, 25) + '...' : text;
+                                                }
+                                                return ''; // return empty if there's no text
+                                            })()}
+                                        </p>
                                     </div>
                                     <button className="btn" >{t('contact_us')}</button>
 
@@ -150,6 +159,8 @@ export default function ProductListing() {
                                 <p>No products available for this category.</p>
                             )}
                         </div>
+
+
                     </div>
                 </>
             )}
