@@ -440,6 +440,10 @@
 }
 
 @media (max-width: 576px) {
+    .atmCardWrapper p {
+        text-align: justify !important;
+    }
+
     .company-logo {
         font-size: 2rem;
     }
