@@ -309,8 +309,9 @@ export default function Atm() {
                                 {t("atmBanknoteValidationContent")}
                             </li>
                             <li>
-                                <strong>                                {t("atmBanknoteValidationContent")}
-                                </strong>                                {t("atmBanknoteValidationContent")}
+                                <strong>                                {t("atmStackModuleTitle")}
+                                </strong>
+                                {t("atmBanknoteValidationContent")}
 
                             </li>
                             <li>
