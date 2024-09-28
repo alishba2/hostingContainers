@@ -1,9 +1,13 @@
 import React from "react";
 import "../style/pages/Home/_atm.scss";
-import atmImage3 from "../assets/crypto3.jpg";
-import atmImg1 from "../assets/crypto2.jpg";
-import atmImg2 from "../assets/crypto3.jpg";
-import atmImg3 from "../assets/crypto4.jpg";
+import atmImage3 from "../assets/atm102.jpg";
+import atmImg1 from "../assets/bitcointimg.jpg";
+import atmImg2 from "../assets/atm103.jpg";
+import atmImg3 from "../assets/atm101.jpg";
+import atmImg4 from "../assets/atm105.jpg";
+import atmImg5 from "../assets/atm106.jpg";
+import service from "../assets/service.jpg";
+
 import blueDot from "../assets/Icons/blueDot.png";
 import earthPic from "../assets/earth-removebg-preview.png";
 import { useTranslation } from "react-i18next";
@@ -61,8 +65,8 @@ export default function Atm() {
                                 width: "100%",
                                 height: "100%",
                                 objectFit: "cover",
-                                border: '8px solid #4b2e83'
-                                // transform: "skew(10deg, 10deg)",
+                                // border: '8px solid #4b2e83',
+                                transform: "skew(4deg, 4deg)",
                             }}
                             src={atmImg2}
                             alt=""
@@ -178,9 +182,9 @@ export default function Atm() {
                                 height: "100%",
                                 objectFit: "cover",
                                 // border: "4px solid blue"
-                                // transform: "skew(10deg, 10deg)",
+                                transform: "skew(4deg, 4deg)",
                             }}
-                            src={atmImg2}
+                            src={atmImg4}
                             alt=""
                         />
 
@@ -188,10 +192,11 @@ export default function Atm() {
                             style={{
                                 width: "100%",
                                 height: "100%",
+                                marginLeft: "22px",
                                 objectFit: "cover",
-                                // transform: "skew(10deg, 10deg)",
+                                transform: "skew(4deg, 4deg)",
                             }}
-                            src={atmImg2}
+                            src={atmImg5}
                             alt=""
                         />
                     </div>
@@ -209,7 +214,7 @@ export default function Atm() {
                                 height: "100%",
                                 objectFit: "cover",
                             }}
-                            src={atmImg3}
+                            src={service}
                             alt=""
                         />
                     </div>
