@@ -94,9 +94,10 @@ export default function SingleProduct() {
                                 ${price}</span>
                             <p className="description">
 
-                                {/* <span className='label'>
+                                <span className='label'>
                                     Specifications:
-                                </span> */}
+                                </span>
+
 
 
                                 {specifications || power || powerSupply}</p>
