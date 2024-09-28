@@ -6,8 +6,12 @@ import atmImg2 from "../assets/crypto3.jpg";
 import atmImg3 from "../assets/crypto4.jpg";
 import blueDot from "../assets/Icons/blueDot.png";
 import earthPic from "../assets/earth-removebg-preview.png";
+import { useTranslation } from "react-i18next";
+
 
 export default function Atm() {
+    const { t } = useTranslation(); // Initialize translation hook
+
     return (
         <>
             <div className="container-fluid app-container">
@@ -21,68 +25,15 @@ export default function Atm() {
                     <div className="col-md-6 d-flex flex-column align-items-center">
                         {/* <img src={atmImage} alt="Crypto ATM" className="atm-image mb-4" /> */}
                         <div className="text-center">
-                            <h1 className="company-logo">HASH</h1>
-                            <h2 className="company-name">Hosting International</h2>
+                            <h1 className="company-logo">{t("companyLogo")}</h1>
+                            <h2 className="company-name">{t("companyName")}</h2>
                             <p className="description">
-                                Cryptocurrency ATMs with Advanced Cash Handling and Security
-                                Features
+                                {t("description")}
                             </p>
                         </div>
                     </div>
                 </div>
 
-                {/* Second Section */}
-                {/* <div className="row justify-content-center align-items-center min-vh-100">
-                <div className="col-md-6 text-container">
-                    <h2 className="summary-title">Executive Summary</h2>
-                    <p className="description">
-                        This business focuses on the deployment and operation of cryptocurrency ATMs,
-                        combining the traditional functionality of cash terminals with seamless crypto-fiat conversions.
-                        Utilizing cutting-edge hardware from JCM Global, a leader in cash handling technology,
-                        these ATMs allow users to deposit and withdraw fiat currency while easily transacting in cryptocurrencies.
-                        This solution is designed to meet the increasing demand for hybrid financial services,
-                        offering a secure and flexible system for handling both cash and digital assets.
-                    </p>
-                </div>
-                <div className="col-md-5 d-flex justify-content-center align-items-center atm-image-container">
-                    {/* <img src="" alt="ATM Side" className="atm-image" /> */}
-                {/* </div> */}
-                {/* </div>  */}
-
-                {/* third section */}
-
-                {/* <div className="row align-items-center">
-                {/* Left Side: Market Opportunity */}
-
-                {/* <div className="col-md-6 market-text">
-                    <h2 className="market-title">Market Opportunity</h2>
-
-                    <p className="market-description">
-                        As cryptocurrency adoption continues to grow globally, the demand for accessible,
-                        secure, and user-friendly methods to exchange cash for cryptocurrencies is rising.
-                        This business caters to both cryptocurrency enthusiasts and casual users,
-                        especially in areas with limited access to banking services.
-                    </p>
-                    <div className="target-marketing">
-                        <p>Target marketing includes:</p>
-                        <ol >
-                            <li className="target-list">High crypto-adoption regions with developed crypto ecosystems.</li>
-                            <li className="target-list">Underbanked areas where access to traditional financial services is limited.</li>
-                            <li className="target-list">Retailers and service providers seeking more diverse payment methods.</li>
-                        </ol>
-                    </div>
-                </div> */}
-
-                {/* Right Side: Two Images */}
-                {/* <div className="col-md-6 image-section">
-                    <div className="image-container">
-                        <img src={atmImage3} alt="Crypto ATM 1" className="atm-image" />
-                    </div>
-                    <div className="image-container">
-                        <img src={atmImage3} alt="Crypto ATM 2" className="atm-image" />
-                    </div>
-                </div> */}
-                {/* </div> */}
 
                 {/* executive summary */}
                 <div
@@ -98,17 +49,11 @@ export default function Atm() {
                             }}
                         >
                             {" "}
-                            <h3>Executive Summary</h3>
+                            <h3>{t("atmExecutiveSummary")}</h3>
                         </div>
 
                         <p>
-                            This business focuses on the deployment and operation of cryptocurrency ATMs,
-                            combining the traditional functionality of cash terminals with seamless crypto-fiat conversions.
-                            Utilizing cutting-edge hardware from JCM Global, a leader in cash handling technology,
-                            these ATMs allow users to deposit and withdraw fiat currency while easily transacting in cryptocurrencies.
-                            This solution is designed to meet the increasing demand for hybrid financial services,
-                            offering a secure and flexible system for handling both cash and digital assets.
-                        </p>
+                            {t("atmExecutiveSummaryContent")}                 </p>
                     </div>
                     <div className="rightSide w-50">
                         <img
@@ -140,17 +85,14 @@ export default function Atm() {
                             }}
                         >
                             {" "}
-                            <h3>Market Opportunity</h3>
+                            <h3>{t("atmMarketOpportunity")}</h3>
                         </div>
 
                         <p>
-                            As cryptocurrency adoption continues to grow globally, the demand for accessible,
-                            secure, and user-friendly methods to exchange cash for cryptocurrencies is rising.
-                            This business caters to both cryptocurrency enthusiasts and casual users,
-                            especially in areas with limited access to banking services.
+                            {t("atmMarketOpportunityContent")}
                         </p>
 
-                        <p>Target markets include:</p>
+                        <p>{t("atmTargetMarkets")}</p>
                         <ul
                             style={{
                                 fontSize: "17px",
@@ -219,13 +161,13 @@ export default function Atm() {
                                 style={{ zIndex: "2px", marginTop: "20px" }}
                                 className="position-relative"
                             >
-                                Highly crypto-adoption regions*with developed crypto ecosystem
+                                {t("atmTargetRegion1")}
                             </li>
                             <li>
-                                Highly crypto-adoption regions*with developed crypto ecosystem
+                                {t("atmTargetRegion2")}
                             </li>
                             <li>
-                                Highly crypto-adoption regions*with developed crypto ecosystem
+                                {t("atmTargetRegion3")}
                             </li>
                         </ul>
                     </div>
@@ -281,14 +223,14 @@ export default function Atm() {
                         >
                             {" "}
                             <h3 style={{ lineHeight: "normal" }}>
-                                Technology & Hardware Overview{" "}
+                                {t("atmTechnologyOverview")}
+
                             </h3>
                         </div>
 
                         <p style={{ letterSpacing: "1px" }}>
-                            At the core of the terminal is JCM Global's cash handling
-                            technology, designed for speed, accuracy and security. The
-                            hardware includes the following features:
+                            {t("atmHardwareContent")}
+
                         </p>
 
                         <ul
@@ -358,22 +300,16 @@ export default function Atm() {
                                 style={{ zIndex: "2px", marginTop: "20px" }}
                                 className="position-relative"
                             >
-                                <strong>Banknote validation and sorting:</strong>The terminals
-                                accept 30 notes per transection, with each note verified for
-                                authenticity and denomination. Once validated, the notes are
-                                sorted into six programmable roll.
+                                <strong>                            {t("atmBanknoteValidationTitle")}</strong>The terminals
+                                {t("atmBanknoteValidationContent")}
                             </li>
                             <li>
-                                <strong>Stack Module:</strong>The terminals accept 30 notes per
-                                transection, with each note verified for authenticity and
-                                denomination. Once validated, the notes are sorted into six
-                                programmable roll.
+                                <strong>                                {t("atmBanknoteValidationContent")}
+                                </strong>                                {t("atmBanknoteValidationContent")}
+
                             </li>
                             <li>
-                                <strong>Cash Collection & Security:</strong>The terminals accept
-                                30 notes per transection, with each note verified for
-                                authenticity and denomination. Once validated, the notes are
-                                sorted into six programmable roll.
+                                <strong>{t("atmCashCollectionTitle")}</strong>{t("atmCashCollectionContent")}
                             </li>
                         </ul>
                     </div>
@@ -382,7 +318,7 @@ export default function Atm() {
                 {/* key function of terminal */}
                 <div
                     style={{ gap: "100px", marginTop: "140px" }}
-                    className="atmCardWrapper keyfeatures d-flex  align-items-center justify-content-center "
+                    className="atmCardWrapper keyfeatures d-flex align-items-center justify-content-center"
                 >
                     <div className="leftSide w-50 d-flex flex-column align-items-start gap-3">
                         <div
@@ -392,153 +328,11 @@ export default function Atm() {
                                 borderRadius: "15px",
                             }}
                         >
-                            {" "}
                             <h3 style={{ lineHeight: "normal", textAlign: "center" }}>
-                                Key Functions of the Terminal
+                                {t("atmKeyFunctions")}
                             </h3>
                         </div>
-                        <div
-                            style={{ zIndex: "999" }}
-                            className="terminalPrt1  position-relative"
-                        >
-                            <div className="termimalAbsolute"
-                                style={{
-                                    backgroundColor: "#4b2e83",
-                                    width: "430px",
-                                    height: "50px",
-                                    position: "absolute",
-                                    zIndex: "-1",
-                                    top: "15px",
-                                    left: "-20px",
-                                }}
-                            ></div>
-                            <h4 className="mt-4">1. Cash to crypto conversion</h4>
-                            <ul
-                                style={{
-                                    paddingLeft: "20px",
-                                    marginTop: "25px",
-                                    display: "flex",
-                                    flexDirection: "column",
-                                    alignItems: "start",
-                                    justifyContent: "center",
-                                    gap: "20px",
-                                }}
-                            >
-                                <li
-                                    style={{
-                                        display: "flex",
-                                        alignItems: "start",
-                                        justifyContent: "center",
-                                        gap: "10px",
-                                    }}
-                                >
-                                    <img src={blueDot} alt="" />
-                                    Customer deposit upto 30 banknotes into the terminal
-                                </li>
-
-                                <li
-                                    style={{
-                                        display: "flex",
-                                        alignItems: "start",
-                                        justifyContent: "center",
-                                        gap: "10px",
-                                    }}
-                                >
-                                    <img src={blueDot} alt="" />
-                                    Banknotes are validated and securely stored in the rolls or
-                                    stacker.
-                                </li>
-
-                                <li
-                                    style={{
-                                        display: "flex",
-                                        alignItems: "start",
-                                        justifyContent: "center",
-                                        gap: "10px",
-                                    }}
-                                >
-                                    <img src={blueDot} alt="" />
-                                    Customer deposit upto 30 banknotes into the terminal.Banknotes
-                                    are validated and securely stored in the rolls or
-                                    stacker..Banknotes are validated and securely stored in the
-                                    rolls or stacker.
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div
-                            style={{ zIndex: "999" }}
-                            className="terminalPrt1  position-relative"
-                        >
-                            <div className="termimalAbsolute"
-                                style={{
-                                    backgroundColor: "#4b2e83",
-                                    width: "430px",
-                                    height: "50px",
-                                    position: "absolute",
-                                    zIndex: "-1",
-                                    top: "15px",
-                                    left: "-20px",
-                                }}
-                            ></div>
-                            <h4 className="mt-4">2. Crypto to cash conversion</h4>
-                            <ul
-                                style={{
-                                    paddingLeft: "20px",
-                                    marginTop: "25px",
-                                    display: "flex",
-                                    flexDirection: "column",
-                                    alignItems: "start",
-                                    justifyContent: "center",
-                                    gap: "20px",
-                                }}
-                            >
-                                <li
-                                    style={{
-                                        display: "flex",
-                                        alignItems: "start",
-                                        justifyContent: "center",
-                                        gap: "10px",
-                                    }}
-                                >
-                                    <img src={blueDot} alt="" />
-                                    Customer deposit upto 30 banknotes into the terminal
-                                </li>
-
-                                <li
-                                    style={{
-                                        display: "flex",
-                                        alignItems: "start",
-                                        justifyContent: "center",
-                                        gap: "10px",
-                                    }}
-                                >
-                                    <img src={blueDot} alt="" />
-                                    Banknotes are validated and securely stored in the rolls or
-                                    stacker.
-                                </li>
-
-                                <li
-                                    style={{
-                                        display: "flex",
-                                        alignItems: "start",
-                                        justifyContent: "center",
-                                        gap: "10px",
-                                    }}
-                                >
-                                    <img src={blueDot} alt="" />
-                                    Customer deposit upto 30 banknotes into the terminal.Banknotes
-                                    are validated and securely stored in the rolls or
-                                    stacker..Banknotes are validated and securely stored in the
-                                    rolls or stacker.
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div
-                            style={{ zIndex: "999" }}
-                            className="terminalPrt1  position-relative"
-                        >
+                        <div style={{ zIndex: "999" }} className="terminalPrt1 position-relative">
                             <div
                                 className="termimalAbsolute"
                                 style={{
@@ -551,7 +345,7 @@ export default function Atm() {
                                     left: "-20px",
                                 }}
                             ></div>
-                            <h4 className="mt-4">3. KYC Compliance</h4>
+                            <h4 className="mt-4">{t("atmCashToCrypto")}</h4>
                             <ul
                                 style={{
                                     paddingLeft: "20px",
@@ -563,44 +357,97 @@ export default function Atm() {
                                     gap: "20px",
                                 }}
                             >
-                                <li
-                                    style={{
-                                        display: "flex",
-                                        alignItems: "start",
-                                        justifyContent: "center",
-                                        gap: "10px",
-                                    }}
-                                >
+                                <li style={{ display: "flex", alignItems: "start", justifyContent: "center", gap: "10px" }}>
                                     <img src={blueDot} alt="" />
-                                    Customer deposit upto 30 banknotes into the terminal
+                                    {t("atmCashToCryptoDetails1")}
                                 </li>
-
-                                <li
-                                    style={{
-                                        display: "flex",
-                                        alignItems: "start",
-                                        justifyContent: "center",
-                                        gap: "10px",
-                                    }}
-                                >
+                                <li style={{ display: "flex", alignItems: "start", justifyContent: "center", gap: "10px" }}>
                                     <img src={blueDot} alt="" />
-                                    Banknotes are validated and securely stored in the rolls or
-                                    stacker.
+                                    {t("atmCashToCryptoDetails2")}
                                 </li>
-
-                                <li
-                                    style={{
-                                        display: "flex",
-                                        alignItems: "start",
-                                        justifyContent: "center",
-                                        gap: "10px",
-                                    }}
-                                >
+                                <li style={{ display: "flex", alignItems: "start", justifyContent: "center", gap: "10px" }}>
                                     <img src={blueDot} alt="" />
-                                    Customer deposit upto 30 banknotes into the terminal.Banknotes
-                                    are validated and securely stored in the rolls or
-                                    stacker..Banknotes are validated and securely stored in the
-                                    rolls or stacker.
+                                    {t("atmCashToCryptoDetails3")}
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div style={{ zIndex: "999" }} className="terminalPrt1 position-relative">
+                            <div
+                                className="termimalAbsolute"
+                                style={{
+                                    backgroundColor: "#4b2e83",
+                                    width: "430px",
+                                    height: "50px",
+                                    position: "absolute",
+                                    zIndex: "-1",
+                                    top: "15px",
+                                    left: "-20px",
+                                }}
+                            ></div>
+                            <h4 className="mt-4">{t("atmCryptoToCash")}</h4>
+                            <ul
+                                style={{
+                                    paddingLeft: "20px",
+                                    marginTop: "25px",
+                                    display: "flex",
+                                    flexDirection: "column",
+                                    alignItems: "start",
+                                    justifyContent: "center",
+                                    gap: "20px",
+                                }}
+                            >
+                                <li style={{ display: "flex", alignItems: "start", justifyContent: "center", gap: "10px" }}>
+                                    <img src={blueDot} alt="" />
+                                    {t("atmCryptoToCashDetails1")}
+                                </li>
+                                <li style={{ display: "flex", alignItems: "start", justifyContent: "center", gap: "10px" }}>
+                                    <img src={blueDot} alt="" />
+                                    {t("atmCryptoToCashDetails2")}
+                                </li>
+                                <li style={{ display: "flex", alignItems: "start", justifyContent: "center", gap: "10px" }}>
+                                    <img src={blueDot} alt="" />
+                                    {t("atmCryptoToCashDetails3")}
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div style={{ zIndex: "999" }} className="terminalPrt1 position-relative">
+                            <div
+                                className="termimalAbsolute"
+                                style={{
+                                    backgroundColor: "#4b2e83",
+                                    width: "430px",
+                                    height: "50px",
+                                    position: "absolute",
+                                    zIndex: "-1",
+                                    top: "15px",
+                                    left: "-20px",
+                                }}
+                            ></div>
+                            <h4 className="mt-4">{t("atmKYCCompliance")}</h4>
+                            <ul
+                                style={{
+                                    paddingLeft: "20px",
+                                    marginTop: "25px",
+                                    display: "flex",
+                                    flexDirection: "column",
+                                    alignItems: "start",
+                                    justifyContent: "center",
+                                    gap: "20px",
+                                }}
+                            >
+                                <li style={{ display: "flex", alignItems: "start", justifyContent: "center", gap: "10px" }}>
+                                    <img src={blueDot} alt="" />
+                                    {t("atmKYCDetails1")}
+                                </li>
+                                <li style={{ display: "flex", alignItems: "start", justifyContent: "center", gap: "10px" }}>
+                                    <img src={blueDot} alt="" />
+                                    {t("atmKYCDetails2")}
+                                </li>
+                                <li style={{ display: "flex", alignItems: "start", justifyContent: "center", gap: "10px" }}>
+                                    <img src={blueDot} alt="" />
+                                    {t("atmKYCDetails3")}
                                 </li>
                             </ul>
                         </div>
@@ -610,7 +457,6 @@ export default function Atm() {
                             style={{
                                 width: "100%",
                                 height: "100%",
-
                                 objectFit: "cover",
                             }}
                             src={atmImg1}
@@ -660,12 +506,12 @@ export default function Atm() {
                         >
                             {" "}
                             <h3 style={{ lineHeight: "normal" }}>
-                                Security and Cash Management
+                                {t("securityAndCashManagement")}
                             </h3>
                         </div>
 
                         <p style={{ letterSpacing: "1.5px" }}>
-                            The inclusion of a high-security safe and advanced stacker module adds a robust layer of security each terminal. By storing up to 2200 notes n the stacker, terminal are capble of handling high cash volumes, reducing the frequency of cash collection and minimizing risks associated with vandlism and theft. The design of the systems ensures quick and safe replinishment of cash, with a cassette-based stacker allowing for easy exchange during CIT operations.
+                            {t("securityParagraph")}
                         </p>
                     </div>
                 </div>
@@ -685,7 +531,7 @@ export default function Atm() {
                             }}
                         >
                             {" "}
-                            <h3 style={{ lineHeight: "normal" }}>Business Modal</h3>
+                            <h3 style={{ lineHeight: "normal" }}>{t("businessModal")}</h3>
                         </div>
 
                         <ul
@@ -755,22 +601,15 @@ export default function Atm() {
                                 style={{ zIndex: "2px", marginTop: "20px" }}
                                 className="position-relative"
                             >
-                                <strong>Banknote validation and sorting:</strong>The terminals
-                                accept 30 notes per transection, with each note verified for
-                                authenticity and denomination. Once validated, the notes are
-                                sorted into six programmable roll.
+                                <strong>{t("banknoteValidationAndSorting")}</strong>{t("banknoteValidationDetails")}
                             </li>
                             <li>
-                                <strong>Stack Module:</strong>The terminals accept 30 notes per
-                                transection, with each note verified for authenticity and
-                                denomination. Once validated, the notes are sorted into six
-                                programmable roll.
+                                <strong>{t("stackModule")}</strong>
+                                {t("stackModuleDetails")}
                             </li>
                             <li>
-                                <strong>Cash Collection & Security:</strong>The terminals accept
-                                30 notes per transection, with each note verified for
-                                authenticity and denomination. Once validated, the notes are
-                                sorted into six programmable roll.
+                                <strong>{t("cashCollectionAndSecurity")}</strong>
+                                {t("cashCollectionDetails")}
                             </li>
                         </ul>
                     </div>
@@ -809,7 +648,7 @@ export default function Atm() {
                         }}
                     >
                         {" "}
-                        <h3 style={{ lineHeight: "normal" }}>Operational Strategy</h3>
+                        <h3 style={{ lineHeight: "normal" }}>{t("operationalStrategy")}</h3>
                     </div>
 
                     <div
@@ -838,10 +677,10 @@ export default function Atm() {
                             >
                                 <h3 style={{ position: "relative", zIndex: "5" }}># 1</h3>
                                 <p>
-                                    <strong>Geographic Deployment</strong>
+                                    <strong>{t("geographicDeployment")}</strong>
                                 </p>
                                 <p style={{ fontSize: "16px", position: "relative", zIndex: "5" }} className="text-center">
-                                    Focus on deploying terminals in areas with high cryptocurrency adoption and in underbanked regions where access to financial errices is limited
+                                    {t("geographicDeploymentContent")}
                                 </p>
                             </div>
                         </div>
@@ -859,10 +698,13 @@ export default function Atm() {
                             >
                                 <h3># 2</h3>
                                 <p style={{ textAlign: "center" }}>
-                                    <strong>Maintenance and Security</strong>
+                                    <strong>
+
+                                        {t("maintenanceAndSecurity")}
+                                    </strong>
                                 </p>
                                 <p style={{ fontSize: "16px" }} className="text-center">
-                                    Leverage JCM's robust and reliable hardware, reducing operational downtime and ensuring long-term security. The sage and stacker systems provide additional protection against vandalism and theft, especially in high traffic environments.
+                                    {t("maintenanceAndSecurityContent")}
                                 </p>
                             </div>
                         </div>
@@ -880,10 +722,10 @@ export default function Atm() {
                             >
                                 <h3># 3</h3>
                                 <p>
-                                    <strong>Compliance</strong>
+                                    <strong>{t("compliance")}</strong>
                                 </p>
                                 <p style={{ fontSize: "16px" }} className="text-center">
-                                    Ensure the terminals are compliant with local kYC and anti-money landering(AML) regulations by integrating secure verification systems.
+                                    {t("complianceContent")}
                                 </p>
                             </div>
                         </div>
@@ -905,35 +747,36 @@ export default function Atm() {
                             }}
                         >
                             {" "}
-                            <h3 style={{ lineHeight: "normal" }}>Financial Projection</h3>
+                            <h3 style={{ lineHeight: "normal" }}>{t("financialProjection")}</h3>
                         </div>
 
                         <p style={{ letterSpacing: "1.5px" }}>
-                            Initial deployment of 100 terminals in key marktes is projected to generate the following revenue over three years.
+                            {t("financialProjectionContent")}
                         </p>
 
                         <div style={{ width: "100%", height: '230px', borderRadius: "20px", backgroundColor: "#4b2e83", zIndex: "999", position: "relative", display: "flex", flexDirection: "column", gap: "30px", padding: "20px" }} className="financeBox">
                             <div style={{ display: "flex", justifyContent: "space-between", fontSize: "20px", padding: "0px 30px" }} className="year1">
-                                <p style={{ fontSize: "25px" }}>Year 1:</p>
-                                <p style={{ fontSize: "25px" }}>2.5M</p>
+                                <p style={{ fontSize: "25px" }}>{t("year1")}</p>
+                                <p style={{ fontSize: "25px" }}>{t("year1Revenue")}</p>
                             </div>
 
 
 
                             <div style={{ display: "flex", justifyContent: "space-between", fontSize: "20px", padding: "0px 30px" }} className="year1">
-                                <p style={{ fontSize: "25px" }}>Year 2:</p>
-                                <p style={{ fontSize: "25px" }}>4.8M</p>
+                                <p style={{ fontSize: "25px" }}>{t("year2")}</p>
+                                <p style={{ fontSize: "25px" }}>{t("year2Revenue")}</p>
                             </div>
 
 
 
                             <div style={{ display: "flex", justifyContent: "space-between", fontSize: "20px", padding: "0px 30px" }} className="year1">
-                                <p style={{ fontSize: "25px" }}>Year 3:</p>
-                                <p style={{ fontSize: "25px" }}>7.2M</p>
+                                <p style={{ fontSize: "25px" }}>{t("year3")}</p>
+                                <p style={{ fontSize: "25px" }}>{t("year3Revenue")}</p>
                             </div>
                         </div>
                         <p style={{ letterSpacing: "1.5px" }}>
-                            These projections assume gradual market adoption, transaction volume groth, and continued expansion of crypto-flat transactions.
+
+                            {t("projectionsContent")}
                         </p>
                     </div>
                 </div>
@@ -941,7 +784,7 @@ export default function Atm() {
                 {/* risk and mitigation */}
                 <div
                     style={{ marginTop: "170px", gap: "100px", padding: "10px" }}
-                    className="atmCardWrapper risk d-flex  align-items-center justify-content-center px-5"
+                    className="atmCardWrapper risk d-flex align-items-center justify-content-center px-5"
                 >
                     <div
                         style={{ paddingLeft: "100px" }}
@@ -954,8 +797,7 @@ export default function Atm() {
                                 borderRadius: "15px",
                             }}
                         >
-                            {" "}
-                            <h3>Risk and Mitigation</h3>
+                            <h3>{t('riskAndMitigationTitle')}</h3>
                         </div>
 
                         <ul
@@ -967,81 +809,44 @@ export default function Atm() {
                             }}
                             className="d-flex flex-column gap-3"
                         >
-                            <div
-                                style={{
-                                    backgroundColor: "#4b2e83",
-                                    width: "100px",
-                                    height: "40px",
-                                    top: "25px",
-                                    left: "-60px",
-                                    zIndex: "0",
-                                    fontSize: "25px",
-                                    fontWeight: "bold",
-                                    display: "flex",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                }}
-                                className="position-absolute"
-                            >
-                                1.
-                            </div>
-                            <div
-                                style={{
-                                    backgroundColor: "#4b2e83",
-                                    width: "100px",
-                                    height: "40px",
-                                    top: "95px",
-                                    left: "-60px",
-                                    zIndex: "0",
-                                    fontSize: "25px",
-                                    fontWeight: "bold",
-                                    display: "flex",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                }}
-                                className="position-absolute"
-                            >
-                                2.
-                            </div>
-                            <div
-                                style={{
-                                    backgroundColor: "#4b2e83",
-                                    width: "100px",
-                                    height: "40px",
-                                    top: "160px",
-                                    left: "-60px",
-                                    zIndex: "0",
-                                    fontSize: "25px",
-                                    fontWeight: "bold",
-                                    display: "flex",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                }}
-                                className="position-absolute"
-                            >
-                                3.
-                            </div>
-                            <li
-                                style={{ zIndex: "2px", marginTop: "20px" }}
-                                className="position-relative"
-                            >
+                            {Array.from({ length: 3 }).map((_, index) => (
+                                <div
+                                    key={index}
+                                    style={{
+                                        backgroundColor: "#4b2e83",
+                                        width: "100px",
+                                        height: "40px",
+                                        top: `${25 + index * 70}px`,
+                                        left: "-60px",
+                                        zIndex: "0",
+                                        fontSize: "25px",
+                                        fontWeight: "bold",
+                                        display: "flex",
+                                        alignItems: "center",
+                                        justifyContent: "center",
+                                    }}
+                                    className="position-absolute"
+                                >
+                                    {index + 1}.
+                                </div>
+                            ))}
+                            <li style={{ zIndex: "2px", marginTop: "20px" }} className="position-relative">
                                 <strong style={{ fontSize: "20px", fontWeight: "normal" }}>
-                                    Security Threats:{" "}
+                                    {t('securityThreats')}:{" "}
                                 </strong>
-                                Highly crypto-adoption regions*with developed crypto ecosystem
-                                with developed crypto ecosystem
+                                {t('highCryptoAdoptionRegions')}
                             </li>
                             <li>
                                 <strong style={{ fontSize: "20px", fontWeight: "normal" }}>
-                                    Security Threats:{" "}
+                                    {t('securityThreats')}:{" "}
                                 </strong>
-                                Highly crypto-adoption regions*with developed crypto ecosystem
+                                {t('highCryptoAdoptionRegions')}
                             </li>
                             <li>
                                 <strong style={{ fontSize: "20px", fontWeight: "normal" }}>
-                                    Security Threats:{" "}
+                                    {t('securityThreats')}:{" "}
                                 </strong>
-                                Highly crypto-adoption regions*with developed crypto ecosystem
+                                {t('highCryptoAdoptionRegions')}
                             </li>
                         </ul>
                     </div>
@@ -1059,7 +864,7 @@ export default function Atm() {
                     </div>
                 </div>
 
-                {/* conclusion */}
+                {/* Conclusion */}
                 <div
                     style={{
                         gap: "100px",
@@ -1067,9 +872,9 @@ export default function Atm() {
                         width: "80%",
                         margin: "0 auto",
                     }}
-                    className="atmCardWrapper conclusion d-flex  align-items-center justify-content-center"
+                    className="atmCardWrapper conclusion d-flex align-items-center justify-content-center"
                 >
-                    <div className=" w-100 d-flex flex-column align-items-center justify-content-center gap-5">
+                    <div className="w-100 d-flex flex-column align-items-center justify-content-center gap-5">
                         <div
                             style={{
                                 backgroundColor: "#4b2e83",
@@ -1077,20 +882,18 @@ export default function Atm() {
                                 borderRadius: "15px",
                                 display: "flex",
                                 alignItems: "center",
-                                justifyContent: "center"
-
-
+                                justifyContent: "center",
                             }}
                         >
-                            {" "}
-                            <h3 style={{ lineHeight: "normal" }}>Conclusion</h3>
+                            <h3 style={{ lineHeight: "normal" }}>{t('conclusionTitle')}</h3>
                         </div>
 
                         <p style={{ letterSpacing: "1.5px", textAlign: "left" }}>
-                            The deployment of cryptocurrency ATMs equipped with JSM's advanced hardware offers a scalable, secure, and user-friendly solutions to the growing demand of crypto-fiat transactions, The business modal is built to address both consumer and retailer needs, while ensuring safety, security, and operationsal efficiency through cutting-edge cash handling and anti-theft meaures, This positions the company as a leader in the hybrid financial services market.
+                            {t('conclusionText')}
                         </p>
                     </div>
                 </div>
+
             </div>
         </>
     );

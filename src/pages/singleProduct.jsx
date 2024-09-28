@@ -92,14 +92,13 @@ export default function SingleProduct() {
 
 
                                 ${price}</span>
-                            <p className="description">
 
-                                {/* <span className='label'>
-                                    Specifications:
-                                </span> */}
-
-
-                                {specifications || power || powerSupply}</p>
+                            {(specifications || power || powerSupply) && (
+                                <p className="description">
+                                    <span className='label'>Specifications:</span>
+                                    {specifications || power || powerSupply}
+                                </p>
+                            )}
 
                             <span>
 

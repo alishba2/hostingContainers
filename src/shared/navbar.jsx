@@ -395,6 +395,11 @@ const Navbar = () => {
                 {t("blogs")}
               </NavLink>
             </li>
+            <li>
+              <NavLink to="/atm" activeClassName="active">
+                {t("Atms")}
+              </NavLink>
+            </li>
 
 
           </ul>
