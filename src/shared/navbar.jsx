@@ -390,12 +390,12 @@ const Navbar = () => {
                 {t("about_us")}
               </NavLink>
             </li>
-            <li>
+            <li className="my-3">
               <NavLink to="/blogs" activeClassName="active">
                 {t("blogs")}
               </NavLink>
             </li>
-            <li>
+            <li className="my-3">
               <NavLink to="/atm" activeClassName="active">
                 {t("Atms")}
               </NavLink>
@@ -487,7 +487,7 @@ const Navbar = () => {
             )}
           </div>
         </Drawer>
-      </div>
+      </div >
 
 
       <Login isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
