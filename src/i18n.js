@@ -5,6 +5,7 @@ import ruTranslations from './locales/ru/translation.json';
 import esTranslations from './locales/es/translation.json';
 import zhTranslations from './locales/zh/translation.json';
 import arTranslations from "./locales/ar/translation.json";
+import pgTranslations from "./locales/pg/translation.json";
 
 i18n
     .use(initReactI18next)
@@ -14,7 +15,8 @@ i18n
             ru: { translation: ruTranslations },
             es: { translation: esTranslations },
             zh: { translation: zhTranslations },
-            ar: { translation: arTranslations }
+            ar: { translation: arTranslations },
+            pg: { translation: pgTranslations }
         },
         lng: "en", // default language
         fallbackLng: "en",
