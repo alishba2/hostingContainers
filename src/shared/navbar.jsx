@@ -186,11 +186,11 @@ const Navbar = () => {
                           <h6>{t("mining-containers")}</h6>
                         </div>
                       </div>
-                      <div className="platform-items d-flex space-between" onClick={() => handleNavigation2("Mining Chips")}>
+                      {/* <div className="platform-items d-flex space-between" onClick={() => handleNavigation2("Mining Chips")}>
                         <div className="left d-flex v-center">
                           <h6>{t("mining-chips")}</h6>
                         </div>
-                      </div>
+                      </div> */}
 
                       <div className="platform-items d-flex space-between" onClick={() => handleNavigation2("Others")}>
                         <div className="left d-flex v-center">
@@ -270,15 +270,18 @@ const Navbar = () => {
                     ? "Русский"
                     : i18n.language === "es"
                       ? "Español"
-                      : i18n.language === "ar" // Add Arabic language check
+                      : i18n.language === "ar"
                         ? "العربية"
-                        : "中文"}
+                        : i18n.language === "pg" // Add Portuguese language check
+                          ? "Português"
+                          : "中文"}
                 <Icon
                   color="#FFF"
                   icon="mingcute:down-fill"
                   className="icon-rotate"
                 />
               </button>
+
               {languagesshow && (
                 <div className="languages-main-outer">
                   <div className="platform-hover-container d-flex flex-column">
@@ -317,6 +320,11 @@ const Navbar = () => {
                     <div onClick={() => handleLanguageChange("ar")} className="platform-items d-flex space-between"> {/* Add Arabic option */}
                       <div className="left d-flex v-center">
                         <h6>العربية</h6>
+                      </div>
+                    </div>
+                    <div onClick={() => handleLanguageChange("pg")} className="platform-items d-flex space-between"> {/* Add Arabic option */}
+                      <div className="left d-flex v-center">
+                        <h6>Português</h6>
                       </div>
                     </div>
                   </div>
@@ -368,9 +376,9 @@ const Navbar = () => {
                   <div className="menuItem" onClick={() => { setOpen(false); handleNavigation2("Mining Containers") }}>
                     {t("mining-containers")}
                   </div>
-                  <div className="menuItem" onClick={() => { setOpen(false); handleNavigation2("Mining Chips") }}>
+                  {/* <div className="menuItem" onClick={() => { setOpen(false); handleNavigation2("Mining Chips") }}>
                     {t("mining-chips")}
-                  </div>
+                  </div> */}
                   <div className="menuItem" onClick={() => { setOpen(false); handleNavigation2("Others") }}>
 
                     {t("Accessories")}
@@ -429,7 +437,9 @@ const Navbar = () => {
                           ? "Español"
                           : i18n.language === "ar" // Add Arabic language check
                             ? "العربية"
-                            : "中文"}
+                            : i18n.language === "pg" // Add Portuguese language check
+                              ? "Português"
+                              : "中文"}
                     <Icon
                       color="#FFF"
                       icon="mingcute:down-fill"
@@ -474,6 +484,11 @@ const Navbar = () => {
                         <div onClick={() => handleLanguageChange("ar")} className="platform-items d-flex space-between"> {/* Add Arabic option */}
                           <div className="left d-flex v-center">
                             <h6>العربية</h6>
+                          </div>
+                        </div>
+                        <div onClick={() => handleLanguageChange("pg")} className="platform-items d-flex space-between"> {/* Add Arabic option */}
+                          <div className="left d-flex v-center">
+                            <h6>Português</h6>
                           </div>
                         </div>
                       </div>
