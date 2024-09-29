@@ -175,7 +175,7 @@ const Navbar = () => {
                 </li>
                 {platformshow && (
                   <div className="platform-main-outer">
-                    <div className="platform-hover-container d-flex flex-column">
+                    <div className="platform-hover-container d-flex flex-column" style={{ width: "200px" }}>
                       <div className="platform-items d-flex space-between" onClick={() => handleNavigation2("Miners")}>
                         <div className="left d-flex v-center">
                           <h6>{t("Miners")}</h6>
@@ -262,6 +262,7 @@ const Navbar = () => {
               className="navbarbtn-container"
               onMouseEnter={handlelanguageShow}
               onMouseLeave={handlelanguagesClose}
+
             >
               <button className="dropdown-button v-center gap-2">
                 {i18n.language === "en"
@@ -284,7 +285,7 @@ const Navbar = () => {
 
               {languagesshow && (
                 <div className="languages-main-outer">
-                  <div className="platform-hover-container d-flex flex-column">
+                  <div className="platform-hover-container d-flex flex-column" style={{ width: "170px" }}>
                     <div
                       onClick={() => i18n.changeLanguage("en")}
                       className="platform-items d-flex space-between"
