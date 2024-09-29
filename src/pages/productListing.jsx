@@ -98,7 +98,7 @@ export default function ProductListing() {
 
                         {/* Side Filters */}
                         <div className="side-filters">
-                            <h3>Filters</h3>
+                            <h3>{t("filter")}</h3>
                             {/* <label>
                                 <input
                                     type="checkbox"
@@ -109,7 +109,7 @@ export default function ProductListing() {
                                 In Stock
                             </label> */}
                             <label>
-                                Min Price:
+                                {t("min-price")}
                                 <input
                                     type="number"
                                     name="minPrice"
@@ -119,7 +119,8 @@ export default function ProductListing() {
                                 />
                             </label>
                             <label>
-                                Max Price:
+                                {t("max-price")}
+
                                 <input
                                     type="number"
                                     name="maxPrice"

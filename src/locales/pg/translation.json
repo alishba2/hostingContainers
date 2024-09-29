@@ -264,5 +264,8 @@
     "highCryptoAdoptionRegions": "Regiões com alta adoção de criptomoedas e ecossistema de cripto desenvolvido.",
     "conclusionTitle": "Conclusão",
     "conclusionText": "A implantação de caixas eletrônicos de criptomoedas equipados com manuseio de dinheiro e conversões cripto-fiat oferece uma oportunidade robusta em um mercado emergente. A combinação da adoção crescente de criptomoedas, hardware seguro da JCM Global e uma rede de terminais estrategicamente localizados cria um ambiente propício para o crescimento e sucesso a longo prazo.",
-    "Accessories": "Acessórios e hardware"
+    "Accessories": "Acessórios e hardware",
+    "max-price": " Preço máximo",
+    "min-price": "Preço mínimo",
+    "filter": " Filtros"
 }
