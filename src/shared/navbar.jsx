@@ -354,64 +354,7 @@ const Navbar = () => {
           className="mobile-menu-drawer"
         >
           <img src={logo} alt={t("logo_alt")} className="logostyle" />
-          <ul className="mt-5">
-            <li>
-              <NavLink exact to="/" activeClassName="active" onClick={() => setOpen(false)}>
-                {t("home")}
-              </NavLink>
-            </li>
-            <li
-              onMouseEnter={handleSubmenu}
-              onMouseLeave={handleSubmenu}
-              className={`li-platform ${showSubmenu ? "activeClass" : ""}`}
-            >
-              <a onClick={() => setShowSubmenu(!showSubmenu)} className="v-center mt-3">
-                {t("products")}
-                <Icon icon="mingcute:down-fill" color="white" />
-              </a>
-              {showSubmenu && (
-                <div className="submenu">
-                  <div className="menuItem" onClick={() => { setOpen(false); handleNavigation2("Miners") }}>
-                    {t("Miners")}
-                  </div>
-                  <div className="menuItem" onClick={() => { setOpen(false); handleNavigation2("Mining Containers") }}>
-                    {t("mining-containers")}
-                  </div>
-                  {/* <div className="menuItem" onClick={() => { setOpen(false); handleNavigation2("Mining Chips") }}>
-                    {t("mining-chips")}
-                  </div> */}
-                  <div className="menuItem" onClick={() => { setOpen(false); handleNavigation2("Others") }}>
 
-                    {t("Accessories")}
-
-                  </div>
-
-                </div>
-              )}
-            </li>
-            <li className="my-3">
-              <NavLink exact to="/hosting" activeClassName="active" onClick={() => setOpen(false)}>
-                {t("hosting")}
-              </NavLink>
-            </li>
-            <li className="my-3">
-              <NavLink exact to="/about-us" activeClassName="active" onClick={() => setOpen(false)}>
-                {t("about_us")}
-              </NavLink>
-            </li>
-            <li className="my-3">
-              <NavLink to="/blogs" activeClassName="active">
-                {t("blogs")}
-              </NavLink>
-            </li>
-            <li className="my-3">
-              <NavLink to="/atm" activeClassName="active">
-                {t("Atms")}
-              </NavLink>
-            </li>
-
-
-          </ul>
           <div className="navbarbtn-container">
             {userData ? (
               <Dropdown overlay={menu} trigger={['click']}>
@@ -502,6 +445,65 @@ const Navbar = () => {
 
             )}
           </div>
+          <ul className="mt-5">
+            <li>
+              <NavLink exact to="/" activeClassName="active" onClick={() => setOpen(false)}>
+                {t("home")}
+              </NavLink>
+            </li>
+            <li
+              onMouseEnter={handleSubmenu}
+              onMouseLeave={handleSubmenu}
+              className={`li-platform ${showSubmenu ? "activeClass" : ""}`}
+            >
+              <a onClick={() => setShowSubmenu(!showSubmenu)} className="v-center mt-3">
+                {t("products")}
+                <Icon icon="mingcute:down-fill" color="white" />
+              </a>
+              {showSubmenu && (
+                <div className="submenu">
+                  <div className="menuItem" onClick={() => { setOpen(false); handleNavigation2("Miners") }}>
+                    {t("Miners")}
+                  </div>
+                  <div className="menuItem" onClick={() => { setOpen(false); handleNavigation2("Mining Containers") }}>
+                    {t("mining-containers")}
+                  </div>
+                  {/* <div className="menuItem" onClick={() => { setOpen(false); handleNavigation2("Mining Chips") }}>
+                    {t("mining-chips")}
+                  </div> */}
+                  <div className="menuItem" onClick={() => { setOpen(false); handleNavigation2("Others") }}>
+
+                    {t("Accessories")}
+
+                  </div>
+
+                </div>
+              )}
+            </li>
+            <li className="my-3">
+              <NavLink exact to="/hosting" activeClassName="active" onClick={() => setOpen(false)}>
+                {t("hosting")}
+              </NavLink>
+            </li>
+            <li className="my-3">
+              <NavLink exact to="/about-us" activeClassName="active" onClick={() => setOpen(false)}>
+                {t("about_us")}
+              </NavLink>
+            </li>
+            <li className="my-3">
+              <NavLink to="/blogs" activeClassName="active">
+                {t("blogs")}
+              </NavLink>
+            </li>
+            <li className="my-3">
+              <NavLink to="/atm" activeClassName="active">
+                {t("Atms")}
+              </NavLink>
+            </li>
+
+
+          </ul>
+
         </Drawer>
       </div >
 
