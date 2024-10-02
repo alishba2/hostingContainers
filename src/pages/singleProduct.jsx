@@ -5,11 +5,12 @@ import { Card, Col, Row, Typography, Spin, Table, Button, Tabs } from 'antd';
 import "../style/pages/_singleProduct.scss";
 import ProductSlider from '../components/Home/productSlider';
 import { useTranslation } from "react-i18next";
-
+import { useNavigate } from 'react-router-dom';
 const { Title, Paragraph } = Typography;
 const { TabPane } = Tabs;
 
 export default function SingleProduct() {
+    const navigate = useNavigate();
     const { id } = useParams(); // Get the product ID from the URL
     const [product, setProduct] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -90,7 +91,7 @@ export default function SingleProduct() {
                             <span className="price">
 
                                 <span className='label'>
-                                    Price:
+                                    {t("Price")}:
                                 </span>
 
 
@@ -98,7 +99,7 @@ export default function SingleProduct() {
 
                             {(specifications || power || powerSupply) && (
                                 <p className="description">
-                                    <span className='label'>Specifications:</span>
+                                    <span className='label'> {t("specification")}:</span>
                                     {specifications || power || powerSupply}
                                 </p>
                             )}
@@ -106,12 +107,14 @@ export default function SingleProduct() {
                             <span>
 
                                 <p className='para'>
-                                    Image is for reference only, the actual product serves as the standard.
+
+                                    {t('imgRef')}
+                                    {/* Image is for reference only, the actual product serves as the standard. */}
 
 
                                 </p>
 
-                                <button onClick={() => { Navigate('/contactUs') }} size="large" className="buy-now-button">
+                                <button onClick={() => { navigate('/contactUs') }} size="large" className="buy-now-button">
                                     {t('contactUs')}
                                 </button>
                             </span>
@@ -127,13 +130,13 @@ export default function SingleProduct() {
                                 className={showSpecifications ? 'active' : ''}
                                 onClick={() => setShowSpecifications(true)}
                             >
-                                Specifications
+                                {t("specification")}
                             </button>
                             <button
                                 className={!showSpecifications ? 'active' : ''}
                                 onClick={() => setShowSpecifications(false)}
                             >
-                                Why Hosting Containers
+                                {t("whyHostingContainer")}
                             </button>
                         </div>
 
@@ -158,7 +161,7 @@ export default function SingleProduct() {
                             /* Show Why Hosting Containers */
                             <div className="specifications">
                                 <span>
-                                    Founded in 2017, Hash International Hosting LLC has grown to become a key player in the cryptocurrency mining industry, with a strong presence in Africa, the US, Russia, Kazakhstan, the UAE, and other Gulf countries. Our mission is to provide innovative and reliable mining solutions that empower our clients to maximize their returns while minimizing operational complexities. With a special focus on the UAE, our sites are designed to maintain optimal environmental conditions, ensuring miners operate at peak efficiency. Our team of 100+ professionals, with extensive expertise in mining and infrastructure management, drives our success across multiple continents.
+                                    {t("whyDescription")}
                                 </span>
                             </div>
                         )}
@@ -168,7 +171,7 @@ export default function SingleProduct() {
             </div >
 
             <div className='slider'>
-                <h2 className='heading'>Other {category == "Others" ? "Accessories" : category}</h2>
+                <h2 className='heading'> {t("benefit.seeMore")}</h2>
                 <ProductSlider category={category} />
 
             </div>

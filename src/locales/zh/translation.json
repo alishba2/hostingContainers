@@ -62,7 +62,7 @@
     "service4Description": "服务 4 的描述",
     "contactUs": "联系我们",
     "email": "support@hostingcontainerllc.com",
-    "phone": "+971552115205",
+    "phone": "+971 552115205, 05553880782",
     "address": "迪拜，阿拉伯联合酋长国",
     "quickLinks": "快速链接",
     "blog": "博客",
@@ -266,5 +266,9 @@
     "Accessories": "配件和硬件",
     "max-price": "最高价格",
     "filter": " 筛选",
-    "imgRef": "图片仅供参考，实际产品作为标准"
+    "imgRef": "图片仅供参考，实际产品作为标准",
+    "specification": "规格",
+    "whyHostingContainer": "为什么托管容器",
+    "whyDescription": "Hash International Hosting LLC成立于2017年，已成为加密货币挖矿行业的重要参与者，在非洲、美国、俄罗斯、哈萨克斯坦、阿联酋及其他海湾国家拥有强大影响力。我们的使命是提供创新和可靠的挖矿解决方案，帮助客户最大化回报，同时减少运营复杂性。我们特别关注阿联酋，站点设计旨在保持最佳环境条件，确保矿工以最佳效率运作。我们的团队由100多名专业人士组成，在挖矿和基础设施管理方面拥有丰富的专业知识，推动我们在多个大陆的成功。",
+    "Price": "价格 "
 }
