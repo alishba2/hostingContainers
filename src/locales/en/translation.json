@@ -63,7 +63,7 @@
     "service4Description": "Description for Service 4",
     "contactUs": "Contact Us",
     "email": "support@hostingcontainerllc.com",
-    "phone": "+971552115205",
+    "phone": "+971 552115205, 05553880782",
     "address": "Dubai, United Arab Emirates",
     "quickLinks": "Quick Links",
     "blog": "Blog",
@@ -269,5 +269,9 @@
     "max-price": "Max Price",
     "min-price": "Min Price",
     "filter": "Filter",
-    "imgRef": "Image is for reference only, the actual product serves as the standard."
+    "imgRef": "Image is for reference only, the actual product serves as the standard.",
+    "specification": "Specification",
+    "whyHostingContainer": "Why Hosting Containers",
+    "whyDescription": "Founded in 2017, Hash International Hosting LLC has grown to become a key player in the cryptocurrency mining industry, with a strong presence in Africa, the US, Russia, Kazakhstan, the UAE, and other Gulf countries. Our mission is to provide innovative and reliable mining solutions that empower our clients to maximize their returns while minimizing operational complexities. With a special focus on the UAE, our sites are designed to maintain optimal environmental conditions, ensuring miners operate at peak efficiency. Our team of 100+ professionals, with extensive expertise in mining and infrastructure management, drives our success across multiple continents.",
+    "Price": "Price"
 }

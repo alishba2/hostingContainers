@@ -333,98 +333,7 @@ const Navbar = () => {
         >
           <img src={logo} alt={t("logo_alt")} className="logostyle" />
 
-          <div className="navbarbtn-container">
-            {userData ? (
-              <Dropdown overlay={menu} trigger={['click']}>
-                <span className="name-container">
-                  <p>{userData?.fullName}</p>
-                  <span className="icon">
-                    <Icon color="#FFF" icon="mingcute:down-fill" className="icon-rotate" />
-                  </span>
-                </span>
-              </Dropdown>
-            ) : (
-              <>
-                <div
-                  className="navbarbtn-container"
-                  onMouseEnter={handlelanguageShow}
-                  onMouseLeave={handlelanguagesClose}
-                >
-                  <button className="dropdown-button v-center gap-2">
-                    {i18n.language === "en"
-                      ? "English"
-                      : i18n.language === "ru"
-                        ? "Русский"
-                        : i18n.language === "es"
-                          ? "Español"
-                          : i18n.language === "ar" // Add Arabic language check
-                            ? "العربية"
-                            : i18n.language === "pg" // Add Portuguese language check
-                              ? "Português"
-                              : "中文"}
-                    <Icon
-                      color="#FFF"
-                      icon="mingcute:down-fill"
-                      className="icon-rotate"
-                    />
-                  </button>
-                  {languagesshow && (
-                    <div className="languages-main-outer">
-                      <div className="platform-hover-container d-flex flex-column">
-                        <div
-                          onClick={() => i18n.changeLanguage("en")}
-                          className="platform-items d-flex space-between"
-                        >
-                          <div className="left d-flex v-center">
-                            <h6>English</h6>
-                          </div>
-                        </div>
-                        <div
-                          onClick={() => i18n.changeLanguage("ru")}
-                          className="platform-items d-flex space-between"
-                        >
-                          <div className="left d-flex v-center">
-                            <h6>Русский</h6>
-                          </div>
-                        </div>
-                        <div
-                          onClick={() => i18n.changeLanguage("es")}
-                          className="platform-items d-flex space-between"
-                        >
-                          <div className="left d-flex v-center">
-                            <h6>Español</h6>
-                          </div>
-                        </div>
-                        <div
-                          onClick={() => i18n.changeLanguage("zh")}
-                          className="platform-items d-flex space-between"
-                        >
-                          <div className="left d-flex v-center">
-                            <h6>中文</h6>
-                          </div>
-                        </div>
-                        <div onClick={() => handleLanguageChange("ar")} className="platform-items d-flex space-between"> {/* Add Arabic option */}
-                          <div className="left d-flex v-center">
-                            <h6>العربية</h6>
-                          </div>
-                        </div>
-                        <div onClick={() => handleLanguageChange("pg")} className="platform-items d-flex space-between"> {/* Add Arabic option */}
-                          <div className="left d-flex v-center">
-                            <h6>Português</h6>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  )}
-                </div>
-                {/* <button className="button2" onClick={onsigninbtnClick}>{t("sign_in")}</button> */}
-                <button onClick={() => { navigate('/ContactUs') }}>{t("ContactUs")}</button>
 
-
-              </>
-
-            )}
-          </div>
           <ul className="mt-5">
             <li>
               <NavLink exact to="/" activeClassName="active" onClick={() => setOpen(false)}>
@@ -484,6 +393,33 @@ const Navbar = () => {
 
           </ul>
 
+          <div className="navbarbtn-container">
+            {userData ? (
+              <Dropdown overlay={menu} trigger={['click']}>
+                <span className="name-container">
+                  <p>{userData?.fullName}</p>
+                  <span className="icon">
+                    <Icon color="#FFF" icon="mingcute:down-fill" className="icon-rotate" />
+                  </span>
+                </span>
+              </Dropdown>
+            ) : (
+              <>
+                <div
+                  className="navbarbtn-container"
+                  onMouseEnter={handlelanguageShow}
+                  onMouseLeave={handlelanguagesClose}
+                >
+
+                </div>
+                {/* <button className="button2" onClick={onsigninbtnClick}>{t("sign_in")}</button> */}
+                <button onClick={() => { navigate('/ContactUs') }}>{t("ContactUs")}</button>
+
+
+              </>
+
+            )}
+          </div>
         </Drawer>
       </div >
 
