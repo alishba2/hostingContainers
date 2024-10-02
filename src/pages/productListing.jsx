@@ -79,9 +79,10 @@ export default function ProductListing() {
                 </div>
             ) : (
                 <>
-                    <h1>{category == "Others" ? "Accessories" : category}</h1> {/* Display selected category */}
 
-                    
+                    <h1> {t(category)}</h1>
+
+
                     {/* <p>
                         Find the best {category} to suit your needs. Use the search bar and filters
                         to explore our range of products.

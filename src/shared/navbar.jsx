@@ -354,13 +354,13 @@ const Navbar = () => {
                   <div className="menuItem" onClick={() => { setOpen(false); handleNavigation2("Miners") }}>
                     {t("Miners")}
                   </div>
-                  <div className="menuItem" onClick={() => { setOpen(false); handleNavigation2("Mining Containers") }}>
+                  <div className="menuItem" onClick={() => { setOpen(false); handleNavigation2("mining-containers") }}>
                     {t("mining-containers")}
                   </div>
                   {/* <div className="menuItem" onClick={() => { setOpen(false); handleNavigation2("Mining Chips") }}>
                     {t("mining-chips")}
                   </div> */}
-                  <div className="menuItem" onClick={() => { setOpen(false); handleNavigation2("Others") }}>
+                  <div className="menuItem" onClick={() => { setOpen(false); handleNavigation2("Accessories") }}>
 
                     {t("Accessories")}
 

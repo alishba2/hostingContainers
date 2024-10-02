@@ -171,7 +171,7 @@ export default function SingleProduct() {
             </div >
 
             <div className='slider'>
-                <h2 className='heading'>Other {category == "Others" ? "Accessories" : category}</h2>
+                <h2 className='heading'> {t("benefit.seeMore")}</h2>
                 <ProductSlider category={category} />
 
             </div>
