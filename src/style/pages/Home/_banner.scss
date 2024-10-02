@@ -113,6 +113,8 @@
     /* Center text horizontally */
   }
 
+
+
   .custom-carousel .carousel .slide {
     height: 200px;
     position: relative;
@@ -127,10 +129,32 @@
     font-size: 12px;
     text-align: center;
   }
-  
-  .carousel .contactBtn{
 
-    
+  .carousel .contactBtn {}
+}
 
+.language-switch-container {
+  display: none;
+}
+
+.language-dropdown {
+  transition: max-height 0.3s ease-in-out;
+  overflow: hidden;
+  max-height: 0; // Initial height when closed
+}
+
+.language-dropdown.open {
+  max-height: 200px; // Adjust height to fit content
+}
+
+/* Hide dropdown on larger screens */
+.language-switch-container {
+  display: none;
+}
+
+/* Show dropdown only on mobile view */
+@media (max-width: 767px) {
+  .language-switch-container {
+    display: block;
   }
 }
