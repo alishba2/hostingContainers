@@ -233,30 +233,7 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="v-center gap-2">
-            <div className="navbarbtn-container">
-              {userData ? (
-                <Dropdown overlay={menu} trigger={['click']}>
-                  <span className="name-container">
 
-
-                    <p>
-                      {userData?.fullName}
-                    </p>
-                    <span className="icon">
-                      <Icon
-                        color="#FFF"
-                        icon="mingcute:down-fill"
-                        className="icon-rotate"
-                      />
-                    </span>
-                  </span>
-
-
-                </Dropdown>
-              ) : (
-                <button onClick={onsigninbtnClick}>{t("sign_in")}</button>
-              )}
-            </div>
 
             <div
               className="navbarbtn-container"
@@ -344,6 +321,7 @@ const Navbar = () => {
         <Button onClick={showDrawer} className="menu-btn" type="button">
           <Icon color="white" icon="material-symbols:menu" className="menu-btn-icon" />
         </Button>
+
         <Drawer
           placement={placement}
           closable={false}
@@ -439,7 +417,9 @@ const Navbar = () => {
                     </div>
                   )}
                 </div>
-                <button className="button2" onClick={onsigninbtnClick}>{t("sign_in")}</button>
+                {/* <button className="button2" onClick={onsigninbtnClick}>{t("sign_in")}</button> */}
+                <button onClick={() => { navigate('/ContactUs') }}>{t("ContactUs")}</button>
+
 
               </>
 
