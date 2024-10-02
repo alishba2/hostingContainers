@@ -4,6 +4,8 @@ import { getAllProducts } from '../firebase/firebase'; // Ensure this fetches pr
 import { Card, Col, Row, Typography, Spin, Table, Button, Tabs } from 'antd';
 import "../style/pages/_singleProduct.scss";
 import ProductSlider from '../components/Home/productSlider';
+import { useTranslation } from "react-i18next";
+
 const { Title, Paragraph } = Typography;
 const { TabPane } = Tabs;
 
@@ -13,6 +15,7 @@ export default function SingleProduct() {
     const [loading, setLoading] = useState(true);
     const [showSpecifications, setShowSpecifications] = useState(true);
     const [category, setCategory] = useState(null);
+    const { t } = useTranslation(); // Initialize translation hook
 
 
     useEffect(() => {
@@ -108,8 +111,8 @@ export default function SingleProduct() {
 
                                 </p>
 
-                                <button size="large" className="buy-now-button">
-                                    Contact Us
+                                <button onClick={() => { Navigate('/contactUs') }} size="large" className="buy-now-button">
+                                    {t('contactUs')}
                                 </button>
                             </span>
 
