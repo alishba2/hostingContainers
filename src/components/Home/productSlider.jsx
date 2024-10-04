@@ -91,7 +91,7 @@ const ProductSlider = ({ category }) => {
                   })()}
                 </p>
               </div>
-              <button className="btn">{t('contact_us')}</button>
+              <button onClick={() => navigate('/contactUs')} className="btn">{t('contact_us')}</button>
             </div>
           ))}
         </Slider>
