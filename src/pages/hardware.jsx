@@ -10,14 +10,14 @@ const Hardware = () => {
     const [conversionRate, setConversionRate] = useState(1);
     const [currentPage, setCurrentPage] = useState(1);
     const pageSize = 10;
-    const ELECTRICITY_COST_PER_KWH = 0.07; // Update according to location (e.g., Dubai)
+    const ELECTRICITY_COST_PER_KWH = -7; // Update according to location (e.g., Dubai)
     const { t } = useTranslation();
 
     // Fetch miners and coin data
     useEffect(() => {
         const fetchMiners = async () => {
             try {
-                const response = await axios.get('https://api.minerstat.com/v2/hardware');
+                const response = await axios.get('https://api.minerstat.com/v2/hardware?brand=antminer');
                 setMiners(response.data);
             } catch (error) {
                 console.error('Error fetching miners data:', error);
@@ -48,7 +48,8 @@ const Hardware = () => {
         fetchConversionRate();
     }, []);
 
-    // Function to calculate profitability
+    // const ELECTRICITY_COST_PER_KWH = 0.1; // Example electricity cost per kWh
+
     const calculateProfitability = (miner) => {
         if (!miner.algorithms || Object.keys(miner.algorithms).length === 0) {
             console.warn('No algorithms found for the miner.');
@@ -66,23 +67,31 @@ const Hardware = () => {
             return 0; // No corresponding coin found
         }
 
-        // Convert speed to MH/s and ensure reward and price are treated as floats
-        const minerHashrateMH = speed / 1e6;
-        const rewardPerMH = parseFloat(coinData.reward); // Reward per MH/s (example)
-        const coinPriceUSD = parseFloat(coinData.price);
+        // Convert speed to MH/s (assuming speed is in H/s)
+        const minerHashrateMH = speed / 1_000_000; // Convert from H/s to MH/s
+
+        // Convert reward and price to numbers
+        const rewardPerMH = parseFloat(coinData.reward); // Reward per MH/s
+        const coinPriceUSD = parseFloat(coinData.price); // Coin price in USD
+
+        if (isNaN(rewardPerMH) || isNaN(coinPriceUSD)) {
+            console.warn(`Invalid reward or price data for coin: ${coinData.name}`);
+            return 0;
+        }
 
         // Calculate daily revenue in USD
-        const revenuePerDay = minerHashrateMH * coinPriceUSD;
+        const revenuePerDay = minerHashrateMH * rewardPerMH * coinPriceUSD * 24; // 24 hours/day
 
         // Calculate power cost in USD
         const powerUsageKW = power / 1000; // Convert watts to kilowatts
-        const powerCostPerDay = powerUsageKW * 24 * ELECTRICITY_COST_PER_KWH;
+        const powerCostPerDay = powerUsageKW * 24 * ELECTRICITY_COST_PER_KWH; // 24 hours/day
 
-        // Calculate daily profit
-        const profitPerDayUSD = revenuePerDay - powerCostPerDay; // Avoid negative profit
+        // Calculate daily profit (revenue - power cost)
+        const profitPerDayUSD = revenuePerDay - powerCostPerDay;
 
         return profitPerDayUSD;
     };
+
 
 
 
@@ -111,7 +120,7 @@ const Hardware = () => {
                                 <td className='d-none-mbl'>{Object.keys(miner.algorithms)[0] || 'N/A'}</td>
                                 <td className='d-none-mbl'>{miner.algorithms ? `${Object.values(miner.algorithms)[0]?.speed / 1000000} MH/s` : 'N/A'}</td>
                                 <td className='d-none-mbl'>{miner.algorithms ? `${Object.values(miner.algorithms)[0]?.power} W` : 'N/A'}</td>
-                                <td>{calculateProfitability(miner)?.toFixed(2) || 'N/A'}</td>
+                                <td>${calculateProfitability(miner)?.toFixed(0) || 'N/A'}</td>
                                 <td className='d-none-mbl'>{miner.type || 'N/A'}</td>
                             </tr>
                         ))}

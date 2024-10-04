@@ -140,23 +140,27 @@ export default function ProductListing() {
                                 <div
                                     key={product.id}
                                     className="product-card"
-                                    onClick={() => handleProductClick(product.id)} // Navigate on click
+                                // Navigate on click
                                 >
-                                    <img src={product.images[0]} alt={product.name} />
-                                    <h3 className="truncated-name">{product.name}</h3>
-                                    <div className="product-name">
-                                        <p>${product.price}</p>
-                                        <p className={`power`}>
-                                            {(() => {
-                                                const text = product.specifications || product.power || product.powerSupply;
-                                                if (text) {
-                                                    return text.length > 20 ? text.slice(0, 25) + '...' : text;
-                                                }
-                                                return ''; // return empty if there's no text
-                                            })()}
-                                        </p>
+
+                                    <div onClick={() => handleProductClick(product.id)} >
+                                        <img src={product.images[0]} alt={product.name} />
+                                        <h3 className="truncated-name">{product.name}</h3>
+                                        <div className="product-name">
+                                            <p>${product.price}</p>
+                                            <p className={`power`}>
+                                                {(() => {
+                                                    const text = product.specifications || product.power || product.powerSupply;
+                                                    if (text) {
+                                                        return text.length > 20 ? text.slice(0, 25) + '...' : text;
+                                                    }
+                                                    return ''; // return empty if there's no text
+                                                })()}
+                                            </p>
+                                        </div>
                                     </div>
-                                    <button className="btn" >{t('contact_us')}</button>
+
+                                    <button onClick={() => navigate('/contactUs')} className="btn" >{t('contact_us')}</button>
 
                                 </div>
                             )) : (
