@@ -8,17 +8,17 @@ import {
 } from "react-icons/fa"; // Social icons
 import "../../src/style/pages/_about.scss";
 import Contactus from "../components/Home/contactus";
-import videoSrc from "../assets/blockchainn2.mp4"; // Add your background video here
 import img1 from "../assets/ceo2.png";
 import img2 from "../assets/team102.jpeg"
 import img3 from "../assets/teamman.jpeg";
 import img4 from "../assets/main.jpg";
 import img5 from "../assets/images/main2.jpg";
 
-
+// import video from "../assets/hashhostingvideos/EDITS/HASH CONTAINER AD.mp4"
 
 export default function AboutUs() {
   const { t } = useTranslation();
+  let video = "https://firebasestorage.googleapis.com/v0/b/crypto-598ab.appspot.com/o/HASH%20CONTAINER%20AD.mp4?alt=media&token=45e75494-964c-4bd9-bd51-05c68d0af58b"
 
 
   const teamMembers = [
@@ -61,6 +61,14 @@ export default function AboutUs() {
           <h3>{t("missionStatement")}</h3>
           <p>{t("aboutUsText")}</p>
         </div>
+      </div>
+
+      <div className="video-container">
+        <p>About Hash Hosting International</p>
+        <video autoPlay loop muted controls height="auto">
+          <source src={video} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </div>
 
       <div className="team-section">
