@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "../assets/logo.jpeg";
 import { Modal, notification } from "antd";
@@ -8,6 +8,12 @@ const ForgetPswd = ({ isforgetModal, setisforgetModal }) => {
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false); // State to handle loading
 
+
+  useEffect(() => {
+
+    console.log(loading, "loading");
+
+  }, [loading])
   const handleOk = () => {
     setisforgetModal(false);
   };

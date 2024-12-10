@@ -205,6 +205,7 @@ const getAllProducts = async () => {
         throw error;
     }
 };
+
 const getProductsByType = async (type) => {
     try {
         // Reference to the 'products' collection with a query to filter by type
