@@ -4,7 +4,7 @@ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, se
 import { getFirestore, doc, setDoc, getDoc, addDoc, collection, getDocs, query, where, } from "firebase/firestore"; // Firestore imports
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage"; // Firebase Storage functions
 import { deleteDoc } from "firebase/firestore";
-
+import { listAll } from "firebase/storage";
 const firebaseConfig = {
     apiKey: "AIzaSyDbUPUQcn-Q7mRD0nKjQ4p7j2qwZSWilUo",
     authDomain: "crypto-598ab.firebaseapp.com",
@@ -308,5 +308,15 @@ const saveContactForm = async (formData) => {
         throw error;
     }
 };
-export { saveProduct, deleteProduct, deleteBlog, saveContactForm };
+
+const getPhotos = async () => {
+    const listRef = ref(storage, "photos");
+    const photoList = await listAll(listRef);
+    const photoUrls = await Promise.all(
+        photoList.items.map((itemRef) => getDownloadURL(itemRef))
+    );
+    return photoUrls;
+
+}
+export { saveProduct, deleteProduct, deleteBlog, saveContactForm, getPhotos };
 export { registerUser, loginUser, resetPassword, getCurrentUserData, isLoggedIn, getAllProducts, getProductsByType, addBlog, getBlogs };
