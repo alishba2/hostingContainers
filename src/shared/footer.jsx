@@ -10,9 +10,11 @@ import {
   FaTiktok,
   FaLinkedinIn,
 } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 export default function Footer() {
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   return (
     <div className="footer-container">
@@ -41,22 +43,22 @@ export default function Footer() {
           <h3>{t("quickLinks")}</h3>
           <ul>
             <li>
-              <a href="#">{t("products")}</a>
+              <a href="/products" onClick={(e) => { e.preventDefault(); navigate("/products", { state: { category: "Miners" } }); }}>{t("products")}</a>
             </li>
             <li>
-              <a href="#">{t("gallery")}</a>
+              <a href="/hosting">{t("hosting")}</a>
             </li>
             <li>
-              <a href="#">{t("aboutUs")}</a>
+              <a href="/about-us">{t("aboutUs")}</a>
             </li>
             <li>
-              <a href="#">{t("blog")}</a>
+              <a href="/atm">{t("Atms")}</a>
             </li>
-            <li>
+            {/* <li>
               <a href="#">{t("faq")}</a>
-            </li>
+            </li> */}
             <li>
-              <a href="#">{t("privacyPolicy")}</a>
+              <a href="/blogs">{t("blogs")}</a>
             </li>
           </ul>
         </div>
