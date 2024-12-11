@@ -1,15 +1,14 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
-import { saveContactForm } from "../../firebase/firebase";
+import emailjs from "emailjs-com"; // Import EmailJS
 
 const Contactus = () => {
   const { t } = useTranslation();
-  const navigate = useNavigate();
+  const [loading, setLoading] = useState(false); // State to manage loading indicator
 
   // State to manage form inputs
   const [formData, setFormData] = useState({
-    name: "", // Changed to a single 'name' field
+    name: "",
     email: "",
     phone: "",
     message: "",
@@ -27,31 +26,49 @@ const Contactus = () => {
   // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault(); // Prevent the default form submission
+    setLoading(true); // Start loading indicator
 
+    // Map form data to template variables, including "contact_no" for the phone number
+    const templateParams = {
+      to_name: "Hash containers",       // Static or configurable recipient name
+      from_name: formData.name,        // Sender's name from form data
+      message: formData.message,       // Message from form data
+      reply_to: formData.email,        // Sender's email (use this in EmailJS instead of `email`)
+      contact_no: formData.phone       // Sender's phone number
+    };
+
+    // Using EmailJS to send the email
     try {
-      await saveContactForm(formData);
+      await emailjs.send(
+        "service_ynoyb2u",       // Replace with your EmailJS Service ID
+        "template_e27j58f",      // Replace with your EmailJS Template ID
+        templateParams,
+        "X4DS5Cmx8BaoDj8Nz"      // Replace with your EmailJS Public API Key
+      );
+
       // Optionally reset the form or provide feedback to the user
       setFormData({
-        name: "", // Resetting name field
+        name: "",
         email: "",
         phone: "",
         message: "",
       });
-      alert(t('message_sent_successfully')); // Provide success message
+      setLoading(false); // Stop loading indicator
     } catch (error) {
-      alert(t('error_sending_message')); // Provide error feedback
+      console.error("Error sending email:", error);
+      setLoading(false); // Stop loading indicator
     }
   };
 
   return (
     <div className="requestDemo-main-container">
       <div className="requestDemo-flex-box-right content">
-        <h2 className="text-white text-center mb-3">{t('contact_us')}</h2>
+        <h2 className="text-white text-center mb-3">{t("contact_us")}</h2>
         <form onSubmit={handleSubmit}>
           <input
             type="text"
             name="name"
-            placeholder="Name*" // Changed placeholder
+            placeholder="Name*"
             value={formData.name}
             onChange={handleChange}
           />
@@ -65,18 +82,24 @@ const Contactus = () => {
           <input
             type="number"
             name="phone"
-            placeholder={t('phone_number')}
+            placeholder={t("phone_number")}
             value={formData.phone}
             onChange={handleChange}
           />
           <textarea
-            placeholder={t('your_message')}
+            placeholder={t("your_message")}
             name="message"
             rows="5"
             value={formData.message}
             onChange={handleChange}
           ></textarea>
-          <button type="submit" className="send-request-btn">{t('send')}</button>
+          <button
+            type="submit"
+            className="send-request-btn"
+            disabled={loading}
+          >
+            {loading ? <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> : t("send")}
+          </button>
         </form>
       </div>
     </div>
@@ -84,3 +107,4 @@ const Contactus = () => {
 };
 
 export default Contactus;
+
