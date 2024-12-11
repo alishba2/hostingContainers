@@ -43,7 +43,7 @@ export default function Footer() {
           <h3>{t("quickLinks")}</h3>
           <ul>
             <li>
-              <a href="/products" onClick={(e) => { e.preventDefault(); navigate("/products", { state: { category: "Miners" } }); }}>{t("products")}</a>
+              <a href="/products" onClick={(e) => { e.preventDefault(); navigate("/products", { state: { category: "Miners" } }); window.location.reload(); }}>{t("products")}</a>
             </li>
             <li>
               <a href="/hosting">{t("hosting")}</a>
