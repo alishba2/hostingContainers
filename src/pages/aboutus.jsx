@@ -8,7 +8,7 @@ import {
 } from "react-icons/fa"; // Social icons
 import "../../src/style/pages/_about.scss";
 import Contactus from "../components/Home/contactus";
-import img1 from "../assets/ceo2.png";
+import img1 from "../assets/luis.jpg";
 import img2 from "../assets/team102.jpeg"
 import img3 from "../assets/teamman.jpeg";
 import img4 from "../assets/main.jpg";
