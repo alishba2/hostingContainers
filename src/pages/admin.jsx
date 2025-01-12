@@ -3,37 +3,37 @@ import Product from './product';
 import Blogs from './blogs';
 import { FaBars } from 'react-icons/fa'; // Import a menu icon
 import "../style/pages/_admin.scss";
-import { useNavigate } from 'react-router-dom';
 import { Spinner } from 'react-bootstrap'; // Ensure Bootstrap is installed and imported
-import { useAdmin } from '../Context/appContext';
+import { useNavigate } from 'react-router-dom';
 
 export default function Admin() {
     const [activeComponent, setActiveComponent] = useState('product');
     const [isSidebarVisible, setIsSidebarVisible] = useState(true);
     const [isLoading, setIsLoading] = useState(true); // Add loading state for 30-second delay
+    const [isLoggedIn, setIsLoggedIn] = useState(false); // Track if the user is logged in
+    const [password, setPassword] = useState(''); // Track the entered password
+    const [error, setError] = useState(''); // Track login error
     const navigate = useNavigate();
-    // const { isAdmin } = useAdmin(); // Fetch isAdmin from context
 
-    // useEffect(() => {
-    //     const timer = setTimeout(() => {
-    //         setIsLoading(false); // Stop loading after 30 seconds
-    //     }, 30000); // 30 seconds = 30000 ms
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setIsLoading(false); // Stop loading after 30 seconds
+        }, 30000); // 30 seconds = 30000 ms
 
+        return () => clearTimeout(timer); // Clear the timer when the component unmounts
+    }, []);
 
-    //     console.log(isAdmin, "isAdmin");
-    //     if (isAdmin) {
-    //         setIsLoading(false); // Stop loading immediately if admin status is already available
-    //     }
+    // Render the login form if not logged in
+    const handleLogin = () => {
+        const hardcodedPassword = "admin123"; // Hardcoded password
 
-    //     return () => clearTimeout(timer); // Clear the timer when the component unmounts
-    // }, [isAdmin]);
-
-    // useEffect(() => {
-    //     if (!isAdmin && !isLoading) {
-    //         // If not admin and loading has completed, redirect to home page
-    //         navigate('/');
-    //     }
-    // }, [isAdmin, isLoading, navigate]);
+        if (password === hardcodedPassword) {
+            setIsLoggedIn(true);
+            setError(''); // Clear any previous error
+        } else {
+            setError('Incorrect password. Please try again.');
+        }
+    };
 
     const renderComponent = () => {
         switch (activeComponent) {
@@ -46,17 +46,22 @@ export default function Admin() {
         }
     };
 
-    // Show loading spinner if isLoading is true
-    // if (isLoading) {
-    //     return (
-    //         <div className="spinner-container">
-    //             <Spinner animation="border" role="status">
-    //                 {/* <span className="sr-only">Loading...</span> */}
-    //             </Spinner>
-    //         </div>
-    //     );
-    // }
-
+    if (!isLoggedIn) {
+        return (
+            <div className="login-container">
+                <h2>Admin Login</h2>
+                <input
+                    type="password"
+                    placeholder="Enter Admin Password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                />
+                <button onClick={handleLogin}>Login</button>
+                {error && <p className="error-message">{error}</p>}
+            </div>
+        );
+    }
+    
     return (
         <div className="admin-page">
             {isSidebarVisible && (
